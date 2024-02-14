@@ -36,7 +36,7 @@
 #include "bplan40.h"
 #include "bplan100.h"
 #include "bplan101.h"
-
+#include "bplan_test_move.h"
 
 int main (int argc, char **argv)
 { // prepare all modules and start data flow
@@ -63,7 +63,7 @@ int main (int argc, char **argv)
     // turn off led 16
     */
 
-   
+
 	gpio.setPin(16, 0);
   
   }
