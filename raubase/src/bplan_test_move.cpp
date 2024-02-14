@@ -15,7 +15,7 @@
 
 #include "bplan_test_move.h"
 
-BPlanTestMove plan_test_move
+BPlanTestMove plan_test_move;
 
 void BPlanTestMove::setup()
 { 
