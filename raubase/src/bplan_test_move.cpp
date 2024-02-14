@@ -31,9 +31,9 @@ BPlanTestMove::~BPlanTestMove()
 void BPlanTestMove::run()
 {
 	while (true) {
-		mixer.setVelocity(1);
+		mixer.setVelocity(-0.5);
 		usleep(2000*1000);
-        mixer.setVelocity(0);
+        mixer.setVelocity(-0.5);
 		usleep(2000*1000);
 	}
 }
