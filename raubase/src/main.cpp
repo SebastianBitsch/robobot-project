@@ -46,10 +46,11 @@ int main (int argc, char **argv)
   
   if (not service.theEnd)
   { 
+    gpio.setPin(16, 1);
+	
 	/*
 	// all set to go
     // turn on LED on port 16
-    gpio.setPin(16, 1);
     // run the planned missions
     plan20.run();
     plan21.run();
@@ -61,11 +62,8 @@ int main (int argc, char **argv)
     mixer.setTurnrate(0.0);
     sleep(1); // to allow robot to stop
     // turn off led 16
+	//gpio.setPin(16, 0);
     */
-
-
-	gpio.setPin(16, 0);
-  
   }
   
   // close all logfiles etc.
