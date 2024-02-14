@@ -42,8 +42,3 @@ void BPlanTestMove::terminate()
 { 
 }
 
-void BPlanTestMove::toLog(const char* message)
-{
-  
-}
-
