@@ -16,18 +16,18 @@
 #include "bplan_test_move.h"
 
 
-void BPlan20::setup()
+void BPlanTestMove::setup()
 { 
 
 }
 
-BPlan20::~BPlan20()
+BPlanTestMove::~BPlanTestMove()
 {
   terminate();
 }
 
 
-void BPlan20::run()
+void BPlanTestMove::run()
 {
 	while true {
 		mixer.setVelocity(1);
@@ -38,11 +38,11 @@ void BPlan20::run()
 }
 
 
-void BPlan20::terminate()
+void BPlanTestMove::terminate()
 { 
 }
 
-void BPlan20::toLog(const char* message)
+void BPlanTestMove::toLog(const char* message)
 {
   
 }
