@@ -29,35 +29,36 @@ set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread")
 
 
 add_executable(raubase
-      src/bplan20.cpp
-      src/bplan21.cpp
-      src/bplan40.cpp
-      src/bplan100.cpp
-      src/bplan101.cpp
-      src/cedge.cpp
-      src/cheading.cpp
-      src/cmixer.cpp
-      src/cmotor.cpp
-      src/cservo.cpp
-      src/main.cpp
-      src/maruco.cpp
-      src/medge.cpp
-      src/mpose.cpp
-      src/scam.cpp
-      src/sedge.cpp
-      src/sencoder.cpp
-      src/sgpiod.cpp
-      src/simu.cpp
-      src/sdist.cpp
-      src/sjoylogitech.cpp
-      src/spyvision.cpp
-      src/sstate.cpp
-      src/steensy.cpp
-      src/upid.cpp
-      src/uservice.cpp
-      src/usocket.cpp
-      src/utime.cpp
-      )
+	src/bplan_test_move.cpp
+	src/bplan20.cpp
+	src/bplan21.cpp
+	src/bplan40.cpp
+	src/bplan100.cpp
+	src/bplan101.cpp
+	src/cedge.cpp
+	src/cheading.cpp
+	src/cmixer.cpp
+	src/cmotor.cpp
+	src/cservo.cpp
+	src/main.cpp
+	src/maruco.cpp
+	src/medge.cpp
+	src/mpose.cpp
+	src/scam.cpp
+	src/sedge.cpp
+	src/sencoder.cpp
+	src/sgpiod.cpp
+	src/simu.cpp
+	src/sdist.cpp
+	src/sjoylogitech.cpp
+	src/spyvision.cpp
+	src/sstate.cpp
+	src/steensy.cpp
+	src/upid.cpp
+	src/uservice.cpp
+	src/usocket.cpp
+	src/utime.cpp
+)
 
 if (${CPU} MATCHES "armv7l" OR ${CPU} MATCHES "aarch64")
   target_link_libraries(raubase ${CMAKE_THREAD_LIBS_INIT} ${OpenCV_LIBS} readline gpiod rt)
