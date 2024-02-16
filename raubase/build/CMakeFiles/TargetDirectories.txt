@@ -1,3 +1,0 @@
-/home/local/svn/robobot/raubase/build/CMakeFiles/rebuild_cache.dir
-/home/local/svn/robobot/raubase/build/CMakeFiles/edit_cache.dir
-/home/local/svn/robobot/raubase/build/CMakeFiles/raubase.dir

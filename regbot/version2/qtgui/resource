@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="iconer">
+    <file>icons_qt_extended_17x17.png</file>
+  </qresource>
+</RCC>

@@ -36,32 +36,74 @@
 #include "bplan40.h"
 #include "bplan100.h"
 #include "bplan101.h"
+#include "bplan_test_move.h"
 
+enum LineState { on_line, off_line };
 
 int main (int argc, char **argv)
-{ // prepare all modules and start data flow
-  // but also handle command-line options
-  service.setup(argc, argv);
-  //
-  if (not service.theEnd)
-  { // all set to go
-    // turn on LED on port 16
-    gpio.setPin(16, 1);
-    // run the planned missions
-    plan20.run();
-    plan21.run();
-    plan40.run();
-    plan100.run();
-    plan101.run();
-    //
-    mixer.setVelocity(0.0);
-    mixer.setTurnrate(0.0);
-    sleep(1); // to allow robot to stop
-    // turn off led 16
-    gpio.setPin(16, 0);
-  }
-  // close all logfiles etc.
-  service.terminate();
-  return service.theEnd;
+{ 
+	// prepare all modules and start data flow
+	// but also handle command-line options
+	service.setup(argc, argv);
+	
+	float position[3] = {0,0,0};
+	float position_target[3] = {0,0,0};
+
+	float direction[3] = {0,0,0};
+	float direction_target[3] = {0,0,0};
+	bool is_direction_target = false;
+	
+	LineState line_state = off_line;
+
+	if (not service.theEnd) { 
+
+		gpio.setPin(16, 1);
+		plan_test_move.run();
+		gpio.setPin(16, 0);
+
+
+		switch(line_state)
+		{
+			case on_line: 
+				//TODO;
+				break;
+			case off_line:
+				//TODO;
+				break;
+		}
+
+		//position calculation
+			//Get accelerometer (this depends on the direction too)
+			//Get line data (if on line)
+			//Get wheel data
+		
+		//Direction calculation
+			//Get gyroscope
+			//Get line data (if on line)
+			//Get wheel data
+
+		//the mission must be none_blocking?
+		
+
+		/*
+		// all set to go
+		// turn on LED on port 16
+		// run the planned missions
+		plan20.run();
+		plan21.run();
+		plan40.run();
+		plan100.run();
+		plan101.run();
+		//
+		mixer.setVelocity(0.0);
+		mixer.setTurnrate(0.0);
+		*/
+
+		sleep(1); // to allow robot to stop		
+	}
+
+	// close all logfiles etc.
+	service.terminate();
+	return service.theEnd;
 }
 

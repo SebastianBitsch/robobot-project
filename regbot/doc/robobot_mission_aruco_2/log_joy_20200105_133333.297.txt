@@ -1,0 +1,6 @@
+% robobot mission joystick (gamepad) log
+% 1 Timestamp in seconds
+% 2-8 Axis position
+% 9-19 buttons pressed
+1578227617.611 0 -2 -32767 0 -2 -32767 0 0 1 0 0 0 0 0 0 0 0 0 0 
+1578227617.761 0 -2 -32767 0 -2 -32767 0 0 0 0 0 0 0 0 0 0 0 0 0 
