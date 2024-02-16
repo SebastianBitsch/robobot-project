@@ -59,8 +59,8 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		//plan_test_move.run();
-                mixer.setVelocity(0.3);
+		plan_test_move.run();
+                //mixer.setVelocity(0.7);
                // mixer.setTurnrate(0.3);
 		//mixer.setEdgeMode(true, 0);
 		gpio.setPin(16, 0);
