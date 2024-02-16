@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "Regbot-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/Regbot-eagle-import.kicad_sym")(options "")(descr ""))
+  (lib (name "Teensy")(type "Legacy")(uri "${KIPRJMOD}/teensy_library/teensy.lib")(options "")(descr ""))
+  (lib (name "Regbot")(type "KiCad")(uri "${KIPRJMOD}/Regbot-kicad.kicad_sym")(options "")(descr ""))
+)

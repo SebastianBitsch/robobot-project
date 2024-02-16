@@ -1,0 +1,12 @@
+# Got from robot:
+thread=1
+    vel=0.0, acc=1.0, edgel=0.0, white=1: time=0.05
+    vel=0.0, bal=1: time=1.0, lv>15
+    vel=0.4, edger=0.0, white=1, label=7: time=4.0, lv<3
+    vel=0.45, edger=0.0, white=1: time=3.0, lv<3
+    vel=0.4, edger=0.0, white=1: time=4.0, lv<3
+    vel=0.3, edger=0.0, white=1: time=3.0, lv<3
+    goto=7: lv<3
+    edger=0.0, white=1: time=0.5
+    goto=7: lv<3
+    event=0: time=1.0

@@ -1,0 +1,1565 @@
+%% logfile from robot Liv (36)
+% Liv (36)
+%  1    time 0.008 sec
+%  2  3  4  5   (mission 0), state 2, entered (thread 1, line 0), events 0x0 (bit-flags)
+%  6  7 Motor velocity ref left, right: 0.0000 0.0000
+%  8  9 10 11 Pose x,y,h,tilt [m,m,rad,rad]: 0 0 0 0.473406
+% 12 .. 32 Edge sensor: left -4.180000 0, right 4.180000 0, values 3444 3841 3813 3832 3662 3777 3639 3251, white 1, used 1, LEDhigh=1, xb=0 xw=1 xbc=0 xwc=20 lvl=0 lvr=0       whitelevel=[2048 2588 2677 2705 2381 2601 2347 1938]       blacklevel=[86 89 95 102 87 90 81 80]
+% 33 34 Distance sensor [m]: 0.047 0.047
+% 35    Battery voltage [V]: 11.84
+%% Configuration as seen in client (assumed updated from robot)
+% [main]
+% version = 3.654
+% mission = 0
+% usbdevicename = /dev/ttyACM0
+% connect = False
+% wifihost = 192.168.2.147
+% wificonnect = True
+% wifiport = 24001
+% 
+% [show]
+% debug = True
+% wifi = True
+% log = True
+% robot = True
+% encoder = True
+% edge = True
+% distance = True
+% imu = True
+% control = True
+% mission = True
+% servo = False
+% 
+% [log]
+% interval = 15
+% mission_state = True
+% acceleration = False
+% gyro = False
+% encoder = False
+% motorref = True
+% motorvoltage = False
+% motorcurrent = False
+% wheelvelocity = False
+% robotpose = True
+% linesensor = True
+% irdist = True
+% turnrate = False
+% batteryvoltage = True
+% ctrl_vel = False
+% ctrl_turn = False
+% ctrl_pos = False
+% ctrl_edge = False
+% ctrl_wall = False
+% ctrl_fwd_dist = False
+% ctrl_bal = False
+% ctrl_bal_vel = False
+% controltime = False
+% extrainfo = False
+% logfilename = /home/chr/svnregbot/qtgui/matlab/edge/liv_edge_11.txt
+% allow = True
+% 
+% [cvel]
+% name = Wheel Velocity (left and right)
+% use = True
+% kp = 13.0
+% i_use = False
+% i_tau = 1.0
+% i_limit = 1000000.0
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = False
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 1000000.0
+% post_filt_and_zero = False
+% ff_use = True
+% ff_kp = 3.3
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = False
+% out_limit = 9.0
+% 
+% [ctrn]
+% name = Heading
+% use = True
+% kp = 1.0
+% i_use = False
+% i_tau = 1.0
+% i_limit = 9999.99
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = False
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 9999.99
+% post_filt_and_zero = False
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = True
+% out_limit = 4.0
+% 
+% [cwve]
+% name = IR forward distance
+% use = False
+% kp = 1.0
+% i_use = False
+% i_tau = 1.0
+% i_limit = 1000000.0
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = False
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 1000000.0
+% post_filt_and_zero = False
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = False
+% out_limit = 1000000.0
+% 
+% [cwth]
+% name = Wall distance
+% use = False
+% kp = 3.0
+% i_use = False
+% i_tau = 1.0
+% i_limit = 1000000.0
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = False
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 1000000.0
+% post_filt_and_zero = False
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = False
+% out_limit = 1000000.0
+% 
+% [cpos]
+% name = Position (drive distance)
+% use = False
+% kp = 1.0
+% i_use = False
+% i_tau = 1.0
+% i_limit = 1000000.0
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = False
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 1000000.0
+% post_filt_and_zero = True
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = False
+% out_limit = 1000000.0
+% 
+% [cedg]
+% name = Line edge
+% use = False
+% kp = 9.0
+% i_use = False
+% i_tau = 1.0
+% i_limit = 1000000.0
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = False
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 1000000.0
+% post_filt_and_zero = False
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = False
+% out_limit = 1000000.0
+% 
+% [cbal]
+% name = Balance
+% use = True
+% kp = -2.0
+% i_use = 1
+% i_tau = 0.1
+% i_limit = 8.0
+% lead_fwd_use = 0
+% lead_fwd_tau_zero = 1.0
+% lead_fwd_tau_pole = 1.0
+% lead_back_use = 0
+% lead_back_tau_zero = 1.0
+% lead_back_tau_pole = 1.0
+% pre_filt_use = 0
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = 0
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 1000000.0
+% post_filt_and_zero = 0
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = 0
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = True
+% out_limit = 8.0
+% 
+% [cbav]
+% name = Balance velocity
+% use = True
+% kp = 0.04
+% i_use = True
+% i_tau = 0.05
+% i_limit = 0.1
+% lead_fwd_use = False
+% lead_fwd_tau_zero = 0.007
+% lead_fwd_tau_pole = 0.07
+% lead_back_use = True
+% lead_back_tau_zero = 0.35
+% lead_back_tau_pole = 0.105
+% pre_filt_use = False
+% pre_filt_tau_zero = 1.0
+% pre_filt_tau_pole = 1.0
+% post_filt_i_use = False
+% post_filt_i_tau = 1.0
+% post_filt_i_limit = 9999.99
+% post_filt_and_zero = True
+% ff_use = False
+% ff_kp = 1.0
+% ff_filt_use = False
+% ff_filt_tau_zero = 1.0
+% ff_filt_tau_pole = 1.0
+% out_limit_use = True
+% out_limit = 0.1
+% 
+% [mission]
+% mission = # Got from robot:
+% 	thread=1
+% 	    vel=-0.0, log=1.0, bal=0: time=0.1
+% 	    vel=0.0, bal=1: time=6.0
+% 	# Got from robot:
+% 	thread=1
+% 	    vel=0.0, log=15.0, bal=1: time=2.0
+% 	    vel=0.3, edger=-1.0: time=10.0
+% 	0: No Error found (in 3 lines)
+% 	1: No Error found (in 3 lines)
+% 	2: No Error found (in 3 lines)
+% 	3: No Error found (in 3 lines)
+% 	4: No Error found (in 3 lines)
+% 	5: No Error found (in 3 lines)
+% 	6: No Error found (in 3 lines)
+% 	7: No Error found (in 3 lines)
+% 	
+% 
+% [lineSensor]
+% maximum = 4096
+% use = False
+% white = True
+% ledpower = True
+% ledpowerauto = False
+% 
+% [robot0]
+% name = empty
+% version = 
+% robotbase = 0.0
+% gear = 0.0
+% encoderppr = 0
+% wheelradiusleft = 0.0
+% wheelradiusright = 0.0
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.9
+% wifiip = 0.0.0.0
+% wifimac = 00:00:00:00:00:00
+% 
+% [robot1]
+% name = Emma
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:6e:1f
+% 
+% [robot2]
+% name = Sofia
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:62:26
+% 
+% [robot3]
+% name = Ida
+% version = 526.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:dd:e4
+% 
+% [robot4]
+% name = Freja
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:69:27
+% 
+% [robot5]
+% name = Clara
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:71:e0
+% 
+% [robot6]
+% name = Laura
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d9:69
+% 
+% [robot7]
+% name = Anna
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d8:df
+% 
+% [robot8]
+% name = Ella
+% version = 607.05
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.032
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:da:1c
+% 
+% [robot9]
+% name = Isabella
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:db:c0
+% 
+% [robot10]
+% name = Karla
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d1:4c
+% 
+% [robot11]
+% name = Alma
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d7:37
+% 
+% [robot12]
+% name = Josefine
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:dc:07
+% 
+% [robot13]
+% name = Olivia
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:67:59
+% 
+% [robot14]
+% name = Alberte
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:df:2c
+% 
+% [robot15]
+% name = Maja
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d9:de
+% 
+% [robot16]
+% name = Sofie
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:cf:c8
+% 
+% [robot17]
+% name = Mathilde
+% version = 5hbt
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:ce:31
+% 
+% [robot18]
+% name = Agnes
+% version = 538.03
+% robotbase = 0.15
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:6a:33
+% 
+% [robot19]
+% name = Lily
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:66:20
+% 
+% [robot20]
+% name = Caroline
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:dd:b3
+% 
+% [robot21]
+% name = Liva
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:6a:70
+% 
+% [robot22]
+% name = Emily
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:16:99:a6
+% 
+% [robot23]
+% name = Sara
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:93:78:25
+% 
+% [robot24]
+% name = Victoria
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d5:62
+% 
+% [robot25]
+% name = Emilie
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:68:a5
+% 
+% [robot26]
+% name = Mille
+% version = 533.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 192.168.2.216
+% wifimac = 5c:cf:7f:94:6f:cb
+% 
+% [robot27]
+% name = Frida
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:06:5b:1f
+% 
+% [robot28]
+% name = Marie
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:de:50
+% 
+% [robot29]
+% name = Ellen
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 192.168.2.37
+% wifimac = 5c:cf:7f:db:d6:ed
+% 
+% [robot30]
+% name = Rosa
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d9:8d
+% 
+% [robot31]
+% name = Lea
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:72:fc
+% 
+% [robot32]
+% name = Signe
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:d9:e9:c3
+% 
+% [robot33]
+% name = Filippa
+% version = 586.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.05
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:63:91
+% 
+% [robot34]
+% name = Julie
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d3:8c
+% 
+% [robot35]
+% name = Nora
+% version = 533.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d8:a8
+% 
+% [robot36]
+% name = Liv
+% version = 2.69
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.06
+% batteryuse = True
+% batteryidlevolt = 10.299
+% wifiip = 192.168.2.147
+% wifimac = 18:fe:34:cb:23:45
+% 
+% [robot37]
+% name = Vigga
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.16
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:07:0e:1c
+% 
+% [robot38]
+% name = Nanna
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:68:e4
+% 
+% [robot39]
+% name = Naja
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 8.99978
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d3:15
+% 
+% [robot40]
+% name = Alba
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 18:fe:34:cb:23:03
+% 
+% [robot41]
+% name = Astrid
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 192.168.2.238
+% wifimac = 5c:cf:7f:02:c5:8f
+% 
+% [robot42]
+% name = Aya
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:63:d4
+% 
+% [robot44]
+% name = Luna
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d3:5e
+% 
+% [robot45]
+% name = Malou
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.08
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:2d:0e:4b
+% 
+% [robot46]
+% name = Esther
+% version = 2.69
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.07
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 192.168.1.29
+% wifimac = 5c:cf:7f:db:d7:04
+% 
+% [robot47]
+% name = Celina
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d5:8c
+% 
+% [robot48]
+% name = Johanne
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d2:6b
+% 
+% [robot49]
+% name = Andrea
+% version = 538.03
+% robotbase = 0.15
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:dc:2c
+% 
+% [robot50]
+% name = Silje
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:c1:ba:25
+% 
+% [robot51]
+% name = Thea
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.08
+% batteryuse = True
+% batteryidlevolt = 9.99844
+% wifiip = 0.0.0.0
+% wifimac = 18:fe:34:cb:1f:a9
+% 
+% [robot52]
+% name = Adriana
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.03
+% wheelradiusright = 0.03
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 00:00:00:00:00:00
+% 
+% [robot53]
+% name = Dicte
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d4:3e
+% 
+% [robot54]
+% name = Silke
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d7:86
+% 
+% [robot55]
+% name = Eva
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d4:06
+% 
+% [robot56]
+% name = Gry
+% version = 538.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:67:09
+% 
+% [robot57]
+% name = Tania
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:94:72:6d
+% 
+% [robot58]
+% name = Susanne
+% version = 607.05
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:d4:a8
+% 
+% [robot59]
+% name = Augusta
+% version = 566.03
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.0
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 5c:cf:7f:db:ce:bf
+% 
+% [robot60]
+% name = Birte
+% version = 607.05
+% robotbase = 0.155
+% gear = 9.68
+% encoderppr = 48.0
+% wheelradiusleft = 0.0297
+% wheelradiusright = 0.0297
+% balanceoffset = 0.06
+% batteryuse = True
+% batteryidlevolt = 9.89956
+% wifiip = 0.0.0.0
+% wifimac = 00:00:00:00:00:00
+% 
+%% data log
+0.023 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473374 -4.1800 0 4.1800 0  3446 3840 3824 3835 3671 3773 3632 3260  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.038 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473278 -4.1800 0 4.1800 0  3455 3840 3817 3835 3664 3791 3635 3251  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.053 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473229 -4.1800 0 4.1800 0  3451 3851 3818 3838 3657 3782 3637 3249  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.068 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473193 -4.1800 0 4.1800 0  3456 3852 3823 3840 3667 3784 3641 3246  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.083 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473140 -4.1800 0 4.1800 0  3450 3850 3817 3836 3662 3781 3637 3249  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.098 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473086 -4.1800 0 4.1800 0  3449 3845 3823 3834 3673 3792 3635 3266  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.113 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.473029 -4.1800 0 4.1800 0  3454 3850 3843 3841 3673 3785 3639 3253  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.128 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472997 -4.1800 0 4.1800 0  3457 3844 3813 3838 3665 3780 3644 3257  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.143 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472908 -4.1800 0 4.1800 0  3480 3896 3880 3887 3707 3834 3673 3272  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.158 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472867 -4.1800 0 4.1800 0  3454 3857 3840 3855 3678 3791 3635 3264  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.173 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472871 -4.1800 0 4.1800 0  3451 3852 3831 3858 3673 3786 3647 3260  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.188 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472870 -4.1800 0 4.1800 0  3458 3864 3832 3841 3676 3789 3637 3265  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.203 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472814 -4.1800 0 4.1800 0  3458 3850 3818 3843 3675 3786 3649 3264  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.218 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472782 -4.1800 0 4.1800 0  3457 3851 3831 3848 3678 3779 3646 3260  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.233 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472743 -4.1800 0 4.1800 0  3455 3857 3828 3846 3676 3789 3643 3265  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.248 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472700 -4.1800 0 4.1800 0  3465 3851 3826 3848 3680 3789 3644 3268  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.263 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472651 -4.1800 0 4.1800 0  3465 3857 3842 3842 3669 3785 3642 3262  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.278 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472591 -4.1800 0 4.1800 0  3460 3854 3833 3838 3671 3783 3643 3242  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.293 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472568 -4.1800 0 4.1800 0  3462 3862 3840 3839 3690 3800 3640 3267  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.308 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472535 -4.1800 0 4.1800 0  3459 3865 3837 3840 3679 3791 3645 3264  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.323 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472470 -4.1800 0 4.1800 0  3456 3856 3820 3834 3669 3777 3645 3259  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.338 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472463 -4.1800 0 4.1800 0  3498 3927 3912 3926 3730 3857 3696 3283  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.353 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472454 -4.1800 0 4.1800 0  3465 3876 3849 3863 3682 3796 3657 3261  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.368 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472389 -4.1800 0 4.1800 0  3458 3865 3839 3844 3682 3807 3646 3274  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.383 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472346 -4.1800 0 4.1800 0  3463 3857 3838 3842 3687 3791 3656 3260  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.398 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472309 -4.1800 0 4.1800 0  3452 3850 3839 3830 3665 3789 3637 3263  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.413 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472053 -4.1800 0 4.1800 0  3463 3859 3832 3850 3674 3778 3644 3262  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.428 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.472087 -4.1800 0 4.1800 0  3466 3852 3833 3851 3682 3777 3637 3273  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.443 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.471959 -4.1800 0 4.1800 0  3460 3844 3833 3837 3684 3795 3631 3279  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.458 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.471521 -4.1800 0 4.1800 0  3452 3859 3828 3854 3679 3783 3637 3269  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.473 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.470516 -4.1800 0 4.1800 0  3456 3845 3829 3835 3666 3780 3638 3267  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.488 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.469133 -4.1800 0 4.1800 0  3457 3856 3842 3840 3677 3783 3637 3258  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.503 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.467114 -4.1800 0 4.1800 0  3436 3854 3817 3834 3669 3775 3643 3243  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.518 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.464599 -4.1800 0 4.1800 0  3432 3846 3810 3827 3655 3761 3622 3236  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.533 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.461690 -4.1800 0 4.1800 0  3425 3843 3803 3824 3647 3770 3617 3237  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.548 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.458501 -4.1800 0 4.1800 0  3416 3837 3796 3822 3647 3758 3609 3226  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.563 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.455032 -4.1800 0 4.1800 0  3403 3830 3811 3815 3650 3769 3613 3224  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.578 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.451193 -4.1800 0 4.1800 0  3426 3832 3809 3815 3645 3759 3605 3218  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.593 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.446924 -4.1800 0 4.1800 0  3382 3799 3777 3801 3624 3744 3608 3194  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.608 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.442173 -4.1800 0 4.1800 0  3370 3813 3783 3803 3619 3740 3594 3192  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.623 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.437256 -4.1800 0 4.1800 0  3360 3807 3798 3821 3616 3743 3584 3185  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.638 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.432365 -4.1800 0 4.1800 0  3350 3807 3773 3790 3604 3740 3581 3164  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.653 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.427540 -4.1800 0 4.1800 0  3332 3797 3785 3786 3612 3729 3580 3167  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.668 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.422588 -4.1800 0 4.1800 0  3321 3788 3774 3792 3599 3719 3567 3161  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.683 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.417293 -4.1800 0 4.1800 0  3308 3785 3769 3780 3576 3730 3557 3133  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.698 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.411455 -4.1800 0 4.1800 0  3302 3791 3752 3785 3576 3714 3547 3123  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.713 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.405040 -4.1800 0 4.1800 0  3294 3783 3759 3762 3566 3707 3542 3115  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.728 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.398253 -4.1800 0 4.1800 0  3273 3774 3738 3767 3549 3697 3527 3096  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.743 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.391856 -4.1800 0 4.1800 0  3243 3757 3740 3764 3545 3687 3514 3087  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.758 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.385477 -4.1800 0 4.1800 0  3240 3745 3733 3738 3524 3684 3510 3068  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.773 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.378779 -4.1800 0 4.1800 0  3206 3743 3730 3736 3503 3671 3486 3048  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.788 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.371624 -4.1800 0 4.1800 0  3196 3728 3712 3728 3495 3659 3485 3028  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.803 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.364159 -4.1800 0 4.1800 0  3173 3720 3705 3713 3479 3650 3474 3004  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.818 2 1 0 0 0.0000 0.0000 0.0000 0.0000 0.000000 0.356516 -4.1800 0 4.1800 0  3154 3702 3680 3707 3453 3636 3452 2993  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.833 2 1 0 0 -0.0052 0.0000 -0.0002 0.0000 -0.002617 0.348767 -4.1800 0 4.1800 0  3138 3699 3680 3685 3447 3619 3443 2973  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.848 2 1 0 0 -0.0052 0.0000 -0.0002 0.0000 -0.002617 0.341268 -4.1800 0 4.1800 0  3110 3681 3658 3695 3431 3608 3431 2952  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.863 2 1 0 0 -0.0052 0.0000 -0.0002 0.0000 -0.002617 0.334075 -4.1800 0 4.1800 0  3091 3666 3646 3677 3416 3599 3410 2939  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.878 2 1 0 0 -0.0052 0.0000 -0.0002 0.0000 -0.002617 0.326847 -4.1800 0 4.1800 0  3064 3636 3646 3651 3395 3596 3390 2923  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.893 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.318429 -4.1800 0 4.1800 0  3065 3658 3666 3686 3400 3607 3405 2906  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.908 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.309457 -4.1800 0 4.1800 0  3019 3607 3611 3635 3361 3557 3354 2875  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.923 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.300421 -4.1800 0 4.1800 0  2986 3584 3584 3609 3337 3534 3334 2847  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.938 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.291680 -4.1800 0 4.1800 0  2970 3584 3576 3629 3357 3554 3343 2851  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+0.953 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.283296 -4.1800 0 4.1800 0  2935 3550 3554 3580 3289 3499 3303 2800  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.968 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.275322 -4.1800 0 4.1800 0  2905 3520 3540 3567 3268 3477 3280 2789  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.983 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.267613 -4.1800 0 4.1800 0  2888 3491 3504 3544 3248 3455 3261 2762  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+0.998 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.260229 -4.1800 0 4.1800 0  2867 3473 3506 3524 3232 3453 3249 2756  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.013 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.253195 -4.1800 0 4.1800 0  2844 3457 3477 3500 3220 3424 3226 2724  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.028 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.246467 -4.1800 0 4.1800 0  2823 3439 3467 3478 3194 3414 3205 2726  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.043 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.240059 -4.1800 0 4.1800 0  2804 3417 3434 3470 3171 3390 3188 2695  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.058 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.233998 -4.1800 0 4.1800 0  2780 3394 3429 3450 3152 3384 3164 2685  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.073 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.228214 -4.1800 0 4.1800 0  2772 3377 3415 3431 3143 3365 3152 2666  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.088 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.222878 -4.1800 0 4.1800 0  2748 3378 3407 3426 3133 3356 3142 2651  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.103 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.218005 -4.1800 0 4.1800 0  2737 3351 3382 3420 3104 3314 3126 2652  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.118 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.213209 -4.1800 0 4.1800 0  2722 3336 3370 3397 3099 3324 3114 2624  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.133 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.208496 -4.1800 0 4.1800 0  2708 3324 3357 3385 3079 3305 3105 2609  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.148 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.203728 -4.1800 0 4.1800 0  2696 3336 3357 3388 3079 3302 3097 2592  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.163 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.198719 -4.1800 0 4.1800 0  2677 3292 3322 3354 3056 3274 3079 2582  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.178 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.193789 -4.1800 0 4.1800 0  2654 3290 3310 3333 3034 3276 3050 2566  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.193 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.188800 -4.1800 0 4.1800 0  2643 3265 3294 3311 3022 3246 3039 2547  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.208 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.183713 -4.1800 0 4.1800 0  2628 3244 3268 3315 3004 3225 3023 2523  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.223 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.178504 -4.1800 0 4.1800 0  2613 3239 3266 3291 2976 3224 2995 2518  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.238 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.173176 -4.1800 0 4.1800 0  2583 3219 3246 3286 2967 3191 2996 2489  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.253 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.167861 -4.1800 0 4.1800 0  2584 3200 3216 3265 2938 3183 2973 2464  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.268 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.162606 -4.1800 0 4.1800 0  2550 3169 3219 3245 2947 3167 2937 2457  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.283 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.157321 -4.1800 0 4.1800 0  2544 3156 3203 3234 2900 3147 2936 2438  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.298 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.152149 -4.1800 0 4.1800 0  2518 3130 3191 3220 2903 3125 2916 2392  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.313 2 1 0 0 -0.0052 0.0000 -0.0004 0.0000 0.000000 0.147104 -4.1800 0 4.1800 0  2496 3109 3180 3194 2878 3113 2891 2408  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.328 2 1 0 0 -0.0052 -0.0052 -0.0006 0.0000 0.002617 0.141913 -4.1800 0 4.1800 0  2479 3091 3151 3174 2866 3109 2882 2388  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.343 2 1 0 0 -0.0052 -0.0052 -0.0006 0.0000 0.002617 0.136477 -4.1800 0 4.1800 0  2460 3075 3127 3156 2834 3103 2857 2358  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.358 2 1 0 0 -0.0052 -0.0052 -0.0006 0.0000 0.002617 0.130570 -4.1800 0 4.1800 0  2435 3041 3107 3128 2815 3073 2828 2354  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.373 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.124339 -4.1800 0 4.1800 0  2421 3023 3085 3109 2796 3027 2804 2335  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.388 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.116881 -4.1800 0 4.1800 0  2405 3005 3043 3094 2762 2985 2789 2299  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.403 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.109877 -4.1800 0 4.1800 0  2382 2973 3020 3076 2741 2973 2763 2277  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.418 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.102915 -4.1800 0 4.1800 0  2349 2957 3004 3044 2720 2947 2731 2268  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.433 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.095947 -4.1800 0 4.1800 0  2337 2915 2970 3030 2695 2924 2715 2236  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.448 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.089053 -4.1800 0 4.1800 0  2319 2900 2969 3012 2679 2900 2701 2215  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.463 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.082201 -4.1800 0 4.1800 0  2285 2869 2922 2972 2643 2862 2672 2184  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.478 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.075274 -4.1800 0 4.1800 0  2255 2837 2906 2933 2619 2852 2636 2174  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.493 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.068175 -4.1800 0 4.1800 0  2231 2809 2868 2924 2590 2813 2610 2136  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.508 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.061102 -4.1800 0 4.1800 0  2213 2789 2842 2898 2574 2787 2601 2119  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.523 2 1 0 0 -0.0052 -0.0105 -0.0008 -0.0000 0.005235 0.054088 -4.1800 0 4.1800 0  2172 2736 2819 2857 2538 2776 2549 2102  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.538 2 1 0 0 -0.0052 -0.0157 -0.0010 -0.0000 0.007852 0.047202 -4.1800 0 4.1800 0  2164 2720 2804 2837 2514 2737 2522 2065  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.553 2 1 0 0 -0.0052 -0.0209 -0.0012 -0.0000 0.010469 0.040515 -4.1800 0 4.1800 0  2146 2665 2764 2832 2508 2717 2484 2045  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.568 2 1 0 0 -0.0052 -0.0209 -0.0016 -0.0000 0.010469 0.034279 -4.1800 0 4.1800 0  2116 2677 2746 2799 2470 2694 2490 2026  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.583 2 1 0 0 -0.0052 -0.0157 -0.0018 -0.0000 0.007852 0.028787 -4.1800 0 4.1800 0  2108 2664 2723 2777 2451 2671 2456 2006  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.598 2 1 0 0 -0.0052 -0.0105 -0.0020 -0.0000 0.005235 0.023889 -4.1800 0 4.1800 0  2104 2652 2713 2764 2437 2654 2444 1993  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.613 2 1 0 0 -0.0052 -0.0105 -0.0020 -0.0000 0.005235 0.019373 -4.1800 0 4.1800 0  2080 2634 2707 2740 2419 2636 2416 1986  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.628 2 1 0 0 -0.0052 -0.0157 -0.0022 -0.0000 0.007852 0.015143 -4.1800 0 4.1800 0  2064 2605 2685 2723 2413 2617 2395 1972  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.643 2 1 0 0 -0.0052 -0.0209 -0.0024 -0.0000 0.010469 0.011166 -4.1800 0 4.1800 0  2065 2605 2674 2713 2399 2607 2393 1954  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.658 2 1 0 0 -0.0052 -0.0209 -0.0028 -0.0000 0.010469 0.008217 -4.1800 0 4.1800 0  2065 2546 2663 2698 2359 2591 2391 1964  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.673 2 1 0 0 -0.0052 -0.0105 -0.0032 -0.0000 0.005235 0.005813 -4.1800 0 4.1800 0  2053 2593 2649 2690 2387 2576 2368 1933  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.688 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 0.002270 -4.1800 0 4.1800 0  2045 2573 2635 2689 2327 2547 2378 1937  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.703 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.001324 -4.1800 0 4.1800 0  2026 2563 2634 2664 2363 2546 2343 1917  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.718 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.005433 -4.1800 0 4.1800 0  2032 2552 2628 2686 2349 2545 2341 1895  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.733 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.009565 -4.1800 0 4.1800 0  2000 2540 2599 2633 2332 2518 2316 1888  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.748 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.013643 -4.1800 0 4.1800 0  1990 2510 2590 2629 2308 2504 2298 1881  1 1 1 0 1 0 20 0 0 0.047 0.047 11.85 
+1.763 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.017903 -4.1800 0 4.1800 0  1972 2480 2556 2606 2283 2489 2280 1854  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.778 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.022584 -4.1800 0 4.1800 0  1960 2466 2557 2603 2278 2461 2267 1850  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.793 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.027726 -4.1800 0 4.1800 0  1936 2440 2523 2578 2247 2425 2237 1830  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.808 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.033308 -4.1800 0 4.1800 0  1929 2419 2496 2542 2228 2408 2208 1808  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.823 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.039099 -4.1800 0 4.1800 0  1901 2378 2472 2524 2210 2403 2199 1786  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.838 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.045155 -4.1800 0 4.1800 0  1872 2359 2452 2491 2194 2381 2173 1775  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.853 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.051145 -4.1800 0 4.1800 0  1869 2348 2420 2479 2163 2355 2159 1744  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.868 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.056617 -4.1800 0 4.1800 0  1842 2328 2394 2456 2146 2334 2138 1726  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.883 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.061760 -4.1800 0 4.1800 0  1828 2311 2383 2433 2124 2320 2107 1722  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.898 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.066840 -4.1800 0 4.1800 0  1803 2288 2366 2415 2127 2284 2086 1699  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.913 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.072129 -4.1800 0 4.1800 0  1789 2257 2331 2400 2090 2264 2067 1675  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.928 2 1 0 0 -0.0052 -0.0105 -0.0037 -0.0000 0.005235 -0.077993 -4.1800 0 4.1800 0  1771 2220 2325 2340 2065 2257 2034 1660  1 1 1 0 1 0 20 0 0 0.047 0.047 11.83 
+1.943 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.084327 -4.1800 0 4.1800 0  1754 2227 2308 2363 2051 2246 2032 1651  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.958 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.090887 -4.1800 0 4.1800 0  1724 2172 2262 2339 2016 2201 1998 1616  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.973 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.097522 -4.1800 0 4.1800 0  1701 2156 2227 2295 2002 2169 1983 1586  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+1.988 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.104097 -4.1800 0 4.1800 0  1676 2127 2212 2276 1974 2148 1955 1577  1 1 1 0 1 0 20 0 0 0.047 0.047 11.84 
+2.003 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.110461 -4.1800 0 4.1800 0  1665 2101 2185 2246 1953 2141 1927 1567  1 1 1 0 1 0 14 0 0 0.047 0.047 11.84 
+2.018 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.116672 -4.1800 0 4.1800 0  1639 2072 2166 2242 1944 2092 1920 1543  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.033 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.122721 -4.1800 0 4.1800 0  1623 2056 2140 2205 1942 2089 1892 1528  1 1 1 0 0 0 0 0 0 0.047 0.047 11.84 
+2.048 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.128802 -4.1800 0 4.1800 0  1593 2030 2118 2182 1896 2061 1871 1509  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.063 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.135042 -4.1800 0 4.1800 0  1587 2002 2091 2156 1860 2035 1849 1499  1 1 1 0 0 0 0 0 0 0.047 0.047 11.84 
+2.078 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 0.002617 -0.141455 -4.1800 0 4.1800 0  1555 1974 2077 2149 1878 2009 1832 1465  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.093 2 1 0 0 -0.0000 -0.0052 -0.0037 -0.0000 -0.000000 -0.148051 -4.1800 0 4.1800 0  1536 1959 2047 2118 1843 1999 1809 1424  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.108 2 1 0 0 -0.0000 -0.0052 -0.0037 -0.0000 -0.000000 -0.155010 -4.1800 0 4.1800 0  1506 1918 1985 2086 1791 1958 1779 1416  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.123 2 1 0 0 -0.0000 -0.0052 -0.0037 -0.0000 -0.000000 -0.161886 -4.1800 0 4.1800 0  1491 1886 1988 2046 1785 1917 1746 1425  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.138 2 1 0 0 -0.0000 -0.0052 -0.0037 -0.0000 -0.000000 -0.168915 -4.1800 0 4.1800 0  1467 1862 1967 2030 1757 1912 1725 1399  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.153 2 1 0 0 -0.0000 -0.0052 -0.0037 -0.0000 -0.000000 -0.175706 -4.1800 0 4.1800 0  1446 1834 1936 1997 1733 1843 1700 1373  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.168 2 1 0 0 -0.0000 -0.0052 -0.0037 -0.0000 -0.000000 -0.182349 -4.1800 0 4.1800 0  1437 1807 1903 1974 1713 1867 1670 1344  1 1 1 0 0 0 0 0 0 0.047 0.047 11.84 
+2.183 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 -0.002617 -0.189060 -4.1800 0 4.1800 0  1422 1775 1853 1953 1697 1836 1657 1330  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.198 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 -0.002617 -0.195749 -4.1800 0 4.1800 0  1371 1742 1864 1903 1663 1810 1618 1310  1 1 1 0 0 0 0 0 0 0.047 0.047 11.84 
+2.213 2 1 0 0 -0.0052 -0.0052 -0.0034 -0.0000 -0.002617 -0.202184 -4.1800 0 4.1800 0  1384 1719 1831 1894 1634 1806 1595 1299  1 1 1 0 0 0 0 0 0 0.047 0.047 11.80 
+2.228 2 1 0 0 -0.0105 -0.0052 -0.0037 -0.0000 -0.005235 -0.208533 -4.1800 0 4.1800 0  1338 1710 1788 1878 1617 1751 1585 1263  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.243 2 1 0 0 -0.0105 -0.0052 -0.0037 -0.0000 -0.005235 -0.214671 -4.1800 0 4.1800 0  1304 1702 1772 1836 1604 1733 1562 1251  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.258 2 1 0 0 -0.0052 -0.0052 -0.0039 -0.0000 -0.002617 -0.220866 -4.1800 0 4.1800 0  1316 1646 1747 1775 1580 1707 1541 1230  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.273 2 1 0 0 -0.0052 -0.0052 -0.0039 -0.0000 -0.002617 -0.227217 -4.1800 0 4.1800 0  1293 1616 1736 1843 1556 1683 1526 1206  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.288 2 1 0 0 -0.0105 -0.0052 -0.0041 -0.0000 -0.005235 -0.233243 -4.1800 0 4.1800 0  1238 1637 1706 1816 1551 1683 1499 1216  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.303 2 1 0 0 -0.0105 -0.0052 -0.0041 -0.0000 -0.005235 -0.238922 -4.1800 0 4.1800 0  1261 1568 1684 1778 1526 1649 1467 1186  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.318 2 1 0 0 -0.0105 -0.0052 -0.0041 -0.0000 -0.005235 -0.244180 -4.1800 0 4.1800 0  1243 1594 1675 1744 1501 1632 1426 1160  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.333 2 1 0 0 -0.0105 -0.0052 -0.0041 -0.0000 -0.005235 -0.249202 -4.1800 0 4.1800 0  1219 1575 1631 1730 1477 1595 1463 1112  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.348 2 1 0 0 -0.0157 -0.0052 -0.0043 -0.0000 -0.007852 -0.254443 -4.1800 0 4.1800 0  1220 1527 1622 1697 1484 1597 1454 1144  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.363 2 1 0 0 -0.0157 -0.0052 -0.0043 -0.0000 -0.007852 -0.259960 -4.1800 0 4.1800 0  1203 1508 1606 1682 1451 1571 1424 1120  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.378 2 1 0 0 -0.0157 -0.0052 -0.0043 -0.0000 -0.007852 -0.265610 -4.1800 0 4.1800 0  1191 1482 1570 1664 1413 1561 1404 1158  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.393 2 1 0 0 -0.0157 -0.0052 -0.0043 -0.0000 -0.007852 -0.271190 -4.1800 0 4.1800 0  1161 1479 1532 1645 1463 1520 1382 1095  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.408 2 1 0 0 -0.0157 -0.0052 -0.0043 -0.0000 -0.007852 -0.276607 -4.1800 0 4.1800 0  1154 1428 1535 1625 1408 1515 1360 1056  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.423 2 1 0 0 -0.0157 -0.0052 -0.0043 -0.0000 -0.007852 -0.281830 -4.1800 0 4.1800 0  1129 1439 1519 1606 1395 1485 1355 1067  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.438 2 1 0 0 -0.0209 -0.0052 -0.0045 -0.0000 -0.010469 -0.287095 -4.1800 0 4.1800 0  1132 1420 1528 1583 1379 1465 1327 1047  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.453 2 1 0 0 -0.0209 -0.0052 -0.0045 -0.0000 -0.010469 -0.292387 -4.1800 0 4.1800 0  1102 1397 1488 1574 1350 1461 1320 1045  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.468 2 1 0 0 -0.0209 -0.0052 -0.0045 -0.0000 -0.010469 -0.297844 -4.1800 0 4.1800 0  1099 1382 1467 1535 1339 1446 1286 1061  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.483 2 1 0 0 -0.0157 -0.0052 -0.0047 -0.0000 -0.007852 -0.302857 -4.1800 0 4.1800 0  1104 1357 1457 1535 1327 1408 1277 1029  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.498 2 1 0 0 -0.0209 -0.0052 -0.0049 -0.0000 -0.010469 -0.307274 -4.1800 0 4.1800 0  1051 1359 1454 1523 1312 1391 1274 1010  1 1 1 0 0 0 0 0 0 0.047 0.047 11.80 
+2.513 2 1 0 0 -0.0157 -0.0052 -0.0051 -0.0000 -0.007852 -0.311011 -4.1800 0 4.1800 0  1087 1330 1444 1486 1306 1404 1251 1009  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.528 2 1 0 0 -0.0105 -0.0052 -0.0053 -0.0000 -0.005235 -0.314471 -4.1800 0 4.1800 0  1092 1318 1389 1498 1294 1411 1252 986  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.543 2 1 0 0 -0.0105 -0.0052 -0.0057 -0.0000 -0.005235 -0.317554 -4.1800 0 4.1800 0  1048 1298 1396 1467 1278 1375 1203 974  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+2.558 2 1 0 0 -0.0105 -0.0052 -0.0057 -0.0000 -0.005235 -0.320320 -4.1800 0 4.1800 0  1017 1307 1391 1478 1270 1373 1228 979  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.573 2 1 0 0 -0.0105 -0.0052 -0.0061 -0.0000 -0.005235 -0.323129 -4.1800 0 4.1800 0  1012 1290 1382 1477 1257 1380 1172 969  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.588 2 1 0 0 -0.0052 -0.0052 -0.0063 -0.0000 -0.002617 -0.326209 -4.1800 0 4.1800 0  1030 1280 1357 1449 1257 1350 1206 955  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.603 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.330154 -4.1800 0 4.1800 0  1016 1265 1358 1457 1241 1338 1222 960  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.618 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.334769 -4.1800 0 4.1800 0  1001 1283 1338 1425 1230 1318 1179 944  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.633 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.339778 -4.1800 0 4.1800 0  991 1202 1320 1405 1213 1302 1144 919  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.648 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.344849 -4.1800 0 4.1800 0  989 1233 1312 1400 1198 1284 1152 945  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.663 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.349734 -4.1800 0 4.1800 0  957 1214 1286 1375 1190 1269 1141 891  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.678 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.354472 -4.1800 0 4.1800 0  955 1208 1272 1357 1182 1254 1099 871  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.693 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.359195 -4.1800 0 4.1800 0  942 1166 1258 1326 1151 1250 1070 888  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.708 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.364170 -4.1800 0 4.1800 0  935 1176 1247 1317 1134 1226 1077 873  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.723 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.369480 -4.1800 0 4.1800 0  918 1148 1231 1303 1137 1214 1069 865  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.738 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.375286 -4.1800 0 4.1800 0  907 1075 1194 1284 1073 1182 1054 818  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.753 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.381490 -4.1800 0 4.1800 0  889 1073 1166 1264 1094 1159 1034 807  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.768 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.387751 -4.1800 0 4.1800 0  870 1112 1170 1235 1072 1155 1005 816  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.783 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.393753 -4.1800 0 4.1800 0  852 1063 1093 1219 1052 1052 1010 793  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.798 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.399593 -4.1800 0 4.1800 0  833 1048 1098 1205 1041 1082 982 788  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.813 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.405521 -4.1800 0 4.1800 0  859 1027 1110 1177 1026 1097 975 765  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.828 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.411759 -4.1800 0 4.1800 0  800 1014 1084 1158 1001 1037 956 750  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+2.843 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.418103 -4.1800 0 4.1800 0  815 1007 1089 1134 990 1084 924 747  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.858 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.424425 -4.1800 0 4.1800 0  773 977 1048 1122 967 1051 922 730  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.873 2 1 0 0 -0.0000 -0.0052 -0.0065 -0.0000 -0.000000 -0.430724 -4.1800 0 4.1800 0  763 962 991 1090 963 1026 903 728  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.888 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.436744 -4.1800 0 4.1800 0  736 929 1016 1070 938 1011 884 713  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.903 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.442512 -4.1800 0 4.1800 0  750 926 969 1032 924 982 958 692  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.918 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.447972 -4.1800 0 4.1800 0  743 912 979 1062 922 968 857 694  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.933 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.453198 -4.1800 0 4.1800 0  741 899 975 1063 901 970 889 684  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.948 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.458301 -4.1800 0 4.1800 0  709 885 947 1054 915 991 839 663  1 1 1 0 0 0 0 0 0 0.047 0.047 11.78 
+2.963 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.463311 -4.1800 0 4.1800 0  699 865 947 976 869 935 824 668  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.978 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.468052 -4.1800 0 4.1800 0  665 811 926 975 829 920 790 650  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+2.993 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.472804 -4.1800 0 4.1800 0  676 833 925 983 831 904 779 646  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+3.008 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.477737 -4.1800 0 4.1800 0  643 826 902 951 820 905 777 631  1 1 1 0 0 0 0 0 0 0.047 0.047 11.81 
+3.023 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.482817 -4.1800 0 4.1800 0  654 801 888 918 814 887 755 624  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+3.038 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.488149 -4.1800 0 4.1800 0  656 783 876 934 803 869 746 614  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+3.053 2 1 0 0 -0.0052 -0.0052 -0.0067 -0.0000 -0.002617 -0.493724 -4.1800 0 4.1800 0  636 774 849 928 795 857 750 602  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+3.068 2 1 0 0 -0.0105 -0.0052 -0.0069 -0.0000 -0.005235 -0.499365 -4.1800 0 4.1800 0  626 779 841 898 763 847 724 604  1 1 1 0 0 0 0 0 0 0.047 0.047 11.82 
+3.083 2 1 0 0 -0.0105 -0.0052 -0.0069 -0.0000 -0.005235 -0.504988 -4.1800 0 4.1800 0  622 781 807 887 788 822 720 551  1 1 1 0 0 0 0 0 0 0.047 0.047 11.83 
+3.098 2 1 0 0 -0.0105 -0.0052 -0.0069 -0.0000 -0.005235 -0.510260 -4.1800 0 4.1800 0  603 763 814 882 749 811 719 575  1 1 1 0 0 3 0 0 0 0.047 0.047 11.82 
+3.113 2 1 0 0 -0.0105 -0.0052 -0.0069 -0.0000 -0.005235 -0.515165 -4.1800 0 4.1800 0  599 762 787 858 727 791 711 566  1 1 1 0 0 10 0 0 0 0.047 0.047 11.82 
+3.128 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.519884 -4.1800 0 4.1800 0  598 734 768 841 726 766 691 565  1 1 1 1 0 20 0 0 0 0.047 0.047 11.81 
+3.143 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.524513 -4.1800 0 4.1800 0  583 714 779 832 723 784 680 549  1 1 1 1 0 20 0 0 0 0.047 0.047 11.81 
+3.158 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.529181 -4.1800 0 4.1800 0  566 705 792 831 693 734 675 513  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.173 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.533999 -4.1800 0 4.1800 0  580 698 771 799 684 740 658 522  1 1 1 1 0 20 0 0 0 0.047 0.047 11.81 
+3.188 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.538783 -4.1800 0 4.1800 0  546 667 739 782 680 722 642 524  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.203 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.543297 -4.1800 0 4.1800 0  542 671 709 804 684 741 638 502  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.218 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.547326 -4.1800 0 4.1800 0  561 663 732 782 674 711 635 508  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.233 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.550770 -4.1800 0 4.1800 0  567 650 705 767 671 713 624 506  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.248 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.553613 -4.1800 0 4.1800 0  547 649 711 760 661 679 622 497  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.263 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.556184 -4.1800 0 4.1800 0  477 654 684 745 660 711 611 487  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.278 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.558753 -4.1800 0 4.1800 0  516 631 676 743 649 698 597 494  1 1 1 1 0 20 0 0 0 0.047 0.047 11.81 
+3.293 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.561391 -4.1800 0 4.1800 0  502 640 675 739 644 701 626 481  1 1 1 1 0 20 0 0 0 0.047 0.047 11.81 
+3.308 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.564108 -4.1800 0 4.1800 0  482 621 674 726 633 683 599 472  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.323 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.567026 -4.1800 0 4.1800 0  491 639 666 725 634 657 590 470  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.338 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.570108 -4.1800 0 4.1800 0  426 610 656 715 619 656 584 472  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.353 2 1 0 0 -0.0157 -0.0052 -0.0071 -0.0000 -0.007852 -0.573085 -4.1800 0 4.1800 0  496 616 658 699 615 650 601 460  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.368 2 1 0 0 -0.0105 -0.0052 -0.0073 -0.0000 -0.005235 -0.575907 -4.1800 0 4.1800 0  492 626 642 710 610 649 570 441  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.383 2 1 0 0 -0.0105 -0.0052 -0.0073 -0.0000 -0.005235 -0.578695 -4.1800 0 4.1800 0  484 572 645 708 616 662 541 444  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.398 2 1 0 0 -0.0105 -0.0052 -0.0073 -0.0000 -0.005235 -0.581791 -4.1800 0 4.1800 0  471 595 616 697 600 630 556 451  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.413 2 1 0 0 -0.0105 -0.0052 -0.0073 -0.0000 -0.005235 -0.585336 -4.1800 0 4.1800 0  470 522 620 665 567 629 546 437  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.428 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.588980 -4.1800 0 4.1800 0  466 576 619 667 575 615 551 439  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.443 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.592563 -4.1800 0 4.1800 0  464 554 589 653 591 602 543 454  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.458 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.595883 -4.1800 0 4.1800 0  458 553 605 656 578 576 547 412  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.473 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.598863 -4.1800 0 4.1800 0  442 552 586 646 607 592 527 440  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.488 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.601518 -4.1800 0 4.1800 0  443 591 588 625 559 600 514 398  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.503 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.604108 -4.1800 0 4.1800 0  418 541 559 619 539 591 516 398  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.518 2 1 0 0 -0.0052 -0.0052 -0.0075 -0.0000 -0.002617 -0.605598 -4.1800 0 4.1800 0  492 533 573 625 560 577 518 438  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.533 2 1 0 0 -0.0000 -0.0052 -0.0077 -0.0000 -0.000000 -0.605351 -4.1800 0 4.1800 0  441 542 571 629 539 566 511 415  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+3.548 2 1 0 0 -0.0000 -0.0052 -0.0077 -0.0000 -0.000000 -0.605023 -4.1800 0 4.1800 0  436 527 592 623 549 580 509 402  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.563 2 1 0 0 -0.0000 -0.0052 -0.0077 -0.0000 -0.000000 -0.605119 -4.1800 0 4.1800 0  407 540 622 635 562 586 538 417  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.578 2 1 0 0 -0.0000 -0.0052 -0.0077 -0.0000 -0.000000 -0.605092 -4.1800 0 4.1800 0  444 538 593 621 554 607 534 421  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.593 2 1 0 0 -0.0000 -0.0052 -0.0077 -0.0000 -0.000000 -0.604874 -4.1800 0 4.1800 0  438 534 618 608 550 607 512 422  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.608 2 1 0 0 -0.0000 -0.0052 -0.0077 -0.0000 -0.000000 -0.604552 -4.1800 0 4.1800 0  467 541 579 634 549 588 494 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.623 2 1 0 0 -0.0000 -0.0052 -0.0079 -0.0000 0.002617 -0.604201 -4.1800 0 4.1800 0  449 523 578 616 549 553 512 408  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.638 2 1 0 0 -0.0000 -0.0052 -0.0079 -0.0000 0.002617 -0.603876 -4.1800 0 4.1800 0  484 545 578 605 552 580 502 407  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+3.653 2 1 0 0 -0.0000 -0.0105 -0.0081 -0.0000 0.005235 -0.603534 -4.1800 0 4.1800 0  422 538 566 631 548 580 495 410  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+3.668 2 1 0 0 -0.0000 -0.0105 -0.0081 -0.0000 0.005235 -0.603266 -4.1800 0 4.1800 0  445 540 587 649 546 580 525 409  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.683 2 1 0 0 -0.0000 -0.0157 -0.0083 -0.0000 0.007852 -0.603178 -4.1800 0 4.1800 0  436 520 575 637 581 585 524 415  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.698 2 1 0 0 -0.0000 -0.0209 -0.0085 -0.0000 0.010469 -0.603273 -4.1800 0 4.1800 0  479 551 571 628 536 583 526 404  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.713 2 1 0 0 -0.0000 -0.0209 -0.0085 -0.0000 0.010469 -0.603405 -4.1800 0 4.1800 0  471 539 574 623 546 582 524 418  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.728 2 1 0 0 -0.0000 -0.0209 -0.0085 -0.0000 0.010469 -0.603799 -4.1800 0 4.1800 0  440 547 570 617 542 580 501 427  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.743 2 1 0 0 -0.0000 -0.0209 -0.0089 -0.0000 0.010469 -0.603813 -4.1800 0 4.1800 0  441 547 586 613 548 589 491 359  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.758 2 1 0 0 -0.0000 -0.0209 -0.0089 -0.0000 0.010469 -0.604144 -4.1800 0 4.1800 0  449 540 580 619 537 567 543 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.773 2 1 0 0 -0.0000 -0.0209 -0.0089 -0.0000 0.010469 -0.604914 -4.1800 0 4.1800 0  419 550 567 619 540 571 511 383  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.788 2 1 0 0 -0.0000 -0.0262 -0.0091 -0.0000 0.013086 -0.605183 -4.1800 0 4.1800 0  446 517 628 618 577 572 534 388  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+3.803 2 1 0 0 -0.0000 -0.0209 -0.0093 -0.0000 0.010469 -0.605277 -4.1800 0 4.1800 0  435 533 596 616 526 565 530 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.818 2 1 0 0 -0.0000 -0.0209 -0.0093 -0.0000 0.010469 -0.605531 -4.1800 0 4.1800 0  436 512 570 608 537 558 507 425  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.833 2 1 0 0 -0.0000 -0.0209 -0.0093 -0.0000 0.010469 -0.605861 -4.1800 0 4.1800 0  430 538 572 611 517 545 504 404  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.848 2 1 0 0 -0.0000 -0.0209 -0.0093 -0.0000 0.010469 -0.605999 -4.1800 0 4.1800 0  441 513 555 620 536 564 501 395  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.863 2 1 0 0 -0.0000 -0.0209 -0.0093 -0.0000 0.010469 -0.606171 -4.1800 0 4.1800 0  427 519 516 613 535 573 516 397  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.878 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.606308 -4.1800 0 4.1800 0  406 531 598 603 560 563 506 424  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.893 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.606413 -4.1800 0 4.1800 0  468 529 547 609 548 576 514 373  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.908 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.606373 -4.1800 0 4.1800 0  463 531 554 624 553 567 506 430  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.923 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.606296 -4.1800 0 4.1800 0  450 537 569 612 541 567 496 391  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.938 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.606158 -4.1800 0 4.1800 0  443 525 565 644 544 578 515 408  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.953 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.606075 -4.1800 0 4.1800 0  396 537 565 615 534 575 508 385  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+3.968 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605955 -4.1800 0 4.1800 0  413 525 588 651 535 571 516 392  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+3.983 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605849 -4.1800 0 4.1800 0  427 537 577 602 552 575 516 413  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+3.998 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605730 -4.1800 0 4.1800 0  422 538 577 606 525 581 504 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.013 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605623 -4.1800 0 4.1800 0  461 535 565 598 539 588 510 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.028 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605550 -4.1800 0 4.1800 0  449 523 556 636 563 557 503 403  1 1 1 1 0 20 0 0 0 0.047 0.047 11.76 
+4.043 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605392 -4.1800 0 4.1800 0  390 520 551 624 554 566 500 453  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.058 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605245 -4.1800 0 4.1800 0  385 528 564 633 537 563 501 395  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.073 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605142 -4.1800 0 4.1800 0  505 593 561 639 539 558 501 394  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.088 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.605007 -4.1800 0 4.1800 0  395 510 566 624 520 574 498 374  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.103 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.604878 -4.1800 0 4.1800 0  425 521 574 625 530 577 521 428  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.118 2 1 0 0 -0.0000 -0.0262 -0.0095 -0.0000 0.013086 -0.604756 -4.1800 0 4.1800 0  423 550 558 627 551 568 493 445  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.133 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604659 -4.1800 0 4.1800 0  428 544 573 615 516 569 488 356  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.148 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604560 -4.1800 0 4.1800 0  436 522 534 622 533 567 524 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.163 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604499 -4.1800 0 4.1800 0  441 516 548 624 559 536 502 372  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.178 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604365 -4.1800 0 4.1800 0  437 555 562 619 514 572 498 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.193 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604255 -4.1800 0 4.1800 0  431 513 561 612 532 564 501 412  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.208 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604157 -4.1800 0 4.1800 0  432 550 554 613 514 562 507 418  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.223 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.604046 -4.1800 0 4.1800 0  479 525 538 616 564 590 517 428  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.238 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603917 -4.1800 0 4.1800 0  431 508 551 609 543 584 508 402  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.253 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603811 -4.1800 0 4.1800 0  409 524 572 613 532 593 501 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.268 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603664 -4.1800 0 4.1800 0  458 511 538 610 528 588 498 420  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.283 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603580 -4.1800 0 4.1800 0  429 515 559 607 527 601 512 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.298 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603507 -4.1800 0 4.1800 0  441 526 573 624 535 577 507 395  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.313 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603411 -4.1800 0 4.1800 0  419 523 577 624 529 546 497 398  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.328 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603307 -4.1800 0 4.1800 0  427 526 548 639 531 566 491 397  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.343 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603204 -4.1800 0 4.1800 0  434 529 555 638 536 544 543 396  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.358 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603114 -4.1800 0 4.1800 0  422 540 557 612 531 576 500 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.373 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.603032 -4.1800 0 4.1800 0  450 524 568 600 536 569 508 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.388 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602898 -4.1800 0 4.1800 0  414 496 569 626 503 584 494 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.403 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602793 -4.1800 0 4.1800 0  440 535 546 617 528 563 508 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.418 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602682 -4.1800 0 4.1800 0  424 512 551 603 544 559 510 397  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.433 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602634 -4.1800 0 4.1800 0  432 537 572 613 549 582 509 414  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.448 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602582 -4.1800 0 4.1800 0  450 534 565 633 499 570 553 353  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.463 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602536 -4.1800 0 4.1800 0  440 511 553 610 553 563 505 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.478 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602469 -4.1800 0 4.1800 0  405 493 543 610 513 563 492 382  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.493 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602353 -4.1800 0 4.1800 0  433 516 561 607 530 555 507 431  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.508 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602272 -4.1800 0 4.1800 0  436 508 559 615 518 565 499 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.523 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602190 -4.1800 0 4.1800 0  428 536 541 612 533 580 517 394  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.538 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602070 -4.1800 0 4.1800 0  429 499 560 605 553 569 504 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.553 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.602021 -4.1800 0 4.1800 0  434 512 570 609 539 595 506 421  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.568 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601951 -4.1800 0 4.1800 0  425 546 565 601 539 555 505 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.583 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601862 -4.1800 0 4.1800 0  397 500 557 604 526 589 492 427  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.598 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601762 -4.1800 0 4.1800 0  452 525 549 608 518 588 496 402  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.613 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601691 -4.1800 0 4.1800 0  434 524 555 609 539 552 502 394  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.628 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601621 -4.1800 0 4.1800 0  425 521 563 599 524 595 494 416  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.643 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601587 -4.1800 0 4.1800 0  419 540 517 627 531 562 500 404  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.658 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601511 -4.1800 0 4.1800 0  441 527 575 598 541 546 511 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.673 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601447 -4.1800 0 4.1800 0  429 524 571 596 533 589 511 403  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.688 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601409 -4.1800 0 4.1800 0  413 488 554 616 531 586 516 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.75 
+4.703 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601332 -4.1800 0 4.1800 0  444 551 556 592 516 571 522 386  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.718 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601231 -4.1800 0 4.1800 0  428 533 561 613 547 561 504 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.733 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601136 -4.1800 0 4.1800 0  432 504 568 608 530 565 499 407  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.748 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.601075 -4.1800 0 4.1800 0  402 507 562 582 545 555 503 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.763 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600981 -4.1800 0 4.1800 0  442 515 563 639 501 562 529 407  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+4.778 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600905 -4.1800 0 4.1800 0  461 510 568 602 523 578 491 383  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.793 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600865 -4.1800 0 4.1800 0  416 511 551 621 538 580 515 415  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.808 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600807 -4.1800 0 4.1800 0  455 522 562 583 534 566 534 387  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.823 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600738 -4.1800 0 4.1800 0  415 546 565 587 551 564 490 375  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.838 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600694 -4.1800 0 4.1800 0  424 529 506 630 528 566 539 424  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.853 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600615 -4.1800 0 4.1800 0  421 525 560 617 524 559 513 378  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.868 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600555 -4.1800 0 4.1800 0  425 528 522 611 537 587 491 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+4.883 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600489 -4.1800 0 4.1800 0  443 525 610 609 530 555 508 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.898 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600421 -4.1800 0 4.1800 0  434 511 595 606 527 506 507 423  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.913 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600339 -4.1800 0 4.1800 0  425 548 541 596 523 576 497 395  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.928 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600301 -4.1800 0 4.1800 0  470 567 556 609 547 567 494 390  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.943 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600235 -4.1800 0 4.1800 0  414 524 557 614 537 590 504 396  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.958 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600164 -4.1800 0 4.1800 0  474 515 569 611 536 555 511 394  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+4.973 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600114 -4.1800 0 4.1800 0  487 512 568 598 526 562 497 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+4.988 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600100 -4.1800 0 4.1800 0  396 520 564 615 535 557 504 378  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.003 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600078 -4.1800 0 4.1800 0  440 524 612 606 532 540 502 398  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.018 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.600015 -4.1800 0 4.1800 0  392 541 576 636 547 568 503 407  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.033 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599954 -4.1800 0 4.1800 0  404 517 556 632 531 569 492 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.048 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599907 -4.1800 0 4.1800 0  413 526 562 594 533 572 517 385  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.063 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599856 -4.1800 0 4.1800 0  469 539 553 631 528 567 526 412  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.078 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599797 -4.1800 0 4.1800 0  447 526 544 571 533 574 475 408  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.093 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599756 -4.1800 0 4.1800 0  460 521 561 607 556 572 494 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.108 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599717 -4.1800 0 4.1800 0  426 537 557 630 530 567 509 392  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.123 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599672 -4.1800 0 4.1800 0  429 538 564 555 574 554 512 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.138 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599616 -4.1800 0 4.1800 0  420 523 557 616 513 546 486 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.153 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599528 -4.1800 0 4.1800 0  411 513 552 628 531 564 498 414  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.168 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599469 -4.1800 0 4.1800 0  456 508 561 588 539 570 536 392  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.183 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599422 -4.1800 0 4.1800 0  427 557 545 617 518 558 513 427  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.198 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599375 -4.1800 0 4.1800 0  427 503 535 603 511 568 503 414  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.213 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599326 -4.1800 0 4.1800 0  430 545 563 602 526 557 494 392  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.228 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599276 -4.1800 0 4.1800 0  431 537 546 611 522 576 499 435  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.243 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599228 -4.1800 0 4.1800 0  437 495 559 609 539 555 497 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.258 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599208 -4.1800 0 4.1800 0  422 501 540 605 542 565 499 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.273 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599173 -4.1800 0 4.1800 0  429 534 567 595 545 509 506 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.288 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599172 -4.1800 0 4.1800 0  452 525 580 609 537 569 499 384  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.303 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599117 -4.1800 0 4.1800 0  418 483 629 646 561 603 520 438  1 1 1 1 0 20 0 0 0 0.047 0.047 11.75 
+5.318 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599066 -4.1800 0 4.1800 0  382 533 564 594 561 584 496 441  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.333 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.599030 -4.1800 0 4.1800 0  431 518 555 598 535 567 497 383  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.348 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598991 -4.1800 0 4.1800 0  390 519 561 621 531 566 475 414  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.363 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598924 -4.1800 0 4.1800 0  389 525 568 627 528 544 512 392  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.378 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598878 -4.1800 0 4.1800 0  454 520 554 612 524 583 517 389  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.393 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598797 -4.1800 0 4.1800 0  435 522 552 606 522 551 494 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.408 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598742 -4.1800 0 4.1800 0  417 535 574 622 529 546 489 396  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.423 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598680 -4.1800 0 4.1800 0  456 525 569 606 519 560 491 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.438 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598674 -4.1800 0 4.1800 0  406 550 561 604 532 581 510 403  1 1 1 1 0 20 0 0 0 0.047 0.047 11.75 
+5.453 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598648 -4.1800 0 4.1800 0  387 507 560 615 548 559 533 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.468 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598625 -4.1800 0 4.1800 0  422 522 552 637 545 564 494 375  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.483 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598623 -4.1800 0 4.1800 0  489 549 565 602 541 558 495 378  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.498 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598583 -4.1800 0 4.1800 0  421 503 551 609 478 564 516 444  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+5.513 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598516 -4.1800 0 4.1800 0  464 536 579 591 559 582 534 414  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.528 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598533 -4.1800 0 4.1800 0  421 549 556 619 518 566 497 376  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+5.543 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598510 -4.1800 0 4.1800 0  415 523 566 584 533 577 483 435  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.558 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598459 -4.1800 0 4.1800 0  426 532 580 605 524 572 494 404  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.573 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598396 -4.1800 0 4.1800 0  428 524 529 621 532 590 507 380  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.588 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598311 -4.1800 0 4.1800 0  430 519 572 614 538 606 503 402  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.603 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598301 -4.1800 0 4.1800 0  427 506 607 609 539 573 505 403  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.618 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598265 -4.1800 0 4.1800 0  429 553 573 606 526 559 502 409  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.633 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598221 -4.1800 0 4.1800 0  447 545 555 610 558 560 510 358  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.648 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598128 -4.1800 0 4.1800 0  419 535 555 612 523 567 506 396  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.663 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598110 -4.1800 0 4.1800 0  395 524 549 607 536 544 506 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.678 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598121 -4.1800 0 4.1800 0  419 525 531 596 523 544 499 411  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.693 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598097 -4.1800 0 4.1800 0  403 530 549 616 520 555 505 386  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.708 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598064 -4.1800 0 4.1800 0  425 531 576 604 534 537 511 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.723 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598043 -4.1800 0 4.1800 0  403 534 577 633 532 575 491 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.738 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598019 -4.1800 0 4.1800 0  409 521 541 602 530 573 558 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.753 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.598004 -4.1800 0 4.1800 0  400 525 585 611 541 564 477 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.76 
+5.768 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597965 -4.1800 0 4.1800 0  454 528 557 612 532 585 494 405  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.783 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597910 -4.1800 0 4.1800 0  448 542 569 614 552 575 536 401  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+5.798 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597900 -4.1800 0 4.1800 0  431 548 557 620 544 567 506 397  1 1 1 1 0 20 0 0 0 0.047 0.047 11.76 
+5.813 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597871 -4.1800 0 4.1800 0  420 567 570 615 563 565 501 410  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.828 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597821 -4.1800 0 4.1800 0  468 540 574 569 544 570 497 431  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.843 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597757 -4.1800 0 4.1800 0  436 541 566 609 502 570 534 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.858 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597763 -4.1800 0 4.1800 0  430 510 569 607 505 569 529 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.873 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597764 -4.1800 0 4.1800 0  430 517 559 615 549 566 485 394  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.888 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597771 -4.1800 0 4.1800 0  437 523 568 624 532 571 484 371  1 1 1 1 0 20 0 0 0 0.047 0.047 11.80 
+5.903 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597770 -4.1800 0 4.1800 0  433 509 555 606 549 565 508 437  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.918 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597714 -4.1800 0 4.1800 0  410 553 561 610 527 561 499 385  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.933 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597717 -4.1800 0 4.1800 0  429 573 582 610 535 587 484 381  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.948 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597688 -4.1800 0 4.1800 0  431 514 585 614 548 553 509 396  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.963 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597647 -4.1800 0 4.1800 0  432 535 542 609 544 578 507 392  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+5.978 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597630 -4.1800 0 4.1800 0  425 518 554 616 549 560 505 393  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+5.993 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597560 -4.1800 0 4.1800 0  436 508 550 603 527 600 496 402  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+6.008 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597497 -4.1800 0 4.1800 0  450 505 585 610 530 559 504 415  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+6.023 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597450 -4.1800 0 4.1800 0  425 526 549 601 541 565 502 391  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+6.038 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597426 -4.1800 0 4.1800 0  429 534 588 599 539 580 506 439  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+6.053 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597398 -4.1800 0 4.1800 0  430 525 584 636 532 563 509 413  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+6.068 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597390 -4.1800 0 4.1800 0  418 522 576 607 534 553 504 397  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+6.083 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597404 -4.1800 0 4.1800 0  442 523 525 640 536 566 528 403  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+6.098 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597380 -4.1800 0 4.1800 0  452 520 582 618 539 541 501 402  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+6.113 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597343 -4.1800 0 4.1800 0  432 502 571 601 547 590 518 400  1 1 1 1 0 20 0 0 0 0.047 0.047 11.78 
+6.128 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597332 -4.1800 0 4.1800 0  438 515 558 610 534 565 517 390  1 1 1 1 0 20 0 0 0 0.047 0.047 11.76 
+6.143 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597294 -4.1800 0 4.1800 0  425 499 547 610 530 551 484 399  1 1 1 1 0 20 0 0 0 0.047 0.047 11.76 
+6.158 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597306 -4.1800 0 4.1800 0  430 550 575 627 500 568 530 406  1 1 1 1 0 20 0 0 0 0.047 0.047 11.76 
+6.173 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597285 -4.1800 0 4.1800 0  459 520 573 609 542 580 513 403  1 1 1 1 0 20 0 0 0 0.047 0.047 11.77 
+6.188 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597250 -4.1800 0 4.1800 0  464 529 561 627 562 585 471 414  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+6.203 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597174 -4.1800 0 4.1800 0  414 517 548 625 532 560 499 421  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 
+6.218 2 1 0 0 -0.0000 -0.0209 -0.0097 -0.0000 0.010469 -0.597127 -4.1800 0 4.1800 0  420 513 554 594 527 565 511 387  1 1 1 1 0 20 0 0 0 0.047 0.047 11.79 

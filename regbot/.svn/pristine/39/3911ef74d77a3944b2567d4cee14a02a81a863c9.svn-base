@@ -1,0 +1,18 @@
+thread=1
+    vel=0.0, acc=2.0, edgel=0.0, white=1: time=0.05
+    vel=0.0, bal=1: time=1.0
+    vel=0.0: lv>18
+    event=8,log=15
+    edgel=0.0, white=1, label=3: xb>10, xw>10, lv<18
+    goto=11: lv<18
+    : time=3, lv>17
+    goto=10, label=11: xw<10, lv>17
+    : xw<5, lv>17
+    goto=3: lv<15
+    label=10, event=0: time=0.1
+thread=2
+    vel=0.20, label=2: time=2.0
+    vel=0.25: time=2.0
+    vel=0.34: time=2.0
+    vel=0.25: time=2.0
+    goto=2

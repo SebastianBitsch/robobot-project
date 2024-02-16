@@ -1,0 +1,7 @@
+vel=0.2:dist=0.2
+label=44, vel=0 : time=1
+bal=1 : time=2
+vel=0.3:dist=0.3
+vel=0.2,tr=0.2:turn=-90
+:dist=0.2
+goto=44:count=4

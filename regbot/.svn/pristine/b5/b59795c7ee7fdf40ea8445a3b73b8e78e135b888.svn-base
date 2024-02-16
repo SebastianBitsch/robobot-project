@@ -1,0 +1,45 @@
+; inifile to Robobot bridge
+; this starts streaming of data from the Regbot board
+# Text from ini-loader
+; subscribe to regular stream of data
+; format:
+;    source sub message sample-time
+; where
+;    source is 'regbot' fro regbot data
+;    'sub' is keyword for data subscription from regbot
+;    message is the data to subscribe to (see help for full list)
+;    sample-time is time between updates in milliseconds (minimum is 1, but there is a bandwidth limitation)
+# odometry pose (wheel based)
+regbot sub pose 10
+# motor voltage
+regbot sub mot 50
+# robot name and type
+regbot sub id 1500
+# heart-beat message: robot time, battery voltage, robot index number
+regbot sub hbt 450
+# firmware version
+regbot sub ver 2100
+# robot configuration (wheel, gear pulse per rev, wheel base andsample time
+regbot sub conf 300
+# IMU board orientation
+regbot sub board 2001
+# event flags in mission
+regbot sub mevent 25
+# mission status
+regbot sub mstat 30
+;
+# console print of messages
+# format:
+#    source:message 'subscribe' sample-time destination
+# where
+#    source:message is the message - as listed in 'bridge list'
+#    'subscribe' is keyword for subscription
+#    sample time is fastest sample time, or -1 for all updates (0 is stop)
+#    destination is destination for data
+regbot:# subscribe -1 console
+# send pose to ROS link (as default)
+regbot:pose subscribe -1 ros
+
+
+
+

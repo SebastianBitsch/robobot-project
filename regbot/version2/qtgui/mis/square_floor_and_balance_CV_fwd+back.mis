@@ -1,0 +1,24 @@
+# got from robot:
+vel=0.3, acc=2,log=40: time=0.1
+label=6
+: dist = 0.4
+tr=0.20: turn=-90
+goto=6: count=3
+vel=0.2,label=7,bal=1
+: dist = 0.5
+tr=0.05: turn=-90
+goto=7: count=3
+vel=0,acc=7:time=5
+vel=0.25:dist=0.5
+vel=-0.2,label=8:
+: dist = 0.4
+tr=0.05: turn=-90
+goto=8: count=3
+vel=-0.2,label=9,bal=0
+: dist = 0.5
+tr=0.20: turn=-90
+goto=9: count=3
+vel=0,acc=7:time=0.5
+
+
+

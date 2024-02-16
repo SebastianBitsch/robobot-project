@@ -1,0 +1,4 @@
+# forward turn
+vel=0.2, acc=1.0: dist=0.2
+tr=0.0: turn=-30.0
+vel=0.5: dist=0.4, time=1.0

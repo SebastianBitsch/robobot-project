@@ -1,0 +1,5 @@
+% Accelerometer logfile
+% 1 	Time (sec)
+% 2-4 	Accelerometer (x,y,z)
+1707909746.7750 0.4238 0.0032 -0.9017
+1707909746.7871 0.4591 0.0036 -0.9259

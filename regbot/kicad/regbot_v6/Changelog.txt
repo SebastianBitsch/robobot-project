@@ -1,0 +1,29 @@
+v5.0
+- Imported v4.1 into KiCad with built-in importer
+- Changed DESCRIPTION to version number e.g.: "Regbot_v5.0_2022.txt", contents are: "Regbot v5.0 2022"
+- Removed second non-XT60 power connector
+- Fixed footprint of XT60 connector, so footprint matches correct mounting
+- Removed ESP-01 module from board
+- Changed Teensy 3.5 to 4.1
+- Added MINI560 DC-DC (5V 5A) converter replacing old step down converters
+- Added MAX22201ATC motor drivers replacing old drivers
+- Changed motor current sensing to resistor-based solution
+- Removed reverse polarity diode from 12V power input
+- Replaced common connectors with JST-PH board connectors
+- Added various ext I2C, SPI connectors
+- Added PAM8406 amp and audio output to speakers
+- Added Audio jack for stereo-in to amp
+- Added USB Host A connector for Teensy USB host
+
+v5.1
+- Changed PAM8406 PWM5_SPK input to voltage divider to dampen sound
+- Changed various resistors to decrease BOM
+- Added 100nF capacitors on motor current sensors to remove noise
+- Added 1k pull-ups on I2C
+- Changed DESCRIPTION to version number e.g.: "Regbot_v5.1_2022.txt", contents are: "Regbot v5.1 2022"
+
+v5.2
+- Put SDA1 and SCL1 on proper pins
+- Gave motor encoders 3v3 supply instead of 5v
+- Changed pins on 5v and 12v ext connectors, and rotated them to match old board workaround.
+- Changed DESCRIPTION to version number e.g.: "Regbot_v5.2_2022.txt", contents are: "Regbot v5.2 2022"

@@ -1,0 +1,26 @@
+v4.1
+- Swapped Power Switch behavior
+- Moved STATUS_LED from A21/DAC0 to 11/MOSI0
+- Moved LED from 13 to 12/MISO0 and renamed to LINE_LED_HIGH
+- Renamed LED_HIGH to LINE_LED_LOW
+- Renamed SCK to SCK&BUILTIN_LED
+- Added connector for A21_DAC0
+- Renamed A12-A13 and A12-A20 to LS0-LS7
+- Changed RL1 from 560R to 330R
+- Changed CBZ and CQ2A from 0805 to 1210
+- Silkscreen: Ratio and size increases for connectors
+- Silkscreen: Top indication for Servo and Motor orientation
+- Silkscreen: Added IC descriptions
+- Silkscreen: Changed "ON" to "POWER ON"
+- Silkscreen: Added "Up=On", "Press to start" and "Hold to program" hints
+- Silkscreen: Other minor changes
+- Added easily accessible GND via in bottom left corner
+- Moved both power connectors
+- Increased Servo connector clearances
+- Fixed UC_OP incorrect wiring (swapped pin 5 and 6) and optimized wiring
+- Added C33
+- Changed C31 to 1uF from 100nF
+- Changed CIR1 and CIR2 to 3.3nF from 1nF
+
+v4.0
+First EAGLE version

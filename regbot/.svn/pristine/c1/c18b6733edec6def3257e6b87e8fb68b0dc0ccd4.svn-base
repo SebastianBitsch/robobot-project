@@ -1,0 +1,26 @@
+# traffic for robocup:
+thread=1
+    vel=0.0, white=1, bal=1: time=2.0
+    vel=0.4, label=7,event=2: time=2.0
+    vel=0.4: time=2.0
+    vel=0.4: time=2.0
+    goto=7
+thread=2, event=2
+    label=10, event=20: xw>10
+    event=21: dist=1.72, xw>10
+    #: time=0.01
+    goto=10, event=22: xw>5
+    : time=0.01
+    event=23: dist=1.0, ir2<0.3
+    : time=0.05
+    goto=10, event=24: ir2 < 0.4
+    : time=0.01
+    goto=10, event=10
+thread=3, event=2
+    edger=0.8, white=1, irsensor=2, irdist=0.3, label=15: event=10
+    edgel=-0.8, white=1, irsensor=2, irdist=0.3, event=28: dist=3.0, event=11
+    goto=15
+thread=4, event=2
+    :time=4
+    : lv=0
+    event=0

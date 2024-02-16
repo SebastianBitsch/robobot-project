@@ -1,0 +1,1248 @@
+% teensy communication to/from Teensy
+% 1 	Time (sec) from system
+% 2 	(Tx) Send to Teensy
+%   	(Rx) Received from Teensy
+%   	(Qu N) Put in queue to Teensy, now queue size N
+% 3 	Message string queued, send or received
+1707912122.2675 Qu 1 ;47!idi
+1707912122.2764 ## Connection to USB open
+1707912122.2765 Txd ;28hbti
+1707912122.2779 Qu 2 ;04!sub hbt 500
+1707912122.2828 Txd ;22sub hbt 50
+1707912122.3335 Txd ;28hbti
+1707912122.3341 Txd ;31leave
+1707912122.3358 Tx ;47!idi
+1707912122.3761 ## # STeensy::run: msg retry after 0.04032 sec (retry=1, queue=2):;47!idi
+1707912122.3772 Tx ;47!idi
+1707912122.4177 ## # STeensy::run: msg retry after 0.04046 sec (retry=2, queue=2):;47!idi
+1707912122.4188 Tx ;47!idi
+1707912122.4593 ## # STeensy::run: msg retry after 0.04042 sec (retry=3, queue=2):;47!idi
+1707912122.4604 Tx ;47!idi
+1707912122.5009 ## # STeensy::run: msg retry after 0.04047 sec (retry=4, queue=2):;47!idi
+1707912122.5020 Tx ;47!idi
+1707912122.5425 ## # STeensy::run: msg retry after 0.04044 sec (retry=5, queue=2):;47!idi
+1707912122.5436 Tx ;47!idi
+1707912122.5843 ## # STeensy::run: msg retry after 0.04069 sec (retry=6, queue=2):;47!idi
+1707912122.5855 Tx ;47!idi
+1707912122.6259 ## # STeensy::run: msg retry after 0.04041 sec (retry=7, queue=2):;47!idi
+1707912122.6270 Tx ;47!idi
+1707912122.6681 ## # STeensy::run: msg retry after 0.04106 sec (retry=8, queue=2):;47!idi
+1707912122.6692 Tx ;47!idi
+1707912122.7093 ## # STeensy::run: msg retry after 0.04014 sec (retry=9, queue=2):;47!idi
+1707912122.7105 Tx ;47!idi
+1707912122.7515 ## # STeensy::run: msg retry after 0.04101 sec (retry=10, queue=2):;47!idi
+1707912122.7526 Tx ;47!idi
+1707912122.7933 ## # STeensy::run: msg retry after 0.04067 sec (retry=11, queue=2):;47!idi
+1707912122.7944 Tx ;47!idi
+1707912122.8309 Rx ;85confirm !enc0
+1707912122.8310 Rx ;37confirm !idi
+1707912122.8313 Tx ;04!sub hbt 500
+1707912122.8313 Rx ;95dnaerbbot Newton
+1707912122.8400 Rx ;79enc 0 0 162225 0 1
+1707912122.8720 ## # STeensy::run: msg retry after 0.04073 sec (retry=1, queue=1):;04!sub hbt 500
+1707912122.8720 Tx ;04!sub hbt 500
+1707912122.9122 ## # STeensy::run: msg retry after 0.04013 sec (retry=2, queue=1):;04!sub hbt 500
+1707912122.9135 Tx ;04!sub hbt 500
+1707912122.9540 ## # STeensy::run: msg retry after 0.04054 sec (retry=3, queue=1):;04!sub hbt 500
+1707912122.9551 Tx ;04!sub hbt 500
+1707912122.9957 ## # STeensy::run: msg retry after 0.04058 sec (retry=4, queue=1):;04!sub hbt 500
+1707912122.9968 Tx ;04!sub hbt 500
+1707912123.0374 ## # STeensy::run: msg retry after 0.04066 sec (retry=5, queue=1):;04!sub hbt 500
+1707912123.0385 Tx ;04!sub hbt 500
+1707912123.0791 ## # STeensy::run: msg retry after 0.04057 sec (retry=6, queue=1):;04!sub hbt 500
+1707912123.0802 Tx ;04!sub hbt 500
+1707912123.1208 ## # STeensy::run: msg retry after 0.04061 sec (retry=7, queue=1):;04!sub hbt 500
+1707912123.1219 Tx ;04!sub hbt 500
+1707912123.1626 ## # STeensy::run: msg retry after 0.04067 sec (retry=8, queue=1):;04!sub hbt 500
+1707912123.1637 Tx ;04!sub hbt 500
+1707912123.2044 ## # STeensy::run: msg retry after 0.04066 sec (retry=9, queue=1):;04!sub hbt 500
+1707912123.2054 Tx ;04!sub hbt 500
+1707912123.2461 ## # STeensy::run: msg retry after 0.04068 sec (retry=10, queue=1):;04!sub hbt 500
+1707912123.2472 Tx ;04!sub hbt 500
+1707912123.2879 ## # STeensy::run: msg retry after 0.04066 sec (retry=11, queue=1):;04!sub hbt 500
+1707912123.2890 Tx ;04!sub hbt 500
+1707912123.3296 ## # STeensy::run: msg retry after 0.04069 sec (retry=12, queue=1):;04!sub hbt 500
+1707912123.3307 Tx ;04!sub hbt 500
+1707912123.3714 ## # STeensy::run: msg retry after 0.04066 sec (retry=13, queue=1):;04!sub hbt 500
+1707912123.3725 Tx ;04!sub hbt 500
+1707912123.4132 ## # STeensy::run: msg retry after 0.04072 sec (retry=14, queue=1):;04!sub hbt 500
+1707912123.4143 Tx ;04!sub hbt 500
+1707912123.4548 ## # STeensy::run: msg retry after 0.04052 sec (retry=15, queue=1):;04!sub hbt 500
+1707912123.4559 Tx ;04!sub hbt 500
+1707912123.4963 ## # STeensy::run: msg retry after 0.04041 sec (retry=16, queue=1):;04!sub hbt 500
+1707912123.4974 Tx ;04!sub hbt 500
+1707912123.5378 ## # STeensy::run: msg retry after 0.04039 sec (retry=17, queue=1):;04!sub hbt 500
+1707912123.5390 Tx ;04!sub hbt 500
+1707912123.5796 ## # STeensy::run: msg retry after 0.04063 sec (retry=18, queue=1):;04!sub hbt 500
+1707912123.5807 Tx ;04!sub hbt 500
+1707912123.6214 ## # STeensy::run: msg retry after 0.04070 sec (retry=19, queue=1):;04!sub hbt 500
+1707912123.6225 Tx ;04!sub hbt 500
+1707912123.6631 ## # STeensy::run: msg retry after 0.04056 sec (retry=20, queue=1):;04!sub hbt 500
+1707912123.6641 Tx ;04!sub hbt 500
+1707912123.7046 ## # STeensy::run: msg retry after 0.04045 sec (retry=21, queue=1):;04!sub hbt 500
+1707912123.7057 Tx ;04!sub hbt 500
+1707912123.7463 ## # STeensy::run: msg retry after 0.04055 sec (retry=22, queue=1):;04!sub hbt 500
+1707912123.7473 Tx ;04!sub hbt 500
+1707912123.7878 ## # STeensy::run: msg retry after 0.04047 sec (retry=23, queue=1):;04!sub hbt 500
+1707912123.7889 Tx ;04!sub hbt 500
+1707912122.8667 Rx ;95;77enc 4294967290 6 16;95dname rooo ;95dname robobot Newtm;24gyro0 2.2098135295-.1971
+1707912123.8021 Rx ;37confirm !idi
+1707912123.8022 Rx ;95dname robobo etn
+1707912123.8294 ## # STeensy::run: msg retry after 0.04055 sec (retry=24, queue=1):;04!sub hbt 500
+1707912123.8305 Tx ;04!sub hbt 500
+1707912123.8280 Rx ;90gyro0 2.31425 1.30463 -0.25431.3321
+1707912123.8705 ## # STeensy::run: msg retry after 0.04002 sec (retry=25, queue=1):;04!sub hbt 500
+1707912123.8716 Tx ;04!sub hbt 500
+1707912123.9117 ## # STeensy::run: msg retry after 0.04002 sec (retry=26, queue=1):;04!sub hbt 500
+1707912123.9117 Tx ;04!sub hbt 500
+1707912123.8641 Rx ;98gyro0 .;3ofr sbh;23gyro0;20confrm !lip 1 0 1 0 0 0 0
+1707912123.9119 Rx ;20confirm !lip 1 0 1 0 0 0 0
+1707912123.9121 Rx ;93confirm !sub hbt 500
+1707912123.9122 Rx ;85confirm !enc0
+1707912123.9187 Qu 1 ;95!enc0
+1707912123.9188 Qu 2 ;02!sub enc 8
+1707912123.9188 Qu 3 ;65!encrev 1
+1707912123.9188 Tx ;95!enc0
+1707912123.9196 Qu 4 ;30!lip 1 0 1 0 0 0 0
+1707912123.9196 Qu 5 ;23!sub liv 8
+1707912123.9197 Qu 6 ;81!sub svo 50
+1707912123.9199 Qu 7 ;34!sub gyro0 12
+1707912123.9199 Qu 8 ;78!sub acc0 12
+1707912123.9199 Qu 9 ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912123.9212 Txd ;08motv 0.00 0.00
+1707912123.9123 Rx ;48gyro0 2.30408 1.4623 -;20confirm !lip 1 0 1 0 0 0 0
+1707912123.9598 ## # STeensy::run: msg retry after 0.04095 sec (retry=1, queue=9):;95!enc0
+1707912123.9610 Tx ;95!enc0
+1707912124.0004 Rx ;93confirm !sub hbt 500
+1707912124.0018 ## # STeensy::run: msg retry after 0.04079 sec (retry=2, queue=9):;95!enc0
+1707912124.0029 Tx ;95!enc0
+1707912124.0278 Rx ;91;11gyro0 2.26847 1.48265 -0.432332 12
+1707912124.0430 ## # STeensy::run: msg retry after 0.04014 sec (retry=3, queue=9):;95!enc0
+1707912124.0441 Tx ;95!enc0
+1707912124.0441 Rx ;55gyro0 1.28682 5.81106 -0.0661214 12
+1707912124.0446 Rx ;85confirm !enc0
+1707912124.0447 Tx ;02!sub enc 8
+1707912124.0566 Rx ;37confirm !idi
+1707912124.0567 Rx ;95dname robobot Newton
+1707912124.0666 Rx ;83enc 9 4294967280 162358 0 1
+1707912124.0689 Txd ;12motv 0.02 0.02
+1707912124.0743 Rx ;72enc 3 4294967290 162370 0 1
+1707912124.0757 Txd ;08motv -0.10 -0.17
+1707912124.0854 ## # STeensy::run: msg retry after 0.04072 sec (retry=1, queue=8):;02!sub enc 8
+1707912124.0866 Tx ;02!sub enc 8
+1707912124.1163 Rx ;6g;91confirm !sub enc 8
+1707912124.1273 ## # STeensy::run: msg retry after 0.04069 sec (retry=2, queue=8):;02!sub enc 8
+1707912124.1284 Tx ;02!sub enc 8
+1707912124.1196 Rx ;24conim!u yo0 120ofirm!i 1 01
+1707912124.1686 ## # STeensy::run: msg retry after 0.04019 sec (retry=3, queue=8):;02!sub enc 8
+1707912124.1697 Tx ;02!sub enc 8
+1707912124.2100 ## # STeensy::run: msg retry after 0.04030 sec (retry=4, queue=8):;02!sub enc 8
+1707912124.2111 Tx ;02!sub enc 8
+1707912124.1392 Rx ;71e3 496729124741 -3.82230 0107  ;24confim! yo 2;20confirm !lip 1;79enc 1 0121  0 1;20confirm !lip 1 0 1 0 0 0 0
+1707912124.2514 ## # STeensy::run: msg retry after 0.04033 sec (retry=5, queue=8):;02!sub enc 8
+1707912124.2525 Tx ;02!sub enc 8
+1707912124.2504 Rx ;82m !idi
+1707912124.2933 ## # STeensy::run: msg retry after 0.04084 sec (retry=6, queue=8):;02!sub enc 8
+1707912124.2945 Tx ;02!sub enc 8
+1707912124.2654 Rx ;95dname robobot Newtonm !sub b hb;81enc0 ;55gyro;93confirm !sub hbt 500
+1707912124.3354 ## # STeensy::run: msg retry after 0.04084 sec (retry=7, queue=8):;02!sub enc 8
+1707912124.3365 Tx ;02!sub enc 8
+1707912124.3770 ## # STeensy::run: msg retry after 0.04046 sec (retry=8, queue=8):;02!sub enc 8
+1707912124.3780 Tx ;02!sub enc 8
+1707912124.4191 ## # STeensy::run: msg retry after 0.04108 sec (retry=9, queue=8):;02!sub enc 8
+1707912124.4202 Tx ;02!sub enc 8
+1707912124.3486 Rx ;37;20gyro0 2.01416 -0.39418;17g 000   ;4ofr sbgr01
+1707912124.4611 ## # STeensy::run: msg retry after 0.04089 sec (retry=10, queue=8):;02!sub enc 8
+1707912124.4623 Tx ;02!sub enc 8
+1707912124.5027 ## # STeensy::run: msg retry after 0.04045 sec (retry=11, queue=8):;02!sub enc 8
+1707912124.5038 Tx ;02!sub enc 8
+1707912124.5439 ## # STeensy::run: msg retry after 0.04010 sec (retry=12, queue=8):;02!sub enc 8
+1707912124.5450 Tx ;02!sub enc 8
+1707912124.5600 Rx ;67gyro0 2.73387 1.71661 -1.38346 12
+1707912124.5624 Rx ;35liv 200 251 273 30937212327
+1707912124.5704 Rx ;81enc 0 0 162416 0 1
+1707912124.5707 Txd ;04motv -0.03 -0.02
+1707912124.5856 ## # STeensy::run: msg retry after 0.04059 sec (retry=13, queue=8):;02!sub enc 8
+1707912124.5867 Tx ;02!sub enc 8
+1707912124.5942 Rx ;65liv 196 244 268 299 309 290 265 207
+1707912124.5944 Rx ;81enc 0 0 162416 0 1
+1707912124.5961 Txd ;07motv -0.13 -0.13
+1707912124.5988 Rx ;37confirm !idi
+1707912124.5989 Rx ;95dname robobot Newton
+1707912124.6268 ## # STeensy::run: msg retry after 0.04012 sec (retry=14, queue=8):;02!sub enc 8
+1707912124.6279 Tx ;02!sub enc 8
+1707912124.6687 ## # STeensy::run: msg retry after 0.04080 sec (retry=15, queue=8):;02!sub enc 8
+1707912124.6698 Tx ;02!sub enc 8
+1707912124.6742 Rx ;35liv 180 242 266 310 320 299 273 203
+1707912124.6744 Rx ;23enc 27 4294967251 162522 0 1
+1707912124.6771 Txd ;70motv 0.67 -0.04
+1707912124.7101 ## # STeensy::run: msg retry after 0.04024 sec (retry=16, queue=8):;02!sub enc 8
+1707912124.7112 Tx ;02!sub enc 8
+1707912124.7421 Rx ;71confirm !sub svo 50
+1707912124.7520 ## # STeensy::run: msg retry after 0.04074 sec (retry=17, queue=8):;02!sub enc 8
+1707912124.7530 Tx ;02!sub enc 8
+1707912124.7932 ## # STeensy::run: msg retry after 0.04018 sec (retry=18, queue=8):;02!sub enc 8
+1707912124.7943 Tx ;02!sub enc 8
+1707912124.8149 Rx ;85confir!nc0
+1707912124.8343 ## # STeensy::run: msg retry after 0.04005 sec (retry=19, queue=8):;02!sub enc 8
+1707912124.8344 Tx ;02!sub enc 8
+1707912124.8246 Rx ;68confirm !su;60liv 188 245 269 37rm  12
+1707912124.8751 ## # STeensy::run: msg retry after 0.04070 sec (retry=20, queue=8):;02!sub enc 8
+1707912124.8762 Tx ;02!sub enc 8
+1707912124.8979 Rx ;85confirm !enc0
+1707912124.9144 Rx ;87en ;93conim!u  500
+1707912124.9167 ## # STeensy::run: msg retry after 0.04055 sec (retry=21, queue=8):;02!sub enc 8
+1707912124.9178 Tx ;02!sub enc 8
+1707912124.9385 Rx ;26liv 200 252 275 309 312 300 268 213
+1707912124.9387 Rx ;38enc 17 4294967289 162851 0 1
+1707912124.9390 Txd ;09motv -0.03 -0.43
+1707912124.9400 Rx ;8cnsub liv 8
+1707912124.9588 ## # STeensy::run: msg retry after 0.04102 sec (retry=22, queue=8):;02!sub enc 8
+1707912124.9599 Tx ;02!sub enc 8
+1707912124.9621 Rx ;45liv 192 246 266 308  0 0 162853 0 1
+1707912124.9863 Rx ;8
+1707912124.9928 Rx ;07confirm !gyrocal 0.022405 0.0137838 -0.00493368
+1707912125.0000 ## # STeensy::run: msg retry after 0.04008 sec (retry=23, queue=8):;02!sub enc 8
+1707912125.0012 Tx ;02!sub enc 8
+1707912124.9942 Rx ;60liv 189 246 266 ;39liv 184 243;21gyro0 4.22668 -0.84432 -2.78982 12
+1707912125.0163 Rx ;37confirm !idi
+1707912125.0164 Rx ;95dname robobot Newton
+1707912125.0419 ## # STeensy::run: msg retry after 0.04062 sec (retry=24, queue=8):;02!sub enc 8
+1707912125.0429 Tx ;02!sub enc 8
+1707912125.0341 Rx ;07confirm-.36 20 0 162856 0 1
+1707912125.0837 ## # STeensy::run: msg retry after 0.04078 sec (retry=25, queue=8):;02!sub enc 8
+1707912125.0848 Tx ;02!sub enc 8
+1707912125.0759 Rx ;07confirm!;85confirm enc.6677-.2292lv12212652331212020
+1707912125.0906 Rx ;93confirm !sub hbt 500
+1707912125.0983 Rx ;51liv 192 251 274 308 317 291 268 208
+1707912125.0985 Rx ;3ofr sblv8;4n  24622127  ;37conim;93acc0 0.190186 -.;55confirm !encrev 1
+1707912125.1250 ## # STeensy::run: msg retry after 0.04018 sec (retry=26, queue=8):;02!sub enc 8
+1707912125.1261 Tx ;02!sub enc 8
+1707912125.1545 Rx ;91n   86 0 1
+1707912125.1664 ## # STeensy::run: msg retry after 0.04030 sec (retry=27, queue=8):;02!sub enc 8
+1707912125.1675 Tx ;02!sub enc 8
+1707912125.1846 Rx ;28acc0 0.462911 0.0409749 -0.883789 12
+1707912125.2078 ## # STeensy::run: msg retry after 0.04030 sec (retry=28, queue=8):;02!sub enc 8
+1707912125.2091 Tx ;02!sub enc 8
+1707912125.2102 Rx ;55liv 191 245 268 304 318 295 265 209
+1707912125.2104 Rx ;93enc 0 0 162878 0 1
+1707912125.2112 Txd ;02motv -0.11 -0.10
+1707912125.2492 ## # STeensy::run: msg retry after 0.04016 sec (retry=29, queue=8):;02!sub enc 8
+1707912125.2506 Tx ;02!sub enc 8
+1707912125.2810 Rx ;1orm !sub svo 50
+1707912125.2907 ## # STeensy::run: msg retry after 0.04009 sec (retry=30, queue=8):;02!sub enc 8
+1707912125.2918 Tx ;02!sub enc 8
+1707912125.2822 Rx ;30liv  .8910060 10931
+1707912125.3324 ## # STeensy::run: msg retry after 0.04059 sec (retry=31, queue=8):;02!sub enc 8
+1707912125.3335 Tx ;02!sub enc 8
+1707912125.3735 ## # STeensy::run: msg retry after 0.04003 sec (retry=32, queue=8):;02!sub enc 8
+1707912125.3747 Tx ;02!sub enc 8
+1707912125.3302 Rx ;9i 241;89svo 0 089 09775 ;31i;4l673116 -00559-.54;44liv2ac0rcl0;44liv 18 238 263 302 313 295 266 204
+1707912125.4149 ## # STeensy::run: msg retry after 0.04020 sec (retry=33, queue=8):;02!sub enc 8
+1707912125.4159 Tx ;02!sub enc 8
+1707912125.4105 Rx ;87enc 8 4294967293 16327;85confirm !enc0
+1707912125.4180 Txd ;59motv 0.14 -0.10
+1707912125.4366 Rx ;58acc0 0.718201 0.114054 -0.958679 12
+1707912125.4564 ## # STeensy::run: msg retry after 0.04040 sec (retry=34, queue=8):;02!sub enc 8
+1707912125.4575 Tx ;02!sub enc 8
+1707912125.4488 Rx ;0 0 163290 0 1
+1707912125.4980 ## # STeensy::run: msg retry after 0.04054 sec (retry=35, queue=8):;02!sub enc 8
+1707912125.4991 Tx ;02!sub enc 8
+1707912125.5282 Rx ;13confirm !sub liv 8
+1707912125.5304 Rx ;47liv 191 246 7 0 1 9 68
+1707912125.5395 ## # STeensy::run: msg retry after 0.04033 sec (retry=36, queue=8):;02!sub enc 8
+1707912125.5406 Tx ;02!sub enc 8
+1707912125.5536 Rx ;13confirm !sub liv 8
+1707912125.5808 ## # STeensy::run: msg retry after 0.04019 sec (retry=37, queue=8):;02!sub enc 8
+1707912125.5819 Tx ;02!sub enc 8
+1707912125.6058 Rx ;80ac0.27cnfirm !encrev 1
+1707912125.6189 Rx ;9n 649975 63301
+1707912125.6222 ## # STeensy::run: msg retry after 0.04034 sec (retry=38, queue=8):;02!sub enc 8
+1707912125.6233 Tx ;02!sub enc 8
+1707912125.6245 Rx ;85confirm !enc
+1707912125.6638 ## # STeensy::run: msg retry after 0.04050 sec (retry=39, queue=8):;02!sub enc 8
+1707912125.6649 Tx ;02!sub enc 8
+1707912125.6343 Rx ;35en6266 21  0  0 00  932282c 8
+1707912125.6824 Rx ;78enc 1 4294967286 163651 0 1
+1707912125.6841 Txd ;04motv -0.02 -0.03
+1707912125.7054 ## # STeensy::run: msg retry after 0.04055 sec (retry=40, queue=8):;02!sub enc 8
+1707912125.7066 Tx ;02!sub enc 8
+1707912125.7077 Rx ;13confirm !sub liv 8
+1707912125.7132 Rx ;05acc0 0.52238 -0.0636597 -0.701375 12
+1707912125.7222 Rx ;58liv 188 243 297312
+1707912125.7331 Rx ;5ofr !encrev 1
+1707912125.7466 ## # STeensy::run: msg retry after 0.04000 sec (retry=41, queue=8):;02!sub enc 8
+1707912125.7466 Tx ;02!sub enc 8
+1707912125.7465 Rx ;85enc 9 4294967273 163672 0 1
+1707912125.7485 Txd ;28motv 0.37 0.46
+1707912125.7555 Rx ;93confirm !sub hbt 500
+1707912125.7653 Rx ;93confirm !sub hbt 500
+1707912125.7751 Rx ;55confirm !encrev 1
+1707912125.7868 ## # STeensy::run: msg retry after 0.04015 sec (retry=42, queue=8):;02!sub enc 8
+1707912125.7879 Tx ;02!sub enc 8
+1707912125.8283 ## # STeensy::run: msg retry after 0.04044 sec (retry=43, queue=8):;02!sub enc 8
+1707912125.8295 Tx ;02!sub enc 8
+1707912125.8316 Rx ;13confirm !sub liv 8
+1707912125.8317 Rx ;91confirm !sub enc 8
+1707912125.8319 Tx ;65!encrev 1
+1707912125.8319 Rx ;20confirm !lip 1 0 1 0 0 0 0
+1707912125.8321 Rx ;55confirm !encrev 1
+1707912125.8323 Tx ;30!lip 1 0 1 0 0 0 0
+1707912125.8323 Rx ;15gyro;2cnim!i ec1 429496716303 01
+1707912125.8692 Rx ;53acc0 0.383464 -0.0832113 -0.906657 12
+1707912125.8726 ## # STeensy::run: msg retry after 0.04035 sec (retry=1, queue=6):;30!lip 1 0 1 0 0 0 0
+1707912125.8737 Tx ;30!lip 1 0 1 0 0 0 0
+1707912125.8737 Rx ;20confirm !lip 1 0 1 0 0 0 0
+1707912125.8739 Tx ;23!sub liv 8
+1707912125.8739 Rx ;91confirm !sub enc 8
+1707912125.8740 Rx ;13confirm !sub liv 8
+1707912125.8742 Tx ;81!sub svo 50
+1707912125.8742 Rx ;20confirm !lip 1 0 1 0 0 0 0
+1707912125.8743 Rx ;13confirm !subl4 -.6941
+1707912125.9142 ## # STeensy::run: msg retry after 0.04000 sec (retry=1, queue=4):;81!sub svo 50
+1707912125.9143 Tx ;81!sub svo 50
+1707912125.9142 Rx ;37liv 193 244 270 307 307 284 262 13confirm !sub liv 2248 197
+1707912125.9313 Rx ;85enc 0 0 163707 0 1
+1707912125.9324 Txd ;04motv -0.04 -0.01
+1707912125.9412 Rx ;21acc0 0.468445 0.0249023 -0.976685 12
+1707912125.9425 Rx ;20confirm !lip 1 0 1 0 0 0 0
+1707912125.9513 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912125.9526 Rx ;70gyro0 -0.366211 -0.963847 1.4979 1
+1707912125.9559 ## # STeensy::run: msg retry after 0.04158 sec (retry=2, queue=4):;81!sub svo 50
+1707912125.9571 Tx ;81!sub svo 50
+1707912125.9983 ## # STeensy::run: msg retry after 0.04118 sec (retry=3, queue=4):;81!sub svo 50
+1707912125.9994 Tx ;81!sub svo 50
+1707912126.0397 ## # STeensy::run: msg retry after 0.04023 sec (retry=4, queue=4):;81!sub svo 50
+1707912126.0408 Tx ;81!sub svo 50
+1707912126.0794 Rx ;24confirm !sub gyro0 12
+1707912126.0811 ## # STeensy::run: msg retry after 0.04027 sec (retry=5, queue=4):;81!sub svo 50
+1707912126.0822 Tx ;81!sub svo 50
+1707912126.0795 Rx ;118764 12
+1707912126.0982 Rx ;44liv 192 245 266 305 315 286 262 204
+1707912126.1228 ## # STeensy::run: msg retry after 0.04066 sec (retry=6, queue=4):;81!sub svo 50
+1707912126.1239 Tx ;81!sub svo 50
+1707912126.0985 Rx ;85enofir s1
+1707912126.1643 ## # STeensy::run: msg retry after 0.04037 sec (retry=7, queue=4):;81!sub svo 50
+1707912126.1654 Tx ;81!sub svo 50
+1707912126.1708 Rx ;5n  67701
+1707912126.2059 ## # STeensy::run: msg retry after 0.04048 sec (retry=8, queue=4):;81!sub svo 50
+1707912126.2069 Tx ;81!sub svo 50
+1707912126.2184 Rx ;85enc 0 0 163707 0 1
+1707912126.2215 Txd ;60motv 0.06 -0.01
+1707912126.2186 Rx ;91confirm !sub 5 3025 260 202
+1707912126.2264 Rx ;85enc 0 0 163707 0 ;24confirm !sub gyro0 12
+1707912126.2473 Txd ;61motv 0.06 -0.02
+1707912126.2474 ## # STeensy::run: msg retry after 0.04045 sec (retry=9, queue=4):;81!sub svo 50
+1707912126.2485 Tx ;81!sub svo 50
+1707912126.2887 ## # STeensy::run: msg retry after 0.04018 sec (retry=10, queue=4):;81!sub svo 50
+1707912126.2898 Tx ;81!sub svo 50
+1707912126.3313 ## # STeensy::run: msg retry after 0.04153 sec (retry=11, queue=4):;81!sub svo 50
+1707912126.3324 Tx ;81!sub svo 50
+1707912126.3729 ## # STeensy::run: msg retry after 0.04050 sec (retry=12, queue=4):;81!sub svo 50
+1707912126.3741 Tx ;81!sub svo 50
+1707912126.3785 Rx ;4lnfirm !sub hbt 500
+1707912126.4145 ## # STeensy::run: msg retry after 0.04043 sec (retry=13, queue=4):;81!sub svo 50
+1707912126.4155 Tx ;81!sub svo 50
+1707912126.4188 Rx ;83en 246294 312 287 262 207
+1707912126.4265 Rx ;83enc 4294967294 5 163716 0 1
+1707912126.4269 Txd ;64motv 0.07 -0.04
+1707912126.4442 Rx ;63gyro0 2.51261 2.67537 -1.58183 12
+1707912126.4564 ## # STeensy::run: msg retry after 0.04087 sec (retry=14, queue=4):;81!sub svo 50
+1707912126.4564 Tx ;81!sub svo 50
+1707912126.4456 Rx ;92acc0 0.410075 -0.010000;84gyro029543.073-.96 28 12
+1707912126.4973 ## # STeensy::run: msg retry after 0.04088 sec (retry=15, queue=4):;81!sub svo 50
+1707912126.4986 Tx ;81!sub svo 50
+1707912126.4697 Rx ;05acc0 0424 00593 0900 ;93cofir0926 22229210;91confirm !sub enc 8
+1707912126.5224 Rx ;0n 246242 6780
+1707912126.5386 ## # STeensy::run: msg retry after 0.04000 sec (retry=16, queue=4):;81!sub svo 50
+1707912126.5386 Tx ;81!sub svo 50
+1707912126.5364 Rx ;13conf;68confirm !sub ;68confirm !sub acc0 12
+1707912126.5411 Rx ;93confirm !sub hbt 500
+1707912126.5412 Rx ;41acc0;06;54liv 187 247 265 307 311 2;17acc0 0.618042 0.229858 -0.78717 12
+1707912126.5788 ## # STeensy::run: msg retry after 0.04015 sec (retry=17, queue=4):;81!sub svo 50
+1707912126.5799 Tx ;81!sub svo 50
+1707912126.5546 Rx ;58liv 183 2224 299 30;3l;60liv 1;54gyro0 62.4619 -15.3936 -116.13 12
+1707912126.6202 ## # STeensy::run: msg retry after 0.04030 sec (retry=18, queue=4):;81!sub svo 50
+1707912126.6215 Tx ;81!sub svo 50
+1707912126.6138 Rx ;9
+1707912126.6346 Rx ;51liv 186 240 257 293 306 286 253 207
+1707912126.6348 Rx ;44enc 4294967295 49 163944 0 1
+1707912126.6371 Txd ;74motv 0.08 -0.58
+1707912126.6372 Rx ;05acc0 0.400187 0.0367839 -0.706421 12
+1707912126.6428 Rx ;57liv 189 235 264 294 307 287 262 205
+1707912126.6430 Rx ;43enc 4294967295 6 517.568 -122.
+1707912126.6521 Txd ;67motv 0.28 10.00
+1707912126.6619 ## # STeensy::run: msg retry after 0.04041 sec (retry=19, queue=4):;81!sub svo 50
+1707912126.6620 Tx ;81!sub svo 50
+1707912126.6509 Rx ;9800139 -1.19596 12
+1707912126.6622 Rx ;13confirm !sub liv 8
+1707912126.6623 Rx ;71confirm !sub svo 50
+1707912126.6624 Tx ;34!sub gyro0 12
+1707912126.6656 Rx ;68confirm !sub acc0 12
+1707912126.6722 Rx ;06gyro0 53.7516 -18.7327 -111.516 12
+1707912126.6736 Rx ;48acc0 0.26591 0.0214844 -1.0756 12
+1707912126.6905 Rx ;96enc 0 8 164079 0 1
+1707912126.6919 Txd ;29motv 0.09 0.84
+1707912126.6982 Rx ;57liv 182 238 256 293 303 280 257 189
+1707912126.6984 Rx ;36enc 4294967294 24 164097 0 1
+1707912126.7008 Txd ;72motv 0.09 -4.51
+1707912126.7031 ## # STeensy::run: msg retry after 0.04067 sec (retry=1, queue=3):;34!sub gyro0 12
+1707912126.7042 Tx ;34!sub gyro0 12
+1707912126.7446 ## # STeensy::run: msg retry after 0.04032 sec (retry=2, queue=3):;34!sub gyro0 12
+1707912126.7457 Tx ;34!sub gyro0 12
+1707912126.7866 ## # STeensy::run: msg retry after 0.04086 sec (retry=3, queue=3):;34!sub gyro0 12
+1707912126.7878 Tx ;34!sub gyro0 12
+1707912126.7042 Rx ;06# CR!sub enc  240 261 298 ;;35liv 192 241 260 292 310 29;91co;66liv 198 243 264 299 306 288 253 19211 12
+1707912126.8103 Rx ;4lv192127 33 257 205
+1707912126.8104 Rx ;25enc 4294967282 12 164182 0 1
+1707912126.8127 Txd ;61motv -0.20 0.42
+1707912126.8278 ## # STeensy::run: msg retry after 0.04006 sec (retry=4, queue=3):;34!sub gyro0 12
+1707912126.8289 Tx ;34!sub gyro0 12
+1707912126.8561 Rx ;85conf7 313 296 269 214
+1707912126.8585 Rx ;80enc 4294967295 3 164281 0 1
+1707912126.8607 Txd ;35motv 0.77 0.67
+1707912126.8683 Rx ;13confirm !sub liv 8
+1707912126.8695 ## # STeensy::run: msg retry after 0.04055 sec (retry=5, queue=3):;34!sub gyro0 12
+1707912126.8706 Tx ;34!sub gyro0 12
+1707912126.8738 Rx ;71confirm !sub svo 50
+1707912126.8772 Rx ;02acc0 0.470133 0.146708 -1.01888 12
+1707912126.8897 Rx ;65acc0 0.588603 0.142883 -0.771077 1
+1707912126.9113 ## # STeensy::run: msg retry after 0.04069 sec (retry=6, queue=3):;34!sub gyro0 12
+1707912126.9126 Tx ;34!sub gyro0 12
+1707912126.9249 Rx ;91confirm !sub enc 8
+1707912126.9372 Rx ;39acc0 0.212667 -0.037557 -1.00271 12
+1707912126.9532 ## # STeensy::run: msg retry after 0.04057 sec (retry=7, queue=3):;34!sub gyro0 12
+1707912126.9545 Tx ;34!sub gyro0 12
+1707912126.9603 Rx ;10gyro0 10.2412 0.378927 -21.4945 12
+1707912126.9946 ## # STeensy::run: msg retry after 0.04006 sec (retry=8, queue=3):;34!sub gyro0 12
+1707912126.9947 Tx ;34!sub gyro0 12
+1707912126.9948 Rx ;24confirm !sub gyro0 12
+1707912126.9950 Tx ;78!sub acc0 12
+1707912127.0356 ## # STeensy::run: msg retry after 0.04057 sec (retry=1, queue=2):;78!sub acc0 12
+1707912127.0366 Tx ;78!sub acc0 12
+1707912127.0267 Rx ;78enc 4294967292 2 16;21acc0 0.74939 -0.0159505 -0.5;33lacc0 12
+1707912127.0412 Txd ;18motv 0.11 0.26
+1707912127.0442 Rx ;97hbt 8148.2652 119 1646 11.41 0 9 20.0 1 1
+1707912127.0449 Txd ;14idi
+1707912127.0770 ## # STeensy::run: msg retry after 0.04041 sec (retry=2, queue=2):;78!sub acc0 12
+1707912127.0781 Tx ;78!sub acc0 12
+1707912127.1190 ## # STeensy::run: msg retry after 0.04090 sec (retry=3, queue=2):;78!sub acc0 12
+1707912127.1201 Tx ;78!sub acc0 12
+1707912127.1602 ## # STeensy::run: msg retry after 0.04009 sec (retry=4, queue=2):;78!sub acc0 12
+1707912127.1615 Tx ;78!sub acc0 12
+1707912127.1547 Rx ;40liv 186244 7.0 4.781
+1707912127.2017 ## # STeensy::run: msg retry after 0.04026 sec (retry=5, queue=2):;78!sub acc0 12
+1707912127.2033 Tx ;78!sub acc0 12
+1707912127.2368 Rx ;13confirm !sub liv 8
+1707912127.2434 ## # STeensy::run: msg retry after 0.04008 sec (retry=6, queue=2):;78!sub acc0 12
+1707912127.2444 Tx ;78!sub acc0 12
+1707912127.2512 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912127.2784 Rx ;13confirm !sub liv 8
+1707912127.2850 ## # STeensy::run: msg retry after 0.04050 sec (retry=7, queue=2):;78!sub acc0 12
+1707912127.2863 Tx ;78!sub acc0 12
+1707912127.3088 Rx ;4yo 00981 -.36 .913 12
+1707912127.3263 ## # STeensy::run: msg retry after 0.04008 sec (retry=8, queue=2):;78!sub acc0 12
+1707912127.3275 Tx ;78!sub acc0 12
+1707912127.3310 Rx ;07confirm !gyrocal 0.022405 0.0137838 -0.00493368
+1707912127.3324 Rx ;88gyro0 -1.80562 -4.7938 9.89787 12
+1707912127.3684 ## # STeensy::run: msg retry after 0.04096 sec (retry=9, queue=2):;78!sub acc0 12
+1707912127.3695 Tx ;78!sub acc0 12
+1707912127.3627 Rx ;88enc ;68c 164628 0 1
+1707912127.3720 Txd ;22motv 0.15 0.26
+1707912127.3863 Rx ;34liv 191 245 272 305 319 302 274 211
+1707912127.3865 Rx ;36enc 4294967293 32 164648 0 1
+1707912127.3891 Txd ;72motv 0.15 -3.37
+1707912127.4100 ## # STeensy::run: msg retry after 0.04046 sec (retry=10, queue=2):;78!sub acc0 12
+1707912127.4111 Tx ;78!sub acc0 12
+1707912127.4144 Rx ;07confirm !grc4294967286 6 164669 0 1
+1707912127.4346 Rx ;88enc 429496m!sub liv 8
+1707912127.4454 Txd ;20motv 0.15 1.50
+1707912127.4518 ## # STeensy::run: msg retry after 0.04064 sec (retry=11, queue=2):;78!sub acc0 12
+1707912127.4529 Tx ;78!sub acc0 12
+1707912127.4589 Rx ;71confirm !sub svo 50
+1707912127.4893 Rx ;92acc0 0.371094 0.047465 -1.00604 12
+1707912127.4929 ## # STeensy::run: msg retry after 0.04006 sec (retry=12, queue=2):;78!sub acc0 12
+1707912127.4941 Tx ;78!sub acc0 12
+1707912127.5071 Rx ;55confirm !encrev 1
+1707912127.5344 ## # STeensy::run: msg retry after 0.04029 sec (retry=13, queue=2):;78!sub acc0 12
+1707912127.5355 Tx ;78!sub acc0 12
+1707912127.5225 Rx ;91enc 0  664 v 08148.7652 119 1646 11.22;54liv 194 249 266 296 320 293 262 214
+1707912127.5624 Rx ;29enc 4294967264 24 164750 0 1
+1707912127.5635 Txd ;67motv 0.15 -0.53
+1707912127.5759 ## # STeensy::run: msg retry after 0.04042 sec (retry=14, queue=2):;78!sub acc0 12
+1707912127.5770 Tx ;78!sub acc0 12
+1707912127.6092 Rx ;15acc0 0.267985 -0.0343831 -1.09749 12
+1707912127.6172 ## # STeensy::run: msg retry after 0.04021 sec (retry=15, queue=2):;78!sub acc0 12
+1707912127.6187 Tx ;78!sub acc0 12
+1707912127.6265 Rx ;45liv 205 261 279 324 328 305 279 221
+1707912127.6267 Rx ;8;12gyro0 8.78143 -1.75222 -12.0977 12
+1707912127.6588 ## # STeensy::run: msg retry after 0.04001 sec (retry=16, queue=2):;78!sub acc0 12
+1707912127.6600 Tx ;78!sub acc0 12
+1707912127.6693 Rx ;80acc0 0.10437 -0.0250448 -0.450053 12
+1707912127.6907 Rx ;90enc 0 1 164791 0 1
+1707912127.6939 Txd ;26motv 0.15 0.39
+1707912127.7008 ## # STeensy::run: msg retry after 0.04075 sec (retry=17, queue=2):;78!sub acc0 12
+1707912127.7018 Tx ;78!sub acc0 12
+1707912127.7420 ## # STeensy::run: msg retry after 0.04018 sec (retry=18, queue=2):;78!sub acc0 12
+1707912127.7431 Tx ;78!sub acc0 12
+1707912127.7841 ## # STeensy::run: msg retry after 0.04102 sec (retry=19, queue=2):;78!sub acc0 12
+1707912127.7852 Tx ;78!sub acc0 12
+1707912127.7946 Rx ;80enc 4294967293 4294967289 164838 0 1
+1707912127.7956 Txd ;61motv 0.15 -0.02
+1707912127.7993 Rx ;55confirm !encrev 1
+1707912127.8253 ## # STeensy::run: msg retry after 0.04002 sec (retry=20, queue=2):;78!sub acc0 12
+1707912127.8253 Tx ;78!sub acc0 12
+1707912127.8253 Rx ;42acc0 0.42216 0.0264079 -1.0933 12
+1707912127.8663 ## # STeensy::run: msg retry after 0.04095 sec (retry=21, queue=2):;78!sub acc0 12
+1707912127.8663 Tx ;78!sub acc0 12
+1707912127.8903 Rx ;46liv 191 248 267 305 313 292 265 214
+1707912127.8905 Rx ;87enc 1 0 164842 0 1
+1707912127.8931 Txd ;61motv 0.15 -0.02
+1707912127.9073 ## # STeensy::run: msg retry after 0.04098 sec (retry=22, queue=2):;78!sub acc0 12
+1707912127.9085 Tx ;78!sub acc0 12
+1707912127.9140 Rx ;24confirm !sub gyro0 12
+1707912127.9184 Rx ;71confirm !sub svo 50
+1707912127.9494 ## # STeensy::run: msg retry after 0.04081 sec (retry=23, queue=2):;78!sub acc0 12
+1707912127.9507 Tx ;78!sub acc0 12
+1707912127.9562 Rx ;24cbgr01
+1707912127.9804 Rx ;13confirm !sub liv 8
+1707912127.9913 ## # STeensy::run: msg retry after 0.04055 sec (retry=24, queue=2):;78!sub acc0 12
+1707912127.9925 Tx ;78!sub acc0 12
+1707912128.0025 Rx ;49liv 206 251 267 303 308 289 266 217
+1707912128.0053 Rx ;16acc0 0.405599 -0.0249837 -0.91807 12
+1707912128.0325 ## # STeensy::run: msg retry after 0.04000 sec (retry=25, queue=2):;78!sub acc0 12
+1707912128.0325 Tx ;78!sub acc0 12
+1707912128.0735 ## # STeensy::run: msg retry after 0.04095 sec (retry=26, queue=2):;78!sub acc0 12
+1707912128.0746 Tx ;78!sub acc0 12
+1707912128.1150 ## # STeensy::run: msg retry after 0.04043 sec (retry=27, queue=2):;78!sub acc0 12
+1707912128.1161 Tx ;78!sub acc0 12
+1707912128.0324 Rx ;07confirm !gyrocal 0.022405 0.0137838 -;07acc0 0.26592 252
+1707912128.1305 Rx ;93enc 0 3 164927;64liv 184 241 263 299 ;22acc0 0.557149 0.0956828 -0.807027 12
+1707912128.1512 Txd ;64motv 0.14 -0.06
+1707912128.1572 ## # STeensy::run: msg retry after 0.04106 sec (retry=28, queue=2):;78!sub acc0 12
+1707912128.1582 Tx ;78!sub acc0 12
+1707912128.1987 ## # STeensy::run: msg retry after 0.04045 sec (retry=29, queue=2):;78!sub acc0 12
+1707912128.1998 Tx ;78!sub acc0 12
+1707912128.2265 Rx ;82enc 4294967293 2 164961 0 1
+1707912128.2281 Txd ;59motv 0.15 -0.00
+1707912128.2399 ## # STeensy::run: msg retry after 0.04013 sec (retry=30, queue=2):;78!sub acc0 12
+1707912128.2412 Tx ;78!sub acc0 12
+1707912128.2427 Rx ;95enc 0 6 164971 0 1
+1707912128.2453 Txd ;74motv 0.15 -0.69
+1707912128.2573 Rx ;59acc0 0.39738 0.0210571 -0.844584 12
+1707912128.2744 Rx ;95enc 0 3 164992 0 1
+1707912128.2768 Txd ;18motv 0.06 0.13
+1707912128.2801 Rx ;11# 8149.582 Un00493368
+1707912128.2818 ## # STeensy::run: msg retry after 0.04061 sec (retry=31, queue=2):;78!sub acc0 12
+1707912128.2832 Tx ;78!sub acc0 12
+1707912128.2805 Rx ;37gyro0 26.6469 -9.74782 -46.5088 ;59acc0 0.566671 0.223043 -0.744649 12
+1707912128.3043 Rx ;74gyro0 21.9447 16.6601 -48.6883 12
+1707912128.3216 Rx ;07confirm !gyrocal 0.022405 0.0137838 -0.00493368
+1707912128.3240 ## # STeensy::run: msg retry after 0.04080 sec (retry=32, queue=2):;78!sub acc0 12
+1707912128.3251 Tx ;78!sub acc0 12
+1707912128.3283 Rx ;52gyro0 4.06901 6.82322 -14.5162 12
+1707912128.3663 ## # STeensy::run: msg retry after 0.04118 sec (retry=33, queue=2):;78!sub acc0 12
+1707912128.3674 Tx ;78!sub acc0 12
+1707912128.4081 ## # STeensy::run: msg retry after 0.04067 sec (retry=34, queue=2):;78!sub acc0 12
+1707912128.4092 Tx ;78!sub acc0 12
+1707912128.4105 Rx ;73enc 0 4294967295 165024 0 1
+1707912128.4115 Txd ;65motv 0.12 -0.09
+1707912128.4182 Rx ;4l0 1
+1707912128.4493 ## # STeensy::run: msg retry after 0.04007 sec (retry=35, queue=2):;78!sub acc0 12
+1707912128.4505 Tx ;78!sub acc0 12
+1707912128.4363 Rx ;2yro0 0.141-.76 .09 2;crev 1
+1707912128.4892 Rx ;;40liv 183 24025306 314 292 265 206
+1707912128.4905 ## # STeensy::run: msg retry after 0.04000 sec (retry=36, queue=2):;78!sub acc0 12
+1707912128.4916 Tx ;78!sub acc0 12
+1707912128.5317 ## # STeensy::run: msg retry after 0.04009 sec (retry=37, queue=2):;78!sub acc0 12
+1707912128.5328 Tx ;78!sub acc0 12
+1707912128.4905 Rx ;75enc 0499o 0 0;24confirm !sub gyro0 12l20252 2;22gyo 2.710981 ;48liv 187 246 274 307 312 293 261 208
+1707912128.5566 Txd ;76motv 5.54 -0.09
+1707912128.5709 Rx ;71enc 4294620015 -0.00493368
+1707912128.5733 ## # STeensy::run: msg retry after 0.04049 sec (retry=38, queue=2):;78!sub acc0 12
+1707912128.5737 Txd ;68motv 0.93 -0.12
+1707912128.5744 Tx ;78!sub acc0 12
+1707912128.6148 ## # STeensy::run: msg retry after 0.04039 sec (retry=39, queue=2):;78!sub acc0 12
+1707912128.6159 Tx ;78!sub acc0 12
+1707912128.6564 ## # STeensy::run: msg retry after 0.04047 sec (retry=40, queue=2):;78!sub acc0 12
+1707912128.6575 Tx ;78!sub acc0 12
+1707912128.6653 Rx ;24confirm !sub gyro0 12
+1707912128.6655 Rx ;48acc0 0.244507 0.0109863 -1.00909 12
+1707912128.6885 Rx ;28gyro0 2.37783 -9.04338 -1.87937 12
+1707912128.6987 ## # STeensy::run: msg retry after 0.04118 sec (retry=41, queue=2):;78!sub acc0 12
+1707912128.6998 Tx ;78!sub acc0 12
+1707912128.7400 ## # STeensy::run: msg retry after 0.04021 sec (retry=42, queue=2):;78!sub acc0 12
+1707912128.7412 Tx ;78!sub acc0 12
+1707912128.7813 ## # STeensy::run: msg retry after 0.04013 sec (retry=43, queue=2):;78!sub acc0 12
+1707912128.7824 Tx ;78!sub acc0 12
+1707912128.7703 Rx ;58liv 198
+1707912128.7867 Rx ;35encofirb gyro0 12
+1707912128.7966 Rx ;67gyro0 -;59acc0 0.565002 -0.1845 123789 12
+1707912128.8228 ## # STeensy::run: msg retry after 0.04048 sec (retry=44, queue=2):;78!sub acc0 12
+1707912128.8239 Tx ;78!sub acc0 12
+1707912128.8184 Rx ;32enc 429492 3.47646 14.4755 9.62321 12
+1707912128.8447 Txd ;68motv 0.93 -0.12
+1707912128.8641 ## # STeensy::run: msg retry after 0.04009 sec (retry=45, queue=2):;78!sub acc0 12
+1707912128.8652 Tx ;78!sub acc0 12
+1707912128.8585 Rx ;87enc 42949;07confirm !gyr;43gyro0 -3.55275 -20.546 14.1042 12
+1707912128.8701 Txd ;22motv 0.93 0.11
+1707912128.8815 Rx ;4ac .37;92gyro00.09393 -0.766479 12
+1707912128.9056 ## # STeensy::run: msg retry after 0.04040 sec (retry=46, queue=2):;78!sub acc0 12
+1707912128.9067 Tx ;78!sub acc0 12
+1707912128.9068 Rx ;78yo0 12
+1707912128.9405 Rx ;12gyro0 2.093 2.9852
+1707912128.9473 ## # STeensy::run: msg retry after 0.04056 sec (retry=47, queue=2):;78!sub acc0 12
+1707912128.9484 Tx ;78!sub acc0 12
+1707912128.9712 Rx ;55confim;42liv 190 248 267 300 311 22
+1707912128.9887 ## # STeensy::run: msg retry after 0.04029 sec (retry=48, queue=2):;78!sub acc0 12
+1707912128.9898 Tx ;78!sub acc0 12
+1707912128.9865 Rx ;1n   6130 1252 -151270 2953921 259 202
+1707912129.0029 Rx ;43enc 0 32 165187 0 1
+1707912129.0047 Txd ;77motv 0.93 -0.66
+1707912129.0301 ## # STeensy::run: msg retry after 0.04030 sec (retry=49, queue=2):;78!sub acc0 12
+1707912129.0312 Tx ;78!sub acc0 12
+1707912129.0420 Rx ;24confirm !sub gyro0 12
+1707912129.0585 Rx ;39enc 1 28 165204 0 1
+1707912129.0610 Txd ;29motv 0.98 0.04
+1707912129.0715 ## # STeensy::run: msg retry after 0.04025 sec (retry=50, queue=2):;78!sub acc0 12
+1707912129.0726 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.0823 Rx ;57liv 203 251 277 298 309 287 265 207
+1707912129.0826 Rx ;31enc 4294967295 14 165226 0 1
+1707912129.0844 Txd ;30motv 0.94 1.44
+1707912129.0903 Rx ;65liv 19irm !encrev 1
+1707912129.0969 Rx ;20confirm !lip 1 0 1 0 0 0 0
+1707912129.1013 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912129.1133 ## # STeensy::run: msg retry after 0.04075 sec (retry=1, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.1144 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.1553 ## # STeensy::run: msg retry after 0.04090 sec (retry=2, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.1565 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.1805 Rx ;5;9ac .269063 -0.0109253 -1.01945 12
+1707912129.1970 ## # STeensy::run: msg retry after 0.04052 sec (retry=3, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.1981 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.2382 ## # STeensy::run: msg retry after 0.04012 sec (retry=4, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.2393 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.2794 ## # STeensy::run: msg retry after 0.04004 sec (retry=5, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.2805 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.2283 Rx ;01gyro0 -6.68081 -5.04303 6-.53984 3806 26283 165306 ;10acc0 0347 -28315493 18.8141 12;23022405 0.0173 00865394 0 1
+1707912129.3212 ## # STeensy::run: msg retry after 0.04077 sec (retry=6, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.3223 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.3365 Rx ;13gyro4 0.0256551 -1.03764 12
+1707912129.3389 Rx ;33enc 56 4irm!ip 1 0 1 00 0
+1707912129.3488 Txd ;24motv 0.94 0.21
+1707912129.3628 ## # STeensy::run: msg retry after 0.04047 sec (retry=7, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.3640 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4043 ## # STeensy::run: msg retry after 0.04032 sec (retry=8, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4054 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4206 Rx ;74g;56acc0 0.38383 0.126099 -1.25328 12
+1707912129.4263 Rx ;3 211
+1707912129.4459 ## # STeensy::run: msg retry after 0.04047 sec (retry=9, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4470 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4697 Rx ;21acc0 0.287557 0.0475464 -0.494344 1;20confirm !ofirm !li   191 250 251 -512 1
+1707912129.4877 ## # STeensy::run: msg retry after 0.04072 sec (retry=10, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4888 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.5290 ## # STeensy::run: msg retry after 0.04022 sec (retry=11, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.5301 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.4996 Rx ;24confirm !s 29979 165gr0 3;54liv 187 245 266 295 312 280 249 206 282 267 206
+1707912129.5703 ## # STeensy::run: msg retry after 0.04021 sec (retry=12, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.5703 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.5705 Rx ;8;07conf -5670
+1707912129.6104 ## # STeensy::run: msg retry after 0.04001 sec (retry=13, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.6104 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.6103 Rx ;9iv 19 253 279 315 316 312 27 18
+1707912129.6106 Rx ;80enc 108 4.049712
+1707912129.6278 Txd ;22motv 1.45 0.13
+1707912129.6270 Rx ;90en;46liv 194 248 266 303 319 302 275 215
+1707912129.6512 ## # STeensy::run: msg retry after 0.04077 sec (retry=14, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.6512 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.6392 Rx ;71confirm !sub svo 50 00 429973 65612
+1707912129.6922 ## # STeensy::run: msg retry after 0.04095 sec (retry=15, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.6933 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.7063 Rx ;43liv 185 238 264 304 311 292 268 203
+1707912129.7065 Rx ;8ec11 4294967179 165749 0 1
+1707912129.7337 ## # STeensy::run: msg retry after 0.04042 sec (retry=16, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.7337 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.7303 Rx ;41liv 188 251 266 314 322 29;70gyro0 1;47acc0 0.33357;23gyro0 24.621158  1;22gyro0 29.5563 677 12 .0173543 -1.02228 12
+1707912129.7740 ## # STeensy::run: msg retry after 0.04029 sec (retry=17, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.7751 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.7816 Rx ;74acc0048974 0.0734456 -0.924357 12
+1707912129.8158 ## # STeensy::run: msg retry after 0.04063 sec (retry=18, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.8169 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.8299 Rx ;07cnim!gy.995712
+1707912129.8526 Rx ;79gyro0 7.41577 9.5;12acc0 0.379537 0.0647-.3449 12
+1707912129.8572 ## # STeensy::run: msg retry after 0.04035 sec (retry=19, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.8583 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.8986 ## # STeensy::run: msg retry after 0.04024 sec (retry=20, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.8997 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.9223 Rx ;41liv 196 243;46enc 4;80gyro0 048-.59-0.839661 12
+1707912129.9401 ## # STeensy::run: msg retry after 0.04044 sec (retry=21, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.9412 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.9815 ## # STeensy::run: msg retry after 0.04030 sec (retry=22, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.9826 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.9545 Rx ;82enc 15 429496231 -795 12
+1707912129.9855 Txd ;22motv 0.29 0.12
+1707912130.0232 ## # STeensy::run: msg retry after 0.04056 sec (retry=23, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.0243 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912129.9970 Rx ;07confirm ;89sv;51liv 191 241 2266 2;11acc0 0.751485 -0.122294 -0.768473 12 0 0 0
+1707912130.0559 Rx ;71confirm !sub svo 50
+1707912130.0646 ## # STeensy::run: msg retry after 0.04028 sec (retry=24, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.0657 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.1060 ## # STeensy::run: msg retry after 0.04031 sec (retry=25, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.1071 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.0907 Rx ;37enc 90 4296 271 309 32227 270 21;71confr sbsvo 50
+1707912130.1411 Txd ;25motv 2.39 0.12
+1707912130.1474 ## # STeensy::run: msg retry after 0.04026 sec (retry=26, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.1485 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.1885 ## # STeensy::run: msg retry after 0.04000 sec (retry=27, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.1886 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.1407 Rx ;12yo 8049c0 .861 -0.00826009 -0.847221. 00137838 -0.093843liv 201 248 267 391 26216929 -2.59399 6.11623 12-.618 -3.62905 30.042 1;07acc0 0.8819-.079535 24967210 166004 0 10i 9 248 634033 12
+1707912130.2290 ## # STeensy::run: msg retry after 0.04039 sec (retry=28, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.2300 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.2343 Rx ;41l 21-0.97585 12
+1707912130.2704 ## # STeensy::run: msg retry after 0.04034 sec (retry=29, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.2715 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.2845 Rx ;45gyro0 03125 -11.3271 -5.30497 12
+1707912130.3118 ## # STeensy::run: msg retry after 0.04028 sec (retry=30, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.3129 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.3215 Rx ;65acc0 0.37504 .76 -1.19663 1  
+1707912130.3539 ## # STeensy::run: msg retry after 0.04101 sec (retry=31, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.3550 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.3625 Rx ;44liv 194 246 263 281 310 03  2yo 12
+1707912130.3953 ## # STeensy::run: msg retry after 0.04026 sec (retry=32, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.3963 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.4105 Rx ;58enc 4294969674 66118 0 1
+1707912130.4291 Txd ;16motv 1.13 0.12
+1707912130.4367 ## # STeensy::run: msg retry after 0.04041 sec (retry=33, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.4378 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.4779 ## # STeensy::run: msg retry after 0.04001 sec (retry=34, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.4779 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.4779 Rx ;52acc;42l07265 304 311 293 267 214
+1707912130.5185 ## # STeensy::run: msg retry after 0.04063 sec (retry=35, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.5196 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.5447 Rx ;8b 11.7;53liv 189 247 270 317 309 292 270 217
+1707912130.5601 ## # STeensy::run: msg retry after 0.04048 sec (retry=36, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.5612 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6023 ## # STeensy::run: msg retry after 0.04104 sec (retry=37, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6023 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6023 Rx ;56liv 197 246 267 295 304 284 264 212
+1707912130.6025 Rx ;71enc 42;03acc0 0.5245794 -1.00643 12
+1707912130.6115 Txd ;16motv 1.13 0.12
+1707912130.6185 Rx ;73enc 49967263 4294nfirm !sub acc0 12
+1707912130.6223 Txd ;16motv 1.13 0.12
+1707912130.6428 ## # STeensy::run: msg retry after 0.04046 sec (retry=38, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6429 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6504 Rx ;54liv 178 242 cc5 265 299 309 294 266 211
+1707912130.6839 ## # STeensy::run: msg retry after 0.04106 sec (retry=39, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6851 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.6934 Rx ;07acc0 0.475098 0.107564 -1.11466 12
+1707912130.7057 Rx ;87acc0 0.301351 0;49liv 186 236 2662430292 266 212
+1707912130.7259 ## # STeensy::run: msg retry after 0.04080 sec (retry=40, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.7270 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.7643 Rx ;61gyro0 5.75002 -2.59399 -13.059 12
+1707912130.7678 ## # STeensy::run: msg retry after 0.04078 sec (retry=41, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.7689 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.7864 Rx ;46liv 182 2354 274 302 280 259 209
+1707912130.7866 Rx ;32enc 4294967257 18 166260 0 1
+1707912130.7883 Txd ;16motv 1.13 0.12
+1707912130.8096 ## # STeensy::run: msg retry after 0.04074 sec (retry=42, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8107 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8425 Rx ;32enc 4294967244 27 166282 0 1
+1707912130.8450 Txd ;62motv 0.50 -0.31
+1707912130.8511 ## # STeensy::run: msg retry after 0.04030 sec (retry=43, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8522 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8929 ## # STeensy::run: msg retry after 0.04068 sec (retry=44, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8940 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8983 Rx ;42liv 187 244 263 300 307 289 263 211
+1707912130.9341 ## # STeensy::run: msg retry after 0.04012 sec (retry=45, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.9353 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.9756 ## # STeensy::run: msg retry after 0.04023 sec (retry=46, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.9767 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912130.8985 Rx ;31enc 4294967237;65liv 186 238 2;68confirm !sub acc0 12
+1707912130.9985 Txd ;24motv 0.70 1.35
+1707912131.0104 Rx ;53liv 184 239 259 294 301 285 262 206
+1707912131.0106 Rx ;32enc 4294967232 39 166336 0 1
+1707912131.0136 Txd ;82motv 0.87 -0.68
+1707912131.0173 ## # STeensy::run: msg retry after 0.04062 sec (retry=47, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.0173 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.0173 Rx ;71acc0 0.424459 0.098938 -0.715373 12
+1707912131.0381 Rx ;68confirm !sub acc0 12
+1707912131.0404 Rx ;62gyro0 10.2437 23.6867 -16.4642 12
+1707912131.0581 ## # STeensy::run: msg retry after 0.04080 sec (retry=48, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.0592 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.0999 ## # STeensy::run: msg retry after 0.04066 sec (retry=49, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.1011 Tx ;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.1414 ## # STeensy::run: msg retry after 0.04026 sec (retry=50, queue=1):;17!gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.1790 Rx ;19liv 200 25;68confirm !sub acc0 12
+1707912131.1845 Rx ;87gyro;56acc0 0.272542 0.156413 -0.964681 12
+1707912131.2023 Rx ;37liv 184 243 26995 44 166420 0 1
+1707912131.2449 Rx ;51gyro0 -16.95 1ac 12
+1707912131.2746 Rx ;38enc 429496714874. 270 306 323 308 264 215
+1707912131.2924 Txd ;30motv 0.97 0.51
+1707912131.2909 Rx ;80en252 27 1 1 9 7 0
+1707912131.2986 Rx ;88enc 2 214 166665 0 1
+1707912131.3323 Txd ;08motv 0.41 -10.00
+1707912131.3419 Rx ;03acc0;.1517 43.7978 -72.9319 12
+1707912131.3657 Rx ;48acc0 0.482524 -0.0838216 -0.807312 12
+1707912131.3900 Rx ;50acc0 0.518514 -0.189494 -1.02452 12
+1707912131.4184 Rx ;51liv 194 244 262 292 306 284 235 175
+1707912131.4186 Rx ;75en6 3 90
+1707912131.4426 Rx ;79enc 428262 69 216
+1707912131.4505 Rx ;79enc 4294967112 251 166792 0 1
+1707912131.4526 Txd ;74motv 0.97 -2.21
+1707912131.4734 Rx ;68confirm !sub acc0 12
+1707912131.4736 Rx ;388204 -0.0512085 -1.24044 12
+1707912131.5392 Rx ;1n 2460729 1
+1707912131.5570 Rx ;07confirm!yoa .22405 0.03 004368
+1707912131.5572 Rx ;0;55lv;55acc0 0.490255 -0.0151774 06 243 266 297;57liv 190 245 265 297  0.;13confirm !sub liv 8
+1707912131.6400 Rx ;68confim;57liv 180 243 258 9 299 284 265 212
+1707912131.6509 Rx ;99enc 4294967092 299 166928 0 1
+1707912131.6538 Txd ;65motv 0.70 -2.30
+1707912131.6585 Rx ;92n 312 166941 0 1
+1707912131.6789 Rx ;13confirm !sub liv 8
+1707912131.6983 Rx ;47liv 1;11gyo 1161-.168 10.2;55acc0 0.919;67liv 188 247 26272.022405 0.0137838 -0.00493368
+1707912131.7484 Rx ;68gyro0 6.41886 34.1797 -34;40acc0 0.08 -0.809041 12
+1707912131.7648 Rx ;07confirm !gyrocal 0.022405 0.0137838 -0.0049 13.71 -35.9701 12
+1707912131.8323 Rx ;02gyro0 -1.36566 -6.42141 14.0457 12
+1707912131.8563 Rx ;64gyro0 -14.6103 3.11279 38.6658 12
+1707912131.8576 Rx ;07acc0 0.191671 -0.146505 -0.769409 12
+1707912131.8985 Rx ;79enc 4294967036 349 167112 0 1
+1707912131.9001 Txd ;71motv 0.32 -2.29
+1707912131.9420 Rx ;6ac ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912131.9528 Rx ;70gyr0;07confirm !gyrocal 0.022405 0.0137838 -0.00493368
+1707912131.9714 Rx ;1;01
+1707912132.0263 Rx ;50liv 184 235 248 265 287 301 285 257 2237 167180 0 1
+1707912132.0583 Rx ;42liv 191 237 263 306 302 287 260 218
+1707912132.0585 Rx ;81enc 4294967031 308 167196 0 1
+1707912132.0595 Txd ;71motv 0.75 -1.14
+1707912132.0823 Rx ;50liv 186 239 254 291 302 278 255 204
+1707912132.1096 Rx ;16acc0 0.404867 0.0209757 -0.838216 0.022405 0.0137;64gyro0 4.;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912132.1865 Rx ;86enc 4294967048 296 167313 0 1
+1707912132.1881 Txd ;76motv 1.18 -1.48
+1707912132.2191 Rx ;2i 82 3 6 301 309 290 263 205
+1707912132.2193 Rx ;78enc 4294967050 295 167322 0 1
+1707912132.2216 Txd ;66motv 1.04 -1.61
+1707912132.2283 Rx ;54gyro0 3.13314 2.39563 -2.83305 12
+1707912132.2428 Rx ;80enc 494967047 290 167332 0 1
+1707912132.2450 Txd ;65motv 0.90 -1.11
+1707912132.2506 Rx ;89enc 4294967045 287 167337 377 0 1
+1707912132.2997 Txd ;74motv 0.90 -0.57
+1707912132.3227 Rx ;84enc 4294967046 3192128 30 9 7739111
+1707912132.3624 Txd ;75motv 0.94 -1.44
+1707912132.3868 Rx ;07confirm !gyrocal 0.09332122307 28900684 -gyro0 -8.70768 1.27411 17.4586 12
+1707912132.4459 Rx ;26acc0 054.08365lv16252820314 167460 0 1
+1707912132.4670 Rx ;13confirm !sub liv 8
+1707912132.4695 Rx ;07confirm !gy;09gyro0 21.1207 0.256856 -32.1757 12
+1707912132.5304 Rx ;41liv 188 241 268 3033039 0 9 20.1 1 1
+1707912132.5498 Rx ;13confirm !sub li
+1707912132.5531 Rx ;07cn967022 337 167588 0 1
+1707912132.6028 Rx ;41liv 182 245 265 22302 ;50liv 184 235 258 294 306 291 26740175  yocal0020562332212219
+1707912132.6587 Rx ;;13acc0 0.273295 0.0491333 -0.684591 12
+1707912132.7308 Rx ;88enc 4294967022 378 167;13confir sb;59liv 186 236 255 28522262014
+1707912132.7638 Txd ;74motv 0.75 -1.44
+1707912132.7927 Rx ;23gyro0 -4.49626 0.096639 40.1942 12
+1707912132.8825 Rx ;99enc 4294967 5 68501
+1707912132.8849 Txd ;36motv 0.89 5.15
+1707912132.8837 Rx ;07confirm !gyr;70liv 185 243 264 288 297 291 257 195
+1707912132.9066 Rx ;93enc 4294966973 364 167912 0 1
+1707912132.9082 Txd ;07motv 0.22 -10.00
+1707912132.9143 Rx ;56liv 191 243 257 296 293 294 262 206
+1707912132.9145 Rx ;04enc 4294966973 369 167917 0 1
+1707912132.9151 Txd ;87motv 0.57 -4.99
+1707912132.9243 Rx ;11gyro0 27.5014 167938 0 1
+1707912132.9723 Rx ;15gyro0 1.30971 1.69118 10.8617 12
+1707912132.9736 Rx ;08acc0 0.38385 -0.134155 -0.97467 12
+1707912132.9943 Rx ;57liv 186 236 259 280 289 270 252 181
+1707912132.9945 Rx ;93enc 4294966951 321 167995 0 1
+1707912132.9963 Txd ;78motv 0.19 -1.95
+1707912133.0088 Rx ;71confirm !sub svo 50
+1707912133.0089 Rx ;07confirm !gyrocal 0.022405 0.0137838 -0.0049336
+1707912133.0683 Rx ;74gyro0 24.3098 10.4574 -37.7884 12
+1707912133.1174 Rx ;08acc0 0.271667 -0.158325 -0.781148 12
+1707912133.1283 Rx ;10gyro0 91 168083 0 1
+1707912133.1788 Rx ;88enc 429496liv 174 234 251 273 283 271 242 192
+1707912133.1866 Rx ;85enc 4294966949 311 168107 0 1
+1707912133.1871 Txd ;10motv 0.07 -10.00
+1707912133.2247 Rx ;17gyro0 -5.39907 -3.00852 15.5919 1 185 242 261 276 296 263 255 203
+1707912133.2426 Rx ;86enc 4294966950 247 168180 0 1
+1707912133.2436 Txd ;74motv 0.81 -8.40
+1707912133.2963 Rx ;19gyro0 -11.4517 -8.19397 25.2864 12
+1707912133.3309 Rx ;98enc 4294966946 196 168247 0 1
+1707912133.3333 Txd ;82motv 0.64 -9.46
+1707912133.4177 Rx ;98acc0 0.158956 -0.110006 -0.857218 12
+1707912133.4299 Rx ;36acc0 0.372701 -0.103475 -1.17055 12
+1707912133.4585 Rx ;90ec 49962 7 6310 ;71confirm 0
+1707912133.4985 Rx ;96enc ;65gyro0 26.5757 -1.80562 -39.444 12
+1707912133.5263 Txd ;82motv 0.75 -7.64
+1707912133.5310 Rx ;60liv 178 239 4 284 287 291 256 212
+1707912133.5376 Rx ;67acc0 0.437256 0.170959 6 25209 01 272624.5089-0.223409 -1218205 -0959 ;84gyro0 3.43068 -8.5907 0.907898 12
+1707912133.6426 Rx ;02en 2469827186  1
+1707912133.6987 Rx ;53liv 194 245 260 292 297 285 254 203
+1707912133.6989 Rx ;92enc 4294966937 16;07gyro0 -23.3231 -9.05609 50;97acc0 0.254639 -0.249105 -0.860107 4294966925 152 168594 0 1
+1707912133.7333 Txd ;11motv 0.71 -10.00
+1707912133.7793 Rx ;83n 2469113184  -0.0332438 -;4 187
+1707912133.8905 Rx ;69liv 186 237 255 287 296 277 255 208
+1707912133.8907 Rx ;92enc 4294966873 203 168739 0 1
+1707912133.8930 Txd ;54motv -0.06 -10.00
+1707912133.9303 Rx ;52liv 191 237 259 292;61acc0 0.737244 -0.099589 -1.03496683;05acc0 0.202087 -0.101339 -0.9;69gyro0 -0.643412 29.8936 184  61 -24.4039 -37.0305 12
+1707912134.0192 Rx ;10enc 4294966837 269 168879 0 1
+1707912134.0196 Txd ;07motv 0.04 -10.00
+1707912134.0586 Rx ;89enc49964 6 69101
+1707912134.0903 Rx ;i 17 2 5 9 0 9 261 206
+1707912134.0904 Rx ;97enc 4294966840 269 168918 0 1
+1707912134.0923 Txd ;13motv 0.82 -10.00
+1707912134.1134 Rx ;57acc0 0.20483 261 296 304 289 263 212
+1707912134.1224 Rx ;66liv 180 237 251 289 296 274 254 199
+1707912134.1226 Rx ;94en933 0 1
+1707912134.1786 Rx ;95enc255 20754 12
+1707912134.2266 Rx ;80en 1 60801
+1707912134.2517 Rx ;89s;71confirm !sub svo 50
+1707912134.3069 Rx ;45enc 4294966865 83 169183 0 ;60liv 186 234 255 287 293 271 239 191
+1707912134.3225 Rx ;49enc 4294966867 77 169191 0 1
+1707912134.3245 Txd ;79motv 1.04 -8.76
+1707912134.3704 Rx ;55liv 186 238 250 279 298 280 254 202
+1707912134.3705 Rx ;46enc 4294966868 68 169205 0 1
+1707912134.3726 Txd ;80motv 0.83 -9.70
+1707912134.4641 Rx ;71cof;52liv 192 240 254 288 295 278 251 204
+1707912134.4827 Rx ;93en41 2432 12
+1707912134.5069 Rx ;7;42liv 188 240 257 291 301 272 254 207
+1707912134.5146 Rx ;81e;57liv 190 234 2569302 0 1
+1707912134.5703 Rx ;46liv 184 235 255 294 303 284 253 206
+1707912134.5803 Rx ;56gyro0 2.78473 -6.134032529
+1707912134.6585 Rx ;91ec 42468518194    68918195  v134 312 26871confirm
+1707912134.7487 Rx ;8;04acc00;07gyro0 -16.772 35.3775 31.3212 12
+1707912134.7858 Rx ;45acc0 0.2;72liv 196 245 260 284;71confirm !sub svo 50
+1707912134.7967 Rx ;04gyro0 -15.4546 -21.2657 20.4824 12
+1707912134.9294 Rx ;37acc0 0.401123 0.106;88enc 4294966841 152195  vo 0   000    000    16975lv13 237 254 289 298 270 244 206
+1707912134.9625 Rx ;03e;50liv 196;74gyro0 19.6228 15.593 285 262 205
+1707912135.0105 Rx ;94enc 4294966845 192 169608 0 1
+1707912135.0125 Txd ;13motv 0.64 -10.00
+1707912135.0513 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  258 198
+1707912135.0665 Rx ;9!sub gyro0 12
+1707912135.1146 Rx ;96acc0 0.398458 -0.2;8so000    000    000
+1707912135.1547 Rx ;94enc 499 262 233
+1707912135.1728 Txd ;17motv 0.68 -10.00
+1707912135.1711 Rx ;90enc 4294966831 272 169790 0 1;72gyro;49acc0 0.333069 -0.00358073 -0.824 0 0  2626
+1707912135.1961 Txd ;15motv 0.66 -10.00
+1707912135.3384 Rx ;56liv 191 241 258 291 296 273 245 193
+1707912135.3386 Rx ;98enc 4294966844 229 169864 0 1
+1707912135.3396 Txd ;85motv 0.96 -9.53
+1707912135.3484 Rx ;51gyro0 13.5244 7.25;58acc0 0.424703 -0.;89svo 0 0 0  0    0 0 8 58 270 290 314 2894 2firm !sub gyro 187
+1707912135.4985 Rx ;69enc 4294966811 247 170021 0 1
+1707912135.5011 Txd ;07motv 0.22 -10.00
+1707912135.5551 Rx ;57;60liv 175 229 247 283 300 287 254 199
+1707912135.6664 Rx ;65liv 188 5 9 97 25 5 9 0 8 6 1;77enc 4294966779 240 170140 01 247 187   0   000  0 0 0  0 0 0
+1707912135.7146 Rx ;89enc 42902011.;82gyro0 -16.0955 8.96708 46.0765 12
+1707912135.7465 Txd ;75motv 0.75 -7.30
+1707912135.7470 Rx ;58liv 176 237 260 301 2990 -728-.10 9.683 12
+1707912135.7934 Rx ;70acc0 0.198263 0.134379 -0.682963 12
+1707912135.8345 Rx ;78enc 4294966791 201 170267 0 1
+1707912135.8358 Txd ;10motv 0.52 -10.00
+1707912135.8586 Rx ;97enc 4294966786 186 170297 0 1
+1707912135.8592 Txd ;81motv 0.23 -8.69
+1707912135.9945 Rx ;84enc 4294967813101  42949670.5495 -0.25 -1.01971 12
+1707912136.0232 Txd ;10motv 0.70 -10.00
+1707912136.0425 Rx ;2 11 661.5092.  
+1707912136.0565 Rx ;09gyro0 -1.06049 -1.54368 18.3716 12
+1707912136.0986 Rx ;82enc 4294966782 1281;98acc0 1.03554 ;42liv 180 2;;09gyro0 25.8331 -9.42739-;23acc0 0.53  0  0 0 0  0 0 0
+1707912136.1518 Txd ;10motv 0.70 -10.00
+1707912136.1790 Rx ;42liv 189 244 263 300 310 292 259 207
+1707912136.1792 Rx ;89enc4;59gyro0 22.49;44acc0 0.530131 -0.157471 -1.44956 12
+1707912136.2425 Rx ;77enc 4294966771 223 170651 0 1
+1707912136.2452 Txd ;09motv 0.51 -10.00
+1707912136.2513 Rx ;89svo 0 0 0  0 0 0m !sub gyro0 12
+1707912136.3328 Rx ;11gyro0 8.4881
+1707912136.3449 Rx ;74gyro0 6.17981 14.7146 -13.4786 12
+1707912136.4169 Rx ;55gyro0 0.50354 10.2463 -3.64685 12
+1707912136.4284 Rx ;36gyro0 8.31095 9.78597 -3.98 12
+1707912136.4505 Rx ;88enc4n 42170;61li ;23gyro0 -33.1879 8.2016 69.5292 12
+1707912136.5138 Rx ;10acc0 0.236165 -0.0794474 -1.08539 12
+1707912136.5305 Rx ;91enc 4296766 193 170844 0 1
+1707912136.5325 Txd ;83motv 0.70 -9.86
+1707912136.5863 Rx ;47liv 179 226
+1707912136.6187 Rx ;57liv 186 238 256 294 305 286 261 20;81ec49965 0 170953 0 1
+1707912136.6504 Rx ;62liv 188 238 257 289 304 288 262 213
+1707912136.7090 Rx ;68c;4yro0;38acc0 0.1866728 8111  294966726 85 171022 0 1
+1707912136.7785 Rx ;35liv 185 245 253 285 303 301 252 206
+1707912136.7787 Rx ;30enc 4294966707 71 171057 0 1
+1707912136.7806 Txd ;83motv 0.70 -8.78
+1707912136.8017 Rx ;89svo 0 0 0  0;70acc0 0.195658 -0.0516968 -0.827901 12
+1707912136.8364 Rx ;54gyro04 2;35liv 177 241 266 300 302 280 257 216
+1707912136.8906 Rx ;38enc 4294966738 29 171166 0 1
+1707912136.8938 Txd ;80motv 1.45 -8.90
+1707912136.9146 Rx ;33enc 4294966738 11 171188 0 1
+1707912136.9171 Txd ;83motv 0.93 -7.74
+1707912136.9521 Rx ;;89gyro0 -1561enc4996878 9.85463 -0. 253 294 307 280 22
+1707912137.0425 Rx ;70en 26 232 255 280 289 274 255 201
+1707912137.0666 Rx ;61enc 4294966722 4294967257 7;73acc0 0.378988 0.252502 -0.926188 12
+1707912137.0784 Txd ;86motv 0.59 -9.46
+1707912137.0884 Rx ;10gyro0 0.205;62acc0 0.342407 0.2874 0 0  0 0 0  0 0 0  0 0 0
+1707912137.1015 Rx ;41a!yoa .24500388-.0938;55liv 7 2 5 9 0 8 5 9;67ec49962 246119  44 186
+1707912137.1466 Rx ;61enc 42949645 494967349969 75201
+1707912137.2211 Txd ;88motv 0.79 -9.46
+1707912137.2591 Rx ;73enc 4294966757 4294966950 171646 0 1
+1707912137.2609 Txd ;88motv 0.79 -9.46
+1707912137.3226 Rx ;8 212311
+1707912137.3466 Rx ;2n 24673499654 76001
+1707912137.5461 Rx ;99acc0 0.1;89svo 0 ;61liv 183 235 263 296 299 276 282;21gyro0 8.00069 -.;64acc0 0.591146 0.1;07confirm !gyrocal 0.022405 0.0137838 -0.00493368
+1707912137.5810 Rx ;18gyro0 0;73acc0 0.389079 0.0068562;65liv 185 226 251 288 294 277 250 199
+1707912137.5867 Rx ;73enc 4;50liv 188 238 25 ;50acc0 0.532959 -0.0570068 -0.902303 12
+1707912137.6550 Txd ;88motv 0.79 -9.46
+1707912137.7385 Rx ;41liv 184 232 253 291 298 280 252 201
+1707912137.7387 Rx ;84enc 4294966785 4294966943 171897 0 1
+1707912137.7401 Txd ;88motv 0.79 -9.46
+1707912137.7514 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912137.7624 Rx ;43liv 180 234 255 292 297 262 250 205
+1707912137.7626 Rx ;75enc 4294966776 4294966930 171919 0 1
+1707912137.7635 Txd ;11motv -0.22 -8.00
+1707912137.7725 Rx ;22gyro0 -22.6644 -5.45247 48.7493 12
+1707912137.7737 Rx ;19acc0 0.486247 -0.117126 -0.963989 12
+1707912137.7845 Rx ;28gyro0 -17.6697 7.5709 41.51924 169 252 28 9 7 5 0;2n 246178 229 248 288 298 273 196 1ocal 0;55li ;47liv 178 227 247 288 300 278 251 210
+1707912137.8909 Rx ;72enc 4294966778 4294966910 171961261 300 302 279 250 206
+1707912137.9001 Txd ;86motv 0.69 -8.82
+1707912137.8987 Rx ;72enc 4294966778 4294966910 1710.00493368
+1707912137.9153 Txd ;91motv 0.99 -8.84
+1707912137.9226 Rx ;49liv 179 233 241 290 306 298 243 182
+1707912137.9228 Rx ;83enc 4294966779 4294966904 171968 0 1
+1707912137.9241 Txd ;85motv 0.79 -8.62
+1707912137.9284 Rx ;71gyro0 0.526428 6.63503 6.03739 12
+1707912137.9764 Rx ;19gyro0 -12.4791 -6.88426 37.1068 12
+1707912137.9777 Rx ;13a;07confirm !gyrocal;59gyro0  36719.338rocal 0.022;;58gyro0 -4.44539 11.3805 16.3371 12;66liv 174 227 238 2;07gyro0 11.6857 -1.00708 -19.1570.3601;68gyro02;47acc0 0.370463 0.207926 -0.92230 ;64gyro0 20.7163 26.3799924 -35 253 281 287 272 262 213
+1707912138.1307 Rx ;59enc 4294966783 4294966730 172240 0 1
+1707912138.1329 Txd ;82motv 0.77 -6.81
+1707912138.1386 Rx ;63enc 4294966783 429496673;48liv 180 225 245 282 294 267 258 202
+1707912138.1478 Txd ;77motv 1.06 -8.72
+1707912138.1466 Rx ;65enc 4294966783 429;55liv 183 232 249 283 289 277 245 202
+1707912138.1877 Txd ;83motv 0.94 -8.72
+1707912138.2417 Rx ;72acc0 0.351827 -0.0855;89acc00.37266 -0.031901 7247 277 286 268 245 0964 73001
+1707912138.2824 Rx ;54liv 174 220 2470 2 185 234 251 274 283 269 247 198
+1707912138.4185 Rx ;56liv 183 24 277 24.075236 -1.031
+1707912138.4264 Rx ;48liv 179 231 253 288 297 270 250 2030 0 1
+1707912138.4505 Rx ;56liv 175 232 250 278 290 268 239 193
+1707912138.4507 Rx ;66enc 4294966829 4294966650 172416 0 1
+1707912138.4540 Txd ;80motv 1.18 -8.72
+1707912138.4584 Rx ;55liv 179 230 244 286 281 282 248 192
+1707912138.4586 Rx ;66enc 4294966829 4294966650 172416 0 1
+1707912138.4608 Txd ;71motv 1.20 -9.06
+1707912138.4684 Rx ;57gyro0 6.02722 -1.6098 -16.8381 12
+1707912138.4697 Rx ;12acc0 0.567973 -010;94gyro0 -1.9633 -0.231425 10;97acc0 0.69;55liv 187 235 252 26;97gyro0 8.18125 -10.6176 -3.45103 12
+1707912138.5057 Rx ;98acc0 0.496643 -0.101908 -0.908203 12
+1707912138.5224 Rx ;41liv 180 230 244 278 282 262 240 194
+1707912138.5945 Rx ;47liv 186 232 251 283 296 283 256 201
+1707912138.5947 Rx ;69enc 4294966833 4294966653 172493 0 1
+1707912138.5975 Txd ;89motv 0.98 -8.83
+1707912138.6376 Rx ;53acc0 0.452209 0.04298 -071512
+1707912138.6744 Rx ;61 0 1
+1707912138.7064 Rx ;42liv 182 230 247 284 287 263 253 210
+1707912138.7066 Rx ;78enc 4294966835 4294966629 172569 0 1
+1707912138.7075 Txd ;78motv 0.96 -8.20
+1707912138.7784 Rx ;45liv 180 236 253 291 296 265 244 203
+1707912138.7787 Rx ;58enc 4294966814 4294966613 1726 0 1
+1707912138.8050 Txd ;67motv 0.14 -8.10
+1707912138.8430 Rx ;6 0 0 0  0 0 0
+1707912138.8744 Rx ;45liv 187 234 250 2026ec49961 246661258 12
+1707912138.9127 Rx ;91gyro;10gyro0 -2.6474;01acc0 0.484497 -0.034037;31yrocc0 0.393616-.449 1893 12
+1707912138.9866 Rx ;74enc 4294966815 4294966583 172775 0 1
+1707912138.9870 Txd ;75motv 0.82 -8.22
+1707912138.9964 Rx ;49gyro0 -5.33295 . 0.457194 0.0940145 -0.894287 12
+1707912139.0942 Rx ;9130 254 296 303 283 5  5264 12
+1707912139.1226 Rx ;6ec49962 42949662 172867 0 1
+1707912139.1885 Rx ;81gyro0 20.5943 2.82796 -28.7476 12
+1707912139.2125 Rx ;79gyro0 3.74095 9.08661 -8.33638 12
+1707912139.2138 Rx ;62acc0 0.580139 0.117737 -0.945048 12
+1707912139.2246 Rx ;03gyro0 10.4319 c 0.4 0.914 -5.;61acc0 0.424723 0.12457 n 22
+1707912139.2848 Rx ;96gyro0 4.05121 -3.07973 -16.4134cc0;64gyro;67acc0 0.676188 -0.13562-;43liv 191 233 248  205
+1707912139.3226 Rx ;83enc 4294966767 4294966595 172991 0 1
+1707912139.3238 Txd ;78motv 0.43 -8.64
+1707912139.3464 Rx ;52liv 182 240 252 287 294 275 257 206
+1707912139.3466 Rx ;67enc 4294966763 4294966573 173019 0 1
+1707912139.3472 Txd ;63motv 0.30 -6.10
+1707912139.3565 Rx ;75gyro0 -11.4568 51.5951 45.7738 12
+1707912139.3578 Rx ;42acc0 0.106791 0.025411 -0.850525 12
+1707912139.3944 Rx ;56liv 185 238 260 292 308 288 272 217
+1707912139.3946 Rx ;64enc 4294966762 4294966538 173061 0 1
+1707912139.3951 Txd ;74motv 0.63 -6.24
+1707912139.4044 Rx ;81gyro0 -2.47447 17.2373 3.59599 12
+1707912139.5554 Rx ;66enc 429496 2939 284 262 211
+1707912139.5715 Txd ;84motv 0.68 -7.91
+1707912139.5707 Rx ;66enc 2 4.12
+1707912139.5762 Txd ;84motv 0.68 -7.91
+1707912139.5857 Rx ;96acc0 0.350 .035-.51 2lv 181 231 7 4294966530 173132 0 1
+1707912139.6430 Rx ;63enc 4294966781 4294966526 173152 0 1
+1707912139.6449 Txd ;84motv 0.68 -7.91
+1707912139.7146 Rx ;80enc 4294966778 4294966537 173188 0 1
+1707912139.7157 Txd ;77motv 0.56 -8.32
+1707912139.7705 Rx ;32liv 72 83 112 11;42liv 42 52 56 69 70 70 56 53
+1707912139.8266 Rx ;67enc 4294966745 4294966435 173355 0 
+1707912139.8280 Txd ;16motv -0.13 -5.53
+1707912139.8665 Rx ;39liv 41 47 53 63 58 57 52 40
+1707912139.8667 Rx ;64enc 4294966742 4294966405 173394 0 1
+1707912139.8681 Txd ;71motv 0.34 -5.60
+1707912139.9465 Rx ;14liv
+1707912140.0027 Rx ;22liv 17 19 22 26 28 24 20 18liv 21 24 23 26 26 24 23 25
+1707912140.0106 Rx ;72e968 24656130  8454 12
+1707912140.1019 Rx ;;65liv 12 ;46acc0 8 1.103 249667;61acc0 0.5594;55gyro0 -11.6374 56.132;45acc0 0.555216 0.0709025 -1.01349 12
+1707912140.2187 Rx ;66enc 4294966805 4294966529 17371 ;26liv 15 ;65enc 4294966805 4294966542 173726 0 1
+1707912140.2523 Txd ;86motv 0.99 -8.25
+1707912140.2985 Rx ;92enc 4294966797 4294966478 173798 0 1
+1707912140.3005 Txd ;74motv 0.32 -5.74
+1707912140.3417 Rx ;20acc0 0.259847 0.0870972 -0.757121 12
+1707912140.3705 Rx ;86liv 5 9 7 8 7 9 7 31
+1707912140.3708 Rx ;67enc 4294966761 4294966343 173971 0 1
+1707912140.3733 Txd ;26motv -0.79 -2.18
+1707912140.3785 Rx ;72liv 9 7 4 4 19 4 11 32
+1707912140.3787 Rx ;75enc 4294966760 4294966347 173976 0 1
+1707912140.3802 Txd ;70motv 0.01 -7.81
+1707912140.3885 Rx ;54gyro0 -1.90226 50.8321 58;72gyro0 -1.82851 58.6395 57.2205 12
+1707912140.4184 Rx ;27liv 12 8 9 12 9 11 8 27
+1707912140.4187 Rx ;62enc 4294966773 4294966325 174017 0 1
+1707912140.4199 Txd ;76motv 1.17 -5.18
+1707912140.6301 Rx ;08acc0 0.056620.58;75liv 9 30
+1707912140.6885 Rx ;23gyro0 1.46993 -49.1155 42.099 ;82liv 8 9   ;60liv 0 1 6 ;61liv 12;74acc0 0.21;60liv 5 6 3 2 3 3 1 16
+1707912140.7861 Rx ;97acc0 0.215047 -0.00504557 -0.894901
+1707912140.8504 Rx ;82liv;89svo 0  ;80gyro0 -3.967 469 060 2;13acc0 0.237325 6516 17440361 12
+1707912140.8746 Rx ;64en 28949967
+1707912140.9302 Rx ;47acc0 0.21368 0.09434 -1.06724966800 429496650 5881 0
+1707912141.0371 Rx ;53gyro0 45.853068 0.219 11531
+1707912141.0504 Rx ;.06 0 0 0  0 0 0  0 0 0  0 0 0
+1707912141.0617 Rx ;75acc0 0.0525513 0.300028 -1.1404 12
+1707912141.0825 Rx ;78enc 424 174747 0 1
+1707912141.1012 Txd ;73motv 0.43 -6.43
+1707912141.1306 Rx ;73enc 4294966695 4294966265 174805 0 1
+1707912141.1328 Txd ;73motv 0.43 -6.43
+1707912141.1706 Rx ;59ec;69liv 5 10 7 12 6 7 7 15
+1707912141.2346 Rx ;55enc 4294966714 4294966310 174921 0 1
+1707912141.2365 Txd ;77motv 0.92 -7.60
+1707912141.2647 Rx ;35gyro0 86.3851 59.8907 13 2;64i   5 2;70;37gyro0 86.9446 67.2811 108.777 12
+1707912141.2887 Rx ;4;95acc0 -0.271484 0.426147 -0.832214 12
+1707912141.2911 Rx ;48enc 400  -0.323975 0.393005 -0.801412 12
+1707912141.3157 Txd ;71motv 0.50 -6.61
+1707912141.4187 Rx ;17liv 9 5 1 1 5 7 11 17
+1707912141.4515 Rx ;89svo 0 0 0  0 0 0  0 0 0  ;04gyro;06acc0 -0.475057 0.527303 -0.599243 12
+1707912141.4690 Rx ;59gyro0 42.5161 -16.6906 19.063 0-.78699 0;23liv 6 7 1 5 8   ;7n 2496774622;15liv 3 9 13 16 16 15 12 21
+1707912141.5466 Rx ;71enc 4294966769 4294966257 175151 0 1
+1707912141.5492 Txd ;71motv 0.50 -6.61
+1707912141.6425 Rx ;35liv -2 -7 0 -4 10 0 1 14
+1707912141.6426 Rx ;72enc 4294966779 4294966226 175236 0 1
+1707912141.6445 Txd ;84motv 0.78 -5.74
+1707912141.6514 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912141.6745 Rx ;78enc 4294966774 4294966197 175276 0 1
+1707912141.6761 Txd ;64motv 0.12 -4.04
+1707912141.7337 Rx ;99acc0 -0.323853 0.562744 -0.710185 12
+1707912141.8106 Rx ;68enc 420 -.73658512 -0.733256 12
+1707912141.8189 Txd ;74motv 0.48 -6.12
+1707912141.8826 Rx ;60en6704966783 4294966211 175427 
+1707912141.9305 Rx ;62enc 4294966791 4248-553 1.83 12
+1707912141.9390 Txd ;74motv 0.48 -6.12
+1707912141.9384 Rx ;38liv 4 4 -1 -7 -4 -4 ;11gyro0 -7.07245 -35.8149 -11.795 12
+1707912141.9497 Rx ;01acc0 -0.143717 0.572673 -0.824422 12
+1707912141.9845 Rx ;59gyro0 -12.7055 -22.4889 -13.5574 12
+1707912141.9858 Rx ;06a;54liv;51gyro0 -16.1235 -18.2724 -14.1958 12
+1707912142.0667 Rx ;62enc 4;7;78acc0 -0.041 0.57114 82019 12
+1707912142.0963 Txd ;74motv 0.48 -6.12
+1707912142.1465 Rx ;79liv 12 13;;92acc0 0.00411 .28 ;84li;16liv 5 3 8 13 10 13 910 -5.0532 -38.063 -17.7027 12
+1707912142.2265 Rx ;79liv 8 4 7 8 8 8 5 10
+1707912142.2266 Rx ;69enc 4294966681 4294966323 175891 0 1
+1707912142.2270 Txd ;74motv 0.48 -6.12
+1707912142.2366 Rx ;56gyro0 -5.24648 -42.2185 -21.6573 12
+1707912142.2378 Rx ;24acc0 0.10199 0.559835 -0.856099 12
+1707912142.2748 Rx ;38liv 3 5 1 1 10 -3 0 -3
+1707912142.2749 Rx ;88enc 4294966679 4294966369 175965 0 1
+1707912142.2754 Txd ;84motv 0.37 -8.67
+1707912142.3545 Rx ;65enc 4294966678 4294966255 176102 0 1
+1707912142.3565 Txd ;73motv 0.43 -2.65
+1707912142.4536 Rx ;70acc0 0.167928 0.5283 -0.904887 12
+1707912142.4644 Rx ;30gyro0 5.54657 -59.5957 -21.3394 12
+1707912142.4657 Rx ;06acc0 0.180115 0.53009 -0.884399 12
+1707912142.4745 Rx ;85liv 0 0 -3 2 0 2 -6 0
+1707912142.4746 Rx ;65enc 4294966682 4294966292 176241 0 1
+1707912142.4768 Txd ;81motv 0.55 -6.75
+1707912142.5627 Rx ;68enc 4294966678 429496644;16gyro0 12.7004 -37.6816 -21.7997 12
+1707912142.5746 Txd ;72motv 0.35 -6.05
+1707912142.5740 Rx ;67acc0 0.30623405;62gyro 235.675 -21.8328 12
+1707912142.6745 Rx ;61liv 5 11 7 5 3 2 2 5
+1707912142.6746 Rx ;68enc 4294964966672 429
+1707912142.7257 Txd ;73motv 0.45 -6.05
+1707912142.7464 Rx ;17liv949 7 2 4 ;63acc0 0.403544 0.534749 -.7811
+1707912142.7792 Rx ;0
+1707912142.7867 Rx ;63enc 4294966702 42794cc00;64l;47gyro0 21.5937 -30.042 -15.9531 12
+1707912142.8398 Txd ;73motv 0.45 -6.05
+1707912142.8378 Rx ;09acc0 0.429525 ;25gyro0 24.9837 -28.2796 -14.2;67acc0 0.475098 0.546 4 2 5 9 10
+1707912142.9226 Rx ;71enc 4294966706 485 0 1
+1707912142.9249 Txd ;72motv 0.53 -6.05
+1707912143.0185 Rx ;59liv -1 9 4 10 6 3 4 16
+1707912143.0186 Rx ;74enc 4294966744 4294966369 176912 0 1
+1707912143.0203 Txd ;73motv 1.53 -6.05
+1707912143.0346 Rx ;69e 12 7 0 3 6  966322 176981 0 1
+1707912143.1128 Rx ;64gyro0 34.7392 -19.455 -1.90c0 0.552633 04966682 8
+1707912143.1365 Rx ;68gyro0 32.7937;70acc0 0.554138 0.589864 -0.6110 8 7 3 1 7
+1707912143.1544 Rx ;97liv 429 -1
+1707912143.2584 Rx ;52liv 14 11 1 19 ;68acc0 0.533671 0.618774 -0.585327 12
+1707912143.3164 Rx ;60gyro0 30.1514 0.00508626 13.5956 12
+1707912143.3286 Rx ;63gyro0 32.6284 -1.21307 14.8849 12
+1707912143.3310 Rx ;76liv 6 3 4;10liv ;95gyro0 34.3552 -2.10571 16.4;57liv 6 4 12 9 12 14 10 11
+1707912143.3786 Rx ;67enc 4294966699 4294966301 177207 0 1
+1707912143.3797 Txd ;78motv 0.29 -5.54
+1707912143.4106 Rx ;33liv -2 -4 -2 -2 -6 -8 1 14
+1707912143.4107 Rx ;62enc 4294966701 4294;61gyro0 4484-2.61434 24.5056 12
+1707912143.4134 Txd ;85motv 0.74 -5.97
+1707912143.4364 Rx ;63gyro0 48.1389 -10.1649 25.5025 12
+1707912143.4377 Rx ;37acc0 0.554281 0.69869 -0.598389 12
+1707912143.4485 Rx ;60gyro0 51.5315 -18.8319 26.2019 12
+1707912143.4498 Rx ;60acc0 0.5354 0.713745 -0.566772 12
+1707912143.4744 Rx ;54liv 2 4 6 3 2 2 0 14
+1707912143.4746 Rx ;67enc 4294966707 4294966285 177341 0 1
+1707912143.4760 Txd ;87motv 0.85 -5.97
+1707912143.4965 Rx ;83gyro0 61.6659 -28.89 26.1993 12
+1707912143.4977 Rx ;79acc0 0.525838 0.782145 -0.479858 12
+1707912143.5065 Rx ;69liv 3 8 13 15 5 5 7 31
+1707912143.5067 Rx ;80enc 4294966684 4294966367 177448 0 1
+1707912143.5075 Txd ;50motv -1.01 -10.00
+1707912143.6344 Rx ;25liv 4 5  ;41liv -1 -2 3 5 5 0 3 10
+1707912143.6746 Rx ;79enc 4294966697 4294966364 177554 0 1
+1707912143.6770 Txd ;81motv 0.68 -6.44
+1707912143.7066 Rx ;65enc 4294966696 4294966321 177602 0 1
+1707912143.7085 Txd ;76motv 0.42 -2.87
+1707912143.7864 Rx ;15liv 5 4 6 2 6 4 -9 12
+1707912143.7866 Rx ;71enc 4294966667 4294966253 177705 0 1
+1707912143.7874 Txd ;26motv -0.48 -3.66
+1707912143.7964 Rx ;01gyro0 62.2457 -32.224 22.2626 12
+1707912143.7977 Rx ;55acc0 0.417013 0.914917 -0.125956 12
+1707912143.8086 Rx ;57gyro0 61.55 4294966210 177757 0 1
+1707912143.8505 Rx ;48liv 0 0 0 3 2 3 4 15
+1707912143.8506 Rx ;75enc 4294966657 4294966216 177774 0 1
+1707912143.8520 Txd ;15motv -0.07 -4.05
+1707912143.9146 Rx ;68liv 0 6 7 6 9 10 4 5
+1707912143.9306 Rx ;75enc 4294966591 4294966165 177909 0 1
+1707912143.9330 Txd ;27motv -1.93 -3.66
+1707912143.9417 Rx ;80acc0 0.372437 0.895752 0.0285848 12
+1707912143.9887 Rx ;18gyro0;84acc0 0.318746 0.904966616 4v 6 7 8o0 ;71acc ;91liv 1 6 2 -4 -5 -4 -4 2
+1707912144.0268 Rx ;74enc 42;69gyro0 96.3236 70.4371 5.19562 12
+1707912144.0387 Txd ;11motv -0.04 -5.12
+1707912144.0448 Rx ;95dname robobot Newton
+1707912144.0514 Rx ;89svo 0 0 0  0 0 0  0 0 0  0 0 0  0 0 0
+1707912144.1065 Rx ;11liv 9 4 4 5 4 2 1 010 1
+1707912144.1305 Rx ;21liv 6 8 538. 2;06acc0 0.313192 0.832316 0.398621 12
+1707912144.2269 Rx ;9nc 429 0.586873 12
+1707912144.2432 Rx ;58liv 4 63 2
+1707912144.3066 Rx ;74ec4294966585 4294966096 178172 0 1
+1707912144.3245 Rx ;66gyro0 72.464 -38.386 12.7462 12
+1707912144.3258 Rx ;17acc0 0.250244 0.631958 0.703959 12
+1707912144.3365 Rx ;12gyro0 68.812 -33.3633 14.0991 12
+1707912144.3378 Rx ;07acc0 0.251058 0.631327 0.705953 12
+1707912144.3625 Rx ;97liv 6 5 2 4 -1 0 -2 5
+1707912144.3626 Rx ;63enc 4294966586 4294966103 178180 0 1
+1707912144.3652 Txd ;11motv -0.04 -5.12
+1707912144.4668 Rx ;67enc 4294968136 0.788411 12
+1707912144.4849 Txd ;11motv -0.04 -5.12
+1707912144.5147 Rx ;50liv 0 13 12 12 12 6 5 11
+1707912144.5149 Rx ;76enc 4299;20acc0 0.156372 0.563;63gyro0 32.3563 -19.5185 36.6007;89svo 0 0 0   ;42gyro0 32.4249 -21.1182 41.0512 12
+1707912144.5540 Txd ;17motv -0.04 -5.18
+1707912144.5790 Rx ;68enc 294966572 4294966069 18;53gyro0   -1 -5 7 11
+1707912144.6042 Txd ;12motv -0.04 -5.13
+1707912144.6270 Rx ;71nc 4294966574 429496ec 429496657544966141 178389 0 1
+1707912144.7499 Qu 1 ;54!irc 70000 20000 70000 20000 1
+1707912144.7499 Qu 2 ;59!sub ir 45
+1707912144.7500 Tx ;54!irc 70000 20000 70000 20000 1
+1707912144.7530 Qu 3 ;92!stop
+1707912144.8535 Txd ;94lip 0 0 0 0 0 0 0
+1707912144.8547 Txd ;31leave
+1707912144.8553 Txd ;44disp stopped

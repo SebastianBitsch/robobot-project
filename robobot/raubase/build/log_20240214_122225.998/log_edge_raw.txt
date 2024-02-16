@@ -1,0 +1,7 @@
+% Linesensor raw values logfile (reflectance values)
+% Sensor power high=1
+% 1 	Time (sec)
+% 2..9 	Sensor 1..8 AD value difference (illuminated - not illuminated)
+1707909746.7728 0 0 0 0 0 0 0 0
+1707909746.7798 177 225 243 270 283 275 256 198
+1707909746.7884 176 225 247 269 285 268 246 195

@@ -1,0 +1,5 @@
+vel=0.2, acc=100.0, log=7.0: dist=0.1
+bal=1.0: time=4.0
+tr=0.3: turn=90.0
+vel=0.15: dist=0.3
+vel=0.0, bal=0.0: time=1.0

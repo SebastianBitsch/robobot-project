@@ -1,0 +1,8 @@
+# got from robot:
+vel=-0.2, acc=2.0,log=10: dist=0.2
+label=6:
+tr=0.15: turn=45.0
+tr=0.15: turn=-45.0
+vel=0.2:dist=0.18
+vel=-0.2,goto=6: count=2
+

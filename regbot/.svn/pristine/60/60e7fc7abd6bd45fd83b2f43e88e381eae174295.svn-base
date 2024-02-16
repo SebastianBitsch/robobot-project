@@ -1,0 +1,5 @@
+vel=0.2, log=5, acc=2: xw>16, dist=2.5
+ :xw < 4,dist=0.2
+ vel=0:time=0.3
+tr=0,vel=0.2:turn=-80
+linel=0,white=1: dist>0.5
