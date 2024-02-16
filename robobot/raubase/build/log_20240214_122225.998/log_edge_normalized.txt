@@ -1,7 +1,0 @@
-% Edge sensor logfile normalized 'log_20240214_122225.998/log_edge_normalized.txt'
-% 1 	Time (sec)
-% 2..9 	Sensor value in 0..1000 scale for black to white
-% 10 	Line width (m)
-1707909746.7728 0 0 0 0 0 0 0 0  0.0000
-1707909746.7798 0 0 0 0 0 0 0 0  0.0000
-1707909746.7884 0 0 0 0 0 0 0 0  0.0000

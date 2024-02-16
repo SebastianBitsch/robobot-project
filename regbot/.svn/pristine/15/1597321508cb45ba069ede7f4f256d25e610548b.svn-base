@@ -1,9 +1,0 @@
-# got from robot:
-linel=0,white=0,vel=0.1: dist=0.1, time=2.0
-linel=0,bal=1: time=0.5
-linel=0,white=0, log=1.0: time=1.0
-vel=0.2, linel=0.0: time=10.0
-#vel=0.25, liner=0.0, white=0: time=10.0
-#vel=0.3, liner=0.0, white=0: time=10.0
-#vel=0.0, bal=1: time=2.0
-bal=0: time=1.0

@@ -1,7 +1,0 @@
-# not much
-vel=0.3:ir2<0.2
-vel=0.3,label=1:time=0.5,ir1>3,ir2=6
-goto=1:ir1<0.2
-vel=0.3, irsensor=1, irdist=0.2: ir2<0.3,ir1>0.2
-goto=1:ir2<0.2
-vel=0:time=1

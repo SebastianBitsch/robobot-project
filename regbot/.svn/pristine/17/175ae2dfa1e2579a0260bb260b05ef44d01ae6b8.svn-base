@@ -1,5 +1,0 @@
-# got from robot:
-vel=2.0, acc=100.0, log=10.0, label=1: dist=0.4
-tr=0.07: turn=90.0
-goto=1: count=3
-vel=0.0: time=0.5

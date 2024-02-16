@@ -1,9 +1,0 @@
-thread=1
-    bal=1: time=2.0
-    vel=0.3, edgel=-0.5, white=1, log=50.0, label=3: log=0
-    event=0: time=0.1
-    goto=4
-    vel=0.4, edgel=0.5, white=1: time=3.0
-    goto=3
-    vel=0.1, label=4: dist=0.1
-    goto=3
