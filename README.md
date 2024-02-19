@@ -1,6 +1,3 @@
-this is a readme for our project
-
-
 ### Getting started
 
 1. Connect to robot 
