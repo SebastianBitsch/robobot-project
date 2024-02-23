@@ -98,12 +98,6 @@ void BPlan200::run() {
         pose.resetPose();
         pyVision.sendCommand("help");
         pyVision.sendCommand("golf");
-        // if (true) {
-        //     cv::Mat frame = cam.getFrameRaw();
-        //     cv::imwrite("img_state_200.jpg", frame);
-        // } else {
-        //     cam.saveImage();
-        // }
 
         toLog("forward at 0.3m/s");
         mixer.setVelocity(0.3);
