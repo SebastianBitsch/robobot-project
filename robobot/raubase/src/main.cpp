@@ -65,7 +65,8 @@ int main (int argc, char **argv)
 		//mixer.setEdgeMode(true, 0);
 		mixer.setVelocity(0.5);
 		usleep(2*1000*1000);
-		mixer.setVelocity(0);
+		mixer.setVelocity(-0.001);
+		usleep(1000);
 		gpio.setPin(16, 0);
 
 
