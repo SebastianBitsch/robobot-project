@@ -1,6 +1,7 @@
 log/
 robobot_backup/
-robobot/raubase/build/
+robobot/raubase/build/*
+!robobot/raubase/build/robot.ini
 .svn/
 logs/
 .vscode/
