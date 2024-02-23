@@ -20,7 +20,7 @@
 
 
 ### Tips and tricks
-- Moving files from ```ssh``` to ```local```. For instance: 
+- Moving files from ```ssh``` to ```local```. On a terminal on your local machine: 
   ```bash
   scp -r local@10.197.216.74:/home/local/svn<PATH_TO_FILE> <LOCAL_PATH>
   ```
