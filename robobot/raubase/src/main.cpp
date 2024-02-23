@@ -41,6 +41,25 @@
 
 enum LineState { on_line, off_line };
 
+
+/*
+void go_to_position (float x, float y) {
+
+	while true {
+
+		pose.x
+		pose.y
+		pose.heading
+		
+		mixer.setVelocity();
+		mixer.setDesiredHeading();
+		usleep(10*1000); //ms before updating velocity and heading'
+
+	}
+
+}
+*/
+
 int main (int argc, char **argv)
 { 
 	// prepare all modules and start data flow
@@ -59,14 +78,10 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-				//plan_test_move.run();
-                //mixer.setVelocity(0.7);
-               	// mixer.setTurnrate(0.3);
-		//mixer.setEdgeMode(true, 0);
-		mixer.setVelocity(0.1);
-		usleep(10*1000*1000);
-		mixer.setVelocity(-0.001);
-		usleep(1000);
+		mixer.setVelocity(0.5);
+		usleep(2*1000*1000);
+		mixer.setVelocity(0);
+		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.heading);
 		gpio.setPin(16, 0);
 
 

@@ -103,6 +103,34 @@ bool SEncoder::decode(const char* msg, UTime & msgTime)
   return used;
 }
 
+
+bool SEncoder::decode_float(const char* msg, UTime & msgTime)
+{
+  bool used = true;
+  const char * p1 = msg;
+  if (strncmp(p1, "enc ", 4) == 0)
+  {
+    if (strlen(p1) > 4)
+      p1 += 4;
+    else
+      return false;
+    encTime = msgTime;
+    enc[0] = -strtoll(p1, (char**)&p1, 10);
+    enc[1] = strtoll(p1, (char**)&p1, 10);
+    // notify users of a new update
+    updateCnt++;
+    // save to log_encoder_pose
+    toLog();
+    // save new value as old value
+    encLast[0] = enc[0];
+    encLast[1] = enc[1];
+  }
+  else
+    used = false;
+  return used;
+}
+
+
 void SEncoder::toLog()
 {
   if (not service.stop)
