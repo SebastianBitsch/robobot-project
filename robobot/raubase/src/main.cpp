@@ -82,8 +82,10 @@ int main (int argc, char **argv)
 		usleep(1*1000*1000);
 		mixer.setVelocity(0);
 		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
+		usleep(5000*1000);
+		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
 		gpio.setPin(16, 0);
-
+		
 
 		//switch(line_state)
 		//{
