@@ -4,4 +4,4 @@ robobot/raubase/build/
 .svn/
 logs/
 .vscode/
-
+.DS_Store
