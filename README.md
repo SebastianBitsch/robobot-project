@@ -30,6 +30,13 @@
   ```
 
 
+# Camera
+Access the stream
+```bash
+cd svn/robobot/raubase/build/
+motion
+```
+See the output stream at <http://10.197.216.74:8081>
 
 
 
