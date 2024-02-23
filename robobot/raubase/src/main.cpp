@@ -79,7 +79,7 @@ int main (int argc, char **argv)
 
 		gpio.setPin(16, 1);
 		mixer.setVelocity(0.5);
-		usleep(2*1000*1000);
+		usleep(1*1000*1000);
 		mixer.setVelocity(0);
 		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.heading);
 		gpio.setPin(16, 0);
