@@ -36,49 +36,51 @@
 #include "medge.h"
 #include "cedge.h"
 #include "cmixer.h"
-#include "scam.h"
+// #include "scam.h"
+#include "spyvision.h"
 
-#include "bplan100.h"
+#include "bplan200.h"
 
 // create class object
-BPlan100 plan100;
+BPlan200 plan200;
 
 
-void BPlan100::setup()
+void BPlan200::setup()
 { // ensure there is default values in ini-file
-  if (not ini["plan100"].has("log"))
-  { // no data yet, so generate some default values
-    ini["plan100"]["log"] = "true";
-    ini["plan100"]["run"] = "false";
-    ini["plan100"]["print"] = "true";
+  if (not ini["plan200"].has("log")) { // no data yet, so generate some default values
+    ini["plan200"]["log"] = "true";
+    ini["plan200"]["run"] = "false";
+    ini["plan200"]["print"] = "true";
   }
   // get values from ini-file
-  toConsole = ini["plan100"]["print"] == "true";
+  toConsole = ini["plan200"]["print"] == "true";
   //
-  if (ini["plan100"]["log"] == "true")
-  { // open logfile
-    std::string fn = service.logPath + "log_plan100.txt";
+  if (ini["plan200"]["log"] == "true") { // open logfile
+    std::string fn = service.logPath + "log_plan200.txt";
     logfile = fopen(fn.c_str(), "w");
-    fprintf(logfile, "%% Mission plan100 logfile\n");
+    fprintf(logfile, "%% Mission plan200 logfile\n");
     fprintf(logfile, "%% 1 \tTime (sec)\n");
     fprintf(logfile, "%% 2 \tMission state\n");
     fprintf(logfile, "%% 3 \t%% Mission status (mostly for debug)\n");
   }
+
+  pyVision.setup();
+  
   setupDone = true;
 }
 
-BPlan100::~BPlan100()
-{
+BPlan200::~BPlan200() {
   terminate();
 }
 
 
-void BPlan100::run()
-{
-  if (not setupDone)
+void BPlan200::run() {
+  if (not setupDone) {
     setup();
-  if (ini["plan100"]["run"] == "false")
+  }
+  if (ini["plan200"]["run"] == "false") {
     return;
+  }
   //
   UTime t("now");
   bool finished = false;
@@ -86,30 +88,29 @@ void BPlan100::run()
   state = 10;
   oldstate = state;
   //
-  toLog("Plan100 started");
+  toLog("Plan200 started");
   //
-  while (not finished and not lost and not service.stop)
-  {
+  while (not finished and not lost and not service.stop) {
     switch (state)
     { // make a shift in heading-mission
       case 10:
         toLog("Reset pose");
         pose.resetPose();
-
-        if (true) {
-            cv::Mat frame = cam.getFrameRaw();
-            cv::imwrite("img_state_200.jpg", frame);
-        } else {
-            cam.saveImage();
-        }
+        pyVision.sendCommand("help");
+        pyVision.sendCommand("golf");
+        // if (true) {
+        //     cv::Mat frame = cam.getFrameRaw();
+        //     cv::imwrite("img_state_200.jpg", frame);
+        // } else {
+        //     cam.saveImage();
+        // }
 
         toLog("forward at 0.3m/s");
         mixer.setVelocity(0.3);
         state = 11;
         break;
       case 11: // wait for distance
-        if (pose.dist >= 0.3)
-        { // done, and then
+        if (pose.dist >= 0.3) { // done, and then
           toLog("now turn at 0.5 rad/s and 0 m/s");
           // reset turned angle
           pose.turned = 0.0;
@@ -117,12 +118,12 @@ void BPlan100::run()
           mixer.setTurnrate(0.5);
           state = 21;
         }
-        else if (t.getTimePassed() > 10)
-          lost = true;
+        else if (t.getTimePassed() > 10) {
+            lost = true;
+        }
         break;
       case 21:
-        if (pose.turned >= M_PI)
-        {
+        if (pose.turned >= M_PI) {
           mixer.setDesiredHeading(M_PI);
           toLog("now go back");
           mixer.setVelocity(0.3);
@@ -134,21 +135,20 @@ void BPlan100::run()
           lost = true;
         break;
       case 31: // wait for distance
-        if (pose.dist >= 0.3)
-        { // the end
+        if (pose.dist >= 0.3) { // the end
           mixer.setVelocity(0.0);
           finished = true;
+        
+        } else if (t.getTimePassed() > 10) {
+            lost = true;
         }
-        else if (t.getTimePassed() > 10)
-          lost = true;
         break;
       default:
         toLog("Unknown state");
         lost = true;
         break;
     }
-    if (state != oldstate)
-    {
+    if (state != oldstate) {
       oldstate = state;
       toLog("state start");
       // reset time in new state
@@ -157,38 +157,31 @@ void BPlan100::run()
     // wait a bit to offload CPU
     usleep(2000);
   }
-  if (lost)
-  { // there may be better options, but for now - stop
-    toLog("Plan100 got lost");
+  if (lost) { // there may be better options, but for now - stop
+    toLog("Plan200 got lost");
     mixer.setVelocity(0);
     mixer.setTurnrate(0);
   }
-  else
-    toLog("Plan100 finished");
+  else {
+    toLog("Plan200 finished");
+  }
 }
 
 
-void BPlan100::terminate()
-{ //
-  if (logfile != nullptr)
+void BPlan200::terminate() {
+  if (logfile != nullptr) {
     fclose(logfile);
+  }
   logfile = nullptr;
 }
 
-void BPlan100::toLog(const char* message)
-{
+void BPlan200::toLog(const char* message) {
   UTime t("now");
-  if (logfile != nullptr)
-  {
-    fprintf(logfile, "%lu.%04ld %d %% %s\n", t.getSec(), t.getMicrosec()/100,
-            oldstate,
-            message);
+  if (logfile != nullptr) {
+    fprintf(logfile, "%lu.%04ld %d %% %s\n", t.getSec(), t.getMicrosec()/100, oldstate, message);
   }
-  if (toConsole)
-  {
-    printf("%lu.%04ld %d %% %s\n", t.getSec(), t.getMicrosec()/100,
-           oldstate,
-           message);
+  if (toConsole) {
+    printf("%lu.%04ld %d %% %s\n", t.getSec(), t.getMicrosec()/100, oldstate, message);
   }
 }
 

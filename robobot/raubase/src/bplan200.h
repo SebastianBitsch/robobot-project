@@ -30,12 +30,11 @@ using namespace std;
  * Class intended to accomplish a short mission,
  * e.g. one challenge or part of a challenge
  * */
-class BPlan100
-{
+class BPlan200 {
 public:
   /**
    * destructor */
-    ~BPlan100();
+    ~BPlan200();
   /** setup and request data */
   void setup();
   /**
@@ -51,15 +50,18 @@ private:
   void toLog(const char * message);
   /// added to log
   int state, oldstate;
+  
   /// private stuff
   // debug print to console
   bool toConsole = true;
   // logfile
   FILE * logfile = nullptr;
   bool setupDone = false;
+
+  SPyVision pyVision = SPyVision();
 };
 
 /**
  * Make this visible to the rest of the software */
-extern BPlan100 plan100;
+extern BPlan200 plan200;
 

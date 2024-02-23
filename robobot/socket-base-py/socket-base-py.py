@@ -34,22 +34,14 @@ import select
 #from netifaces import interfaces, ifaddresses, AF_INET
 #import netifaces
 
-#
 # based on example found in
 # https://docs.python.org/3/library/socketserver.html#module-socketserver
-#
-#
 
 ## function to handle ctrl-C and reasonable shutdown
 def signal_handler(sig, frame):
     print('UService:: You pressed Ctrl+C!')
     server.stop = True
 
-#################################################################
-#################################################################
-#################################################################
-
-#class MyTCPHandler(socketserver.BaseRequestHandler):
 class MyTCPHandler(socketserver.StreamRequestHandler):
     """
     The request handler class for our server.
@@ -63,9 +55,11 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
         stop = False
         print("Got new client from {}".format(self.client_address[0]))
         self.send("Welcome to python vision server (send 'help' or 'quit' to quit)")
+
         # use poll to allow nice shutdown with ctrl-c even
         poll_obj = select.poll()
         poll_obj.register(self.rfile, select.POLLIN)
+        
         while not stop and not server.stop:
             # test if a command is available (wait up to 100 ms for a command)
             poll_result = poll_obj.poll(100)
@@ -105,11 +99,9 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
                 time.sleep(0.05)
             pass
         print("Client on {} hung up".format(self.client_address[0]))
-        pass
 
     def send(self, msg):
         self.request.sendall(bytes(msg + "\r\n", "utf-8"))
-        pass
 
     def arucoRequest(self, gg):
         id = 66
@@ -135,8 +127,8 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
         if found == 0:
           self.send("golfpos 0 0 0 0")
         else:
-          for i in range(0,found):
-            self.send("golfpos {} {} {} {}".format(found, i, x[i],y[i]))
+            for i in range(0,found):
+                self.send("golfpos {} {} {} {}".format(found, i, x[i],y[i]))
 
 
 #################################################################
