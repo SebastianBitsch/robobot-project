@@ -62,9 +62,9 @@ void go_to_position (float x, float y) {
 }
 */
 
-float max_acc = 0.05;
-float max_vel = 0.2;
-float time_interval = 0.01;
+float max_acc = 0.1;
+float max_vel = 0.5;
+float time_interval = 0.1;
 float dist_margin = 0.05;
 float min_vel = 0.02;
 
@@ -79,8 +79,8 @@ void go_for (float meters) {
 
 		dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
 		
-		cur_vel += fmax(target_vel - cur_vel, max_acc * time_interval);
-		cur_vel = fmin(min_vel, cur_vel);
+		cur_vel += fmin(target_vel - cur_vel, max_acc * time_interval);
+		cur_vel = fmax(min_vel, cur_vel);
 
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
 		if (meters - dist - dist_margin <= 3*cur_vel*cur_vel/(2*max_acc)) {
