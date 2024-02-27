@@ -31,60 +31,63 @@
 SImu imu;
 
 
-void SImu::setup()
-{ // ensure default values
-  if (not ini.has("imu"))
-  { // no data yet, so generate some default values
-    ini["imu"]["rate_ms"] = "12";
-    ini["imu"]["gyro_offset"] = "0 0 0";
-    ini["imu"]["log"] = "true";
-    ini["imu"]["print_gyro"] = "false";
-    ini["imu"]["print_acc"] = "false";
-  }
-  // use values and subscribe to source data
-  // like teensy1.send("sub pose 4\n");
-  std::string s = "sub gyro0 " + ini["imu"]["rate_ms"] + "\n";
-  teensy1.send(s.c_str());
-  s = "sub acc0 " + ini["imu"]["rate_ms"] + "\n";
-  teensy1.send(s.c_str());
-  // gyro offset
-  const char * p1 = ini["imu"]["gyro_offset"].c_str();
-  gyroOffset[0] = strtof(p1, (char**)&p1);
-  gyroOffset[1] = strtof(p1, (char**)&p1);
-  gyroOffset[2] = strtof(p1, (char**)&p1);
-  // send calibration values to Teensy
-  const int MSL = 100;
-  char ss[MSL];
-  snprintf(ss, MSL, "gyrocal %g %g %g\n", gyroOffset[0], gyroOffset[1], gyroOffset[2]);
-  teensy1.send(ss);
-  //
-  toConsoleGyro = ini["imu"]["print_gyro"] == "true";
-  toConsoleAcc = ini["imu"]["print_acc"] == "true";
-  if (ini["imu"]["log"] == "true")
-  { // open logfile
-    std::string fn = service.logPath + "log_gyro.txt";
-    logfile = fopen(fn.c_str(), "w");
-    fprintf(logfile, "%% Gyro logfile\n");
-    fprintf(logfile, "%% 1 \tTime (sec)\n");
-    fprintf(logfile, "%% 2-4 \tGyro (x,y,z)\n");
-    fprintf(logfile, "%% Gyro offset %g %g %g\n", gyroOffset[0], gyroOffset[1], gyroOffset[2]);
-    //
-    fn = service.logPath + "log_acc.txt";
-    logfileAcc = fopen(fn.c_str(), "w");
-    fprintf(logfileAcc, "%% Accelerometer logfile\n");
-    fprintf(logfileAcc, "%% 1 \tTime (sec)\n");
-    fprintf(logfileAcc, "%% 2-4 \tAccelerometer (x,y,z)\n");
-  }
+void SImu::setup() { 
+	
+	// ensure default values
+	if (not ini.has("imu")) { // no data yet, so generate some default values
+		ini["imu"]["rate_ms"] = "12";
+		ini["imu"]["gyro_offset"] = "0 0 0";
+		ini["imu"]["log"] = "true";
+		ini["imu"]["print_gyro"] = "false";
+		ini["imu"]["print_acc"] = "false";
+	}
+
+	// use values and subscribe to source data
+	// like teensy1.send("sub pose 4\n");
+	std::string s = "sub gyro0 " + ini["imu"]["rate_ms"] + "\n";
+	teensy1.send(s.c_str());
+	s = "sub acc0 " + ini["imu"]["rate_ms"] + "\n";
+	teensy1.send(s.c_str());
+	
+	// gyro offset
+	const char * p1 = ini["imu"]["gyro_offset"].c_str();
+	gyroOffset[0] = strtof(p1, (char**)&p1);
+	gyroOffset[1] = strtof(p1, (char**)&p1);
+	gyroOffset[2] = strtof(p1, (char**)&p1);
+	
+	// send calibration values to Teensy
+	const int MSL = 100;
+	char ss[MSL];
+	snprintf(ss, MSL, "gyrocal %g %g %g\n", gyroOffset[0], gyroOffset[1], gyroOffset[2]);
+	teensy1.send(ss);
+	
+	//
+	toConsoleGyro = ini["imu"]["print_gyro"] == "true";
+	toConsoleAcc = ini["imu"]["print_acc"] == "true";
+	if (ini["imu"]["log"] == "true")
+	{ // open logfile
+		std::string fn = service.logPath + "log_gyro.txt";
+		logfile = fopen(fn.c_str(), "w");
+		fprintf(logfile, "%% Gyro logfile\n");
+		fprintf(logfile, "%% 1 \tTime (sec)\n");
+		fprintf(logfile, "%% 2-4 \tGyro (x,y,z)\n");
+		fprintf(logfile, "%% Gyro offset %g %g %g\n", gyroOffset[0], gyroOffset[1], gyroOffset[2]);
+		//
+		fn = service.logPath + "log_acc.txt";
+		logfileAcc = fopen(fn.c_str(), "w");
+		fprintf(logfileAcc, "%% Accelerometer logfile\n");
+		fprintf(logfileAcc, "%% 1 \tTime (sec)\n");
+		fprintf(logfileAcc, "%% 2-4 \tAccelerometer (x,y,z)\n");
+	}
 }
 
 void SImu::terminate()
 {
-  if (logfileAcc != nullptr)
-  {
+  if (logfileAcc != nullptr) {
     fclose(logfileAcc);
   }
-  if (logfile != nullptr)
-  {
+
+  if (logfile != nullptr) {
     fclose(logfile);
     logfile = nullptr;
   }
@@ -92,60 +95,74 @@ void SImu::terminate()
 
 bool SImu::decode(const char* msg, UTime & msgTime)
 {
-  bool used = true;
-  const char * p1 = msg;
-  if (strncmp(p1, "acc0 ", 4) == 0)
-  {
-    if (strlen(p1) > 4)
-      p1 += 4;
-    else
-      return false;
-    updTimeAcc = msgTime;
-    acc[0] = strtof(p1, (char**)&p1);
-    acc[1] = strtof(p1, (char**)&p1);
-    acc[2] = strtof(p1, (char**)&p1);
-    // notify users of a new update
-    updateCnt++;
-    // save to log
-    toLog(true);
-  }
-  else if (strncmp(p1, "gyro0 ", 5) == 0)
-  {
-    if (strlen(p1) > 5)
-      p1 += 5;
-    else
-      return false;
-    updTime = msgTime;
-    gyro[0] = strtof(p1, (char**)&p1);
-    gyro[1] = strtof(p1, (char**)&p1);
-    gyro[2] = strtof(p1, (char**)&p1);
-    // notify users of a new update
-    updateCnt++;
-    // save to log
-    toLog(false);
-    //
-    if (inCalibration)
-    {
-      for (int j = 0; j < 3; j++)
-        calibSum[j] = gyro[j];
-      calibCount++;
-      if (calibCount >= calibCountMax)
-      {
-        for (int j = 0; j < 3; j++)
-          gyroOffset[j] = calibSum[j]/calibCount;
-        // implement new values
-        const int MSL = 100;
-        char s[MSL];
-        snprintf(s, MSL, "%g %g %g", gyroOffset[0], gyroOffset[1], gyroOffset[2]);
-        ini["imu"]["gyro_offset"] = s;
-        inCalibration = false;
-        printf("# gyro calibration finished: %s\n", s);
-      }
-    }
-  }
-  else
-    used = false;
-  return used;
+	bool used = true;
+	const char * p1 = msg;
+
+	if (strncmp(p1, "acc0 ", 4) == 0)
+	{
+	if (strlen(p1) > 4)
+		p1 += 4;
+	else {
+		return false;
+	}
+
+	updTimeAcc = msgTime;
+	acc[0] = strtof(p1, (char**)&p1);
+	acc[1] = strtof(p1, (char**)&p1);
+	acc[2] = strtof(p1, (char**)&p1);
+	
+	// notify users of a new update
+	updateCnt++;
+	
+	// save to log
+	toLog(true);
+	}
+	else if (strncmp(p1, "gyro0 ", 5) == 0) {
+
+		if (strlen(p1) > 5)
+			p1 += 5;
+		else {
+			return false;
+		}
+
+		updTime = msgTime;	
+		gyro[0] = strtof(p1, (char**)&p1);
+		gyro[1] = strtof(p1, (char**)&p1);
+		gyro[2] = strtof(p1, (char**)&p1);
+		
+		// notify users of a new update
+		updateCnt++;
+		
+		// save to log
+		toLog(false);
+		
+		//Some calibration stuff
+		if (inCalibration)
+		{
+			for (int j = 0; j < 3; j++)
+			calibSum[j] = gyro[j];
+			calibCount++;
+			if (calibCount >= calibCountMax)
+			{
+				for (int j = 0; j < 3; j++) {
+					gyroOffset[j] = calibSum[j]/calibCount;
+				}
+				
+				// implement new values
+				const int MSL = 100;
+				char s[MSL];
+				snprintf(s, MSL, "%g %g %g", gyroOffset[0], gyroOffset[1], gyroOffset[2]);
+				ini["imu"]["gyro_offset"] = s;
+				inCalibration = false;
+				printf("# gyro calibration finished: %s\n", s);
+			}
+		}
+	}
+	else {
+		used = false;
+	}
+	
+	return used;
 }
 
 void SImu::toLog(bool accChanged)

@@ -65,7 +65,8 @@ int main (int argc, char **argv)
 	// prepare all modules and start data flow
 	// but also handle command-line options
 	service.setup(argc, argv);
-	
+	imu.setup();
+
 	float position[3] = {0,0,0};
 	float position_target[3] = {0,0,0};
 
@@ -78,12 +79,19 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
+
 		mixer.setVelocity(0.5);
 		usleep(1*1000*1000);
 		mixer.setVelocity(0);
 		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
 		usleep(5000*1000);
 		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
+
+		for (int i = 0; i < 1000; i++) {
+			printf("Acc : (%f, %f, %f), Gyro : (%f, %f, %f)\n", imu.acc[0], imu.acc[1], imu.acc[2], imu.gyro[0], imu.gyro[1], imu.gyro[2]);
+			usleep(1000);
+		}
+		
 		gpio.setPin(16, 0);
 		
 
@@ -126,6 +134,10 @@ int main (int argc, char **argv)
 
 		//sleep(1); // to allow robot to stop		
 	}
+
+
+
+	imu.terminate();
 
 	// close all logfiles etc.
 	service.terminate();
