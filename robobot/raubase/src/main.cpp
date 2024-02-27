@@ -39,6 +39,8 @@
 #include "bplan101.h"
 #include "bplan_test_move.h"
 
+#include "simu.h"
+
 enum LineState { on_line, off_line };
 
 
@@ -91,7 +93,7 @@ int main (int argc, char **argv)
 			printf("Acc : (%f, %f, %f), Gyro : (%f, %f, %f)\n", imu.acc[0], imu.acc[1], imu.acc[2], imu.gyro[0], imu.gyro[1], imu.gyro[2]);
 			usleep(1000);
 		}
-		
+
 		gpio.setPin(16, 0);
 		
 
