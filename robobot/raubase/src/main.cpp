@@ -27,6 +27,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <string>
+#include <math>
+
 //
 // include local files for data values and functions
 #include "uservice.h"
@@ -73,13 +75,13 @@ void go_for (float meters) {
 	float start[2] = {pose.x, pose.y};
 	float dist = 0;
 
-	while true {
+	while (true) {
 
 		dist = math.sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
 		
 		cur_vel += math.fmax(target_vel - cur_vel, max_acc * time_interval);
 		cur_vel = math.fmin(min_vel, cur_vel);
-		
+
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
 		if meters - dist - dist_margin <= 3*cur_vel*cur_vel/(2*max_acc) {
 			target_vel = 0;
@@ -96,7 +98,6 @@ void go_for (float meters) {
 		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 	}
-
 }
 
 int main (int argc, char **argv)
