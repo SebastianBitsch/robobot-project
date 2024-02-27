@@ -93,9 +93,12 @@ void go_for (float meters) {
 		*/
 
 		cur_vel = fmax(min_vel, cur_vel);
+		
+		// Calculate the stopping distance
+		float stopping_distance = cur_vel * cur_vel / (2 * max_acc);
 
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
-		if ((meters - dist - dist_margin) <= 3*cur_vel*cur_vel/(2*max_acc)) {
+		if ((meters - dist - dist_margin) <= stopping_distance) {
 			target_vel = 0;
 		}
 
