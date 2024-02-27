@@ -43,7 +43,6 @@
 
 enum LineState { on_line, off_line };
 
-
 /*
 void go_to_position (float x, float y) {
 
@@ -58,9 +57,47 @@ void go_to_position (float x, float y) {
 		usleep(10*1000); //ms before updating velocity and heading'
 
 	}
-
 }
 */
+
+float max_acc = 0.05;
+float max_vel = 0.2;
+float time_interval = 0.01;
+float dist_margin = 0.05;
+float min_vel = 0.02;
+
+void go_for (float meters) {
+	
+	float cur_vel = 0;
+	float target_vel = max_vel;
+	float start[2] = {pose.x, pose.y};
+	float dist = 0;
+
+	while true {
+
+		dist = math.sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
+		
+		cur_vel += math.fmax(target_vel - cur_vel, max_acc * time_interval);
+		cur_vel = math.fmin(min_vel, cur_vel);
+		
+		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
+		if meters - dist - dist_margin <= 3*cur_vel*cur_vel/(2*max_acc) {
+			target_vel = 0;
+		}
+
+		mixer.setVelocity(cur_vel);
+		mixer.setDesiredHeading(0);
+		
+		if dist >= meters {
+			mixer.setVelocity(0);
+			break;
+		}
+
+		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
+		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
+	}
+
+}
 
 int main (int argc, char **argv)
 { 
@@ -89,10 +126,10 @@ int main (int argc, char **argv)
 		usleep(5000*1000);
 		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
 
-		for (int i = 0; i < 1000; i++) {
-			printf("Acc : (%f, %f, %f), Gyro : (%f, %f, %f)\n", imu.acc[0], imu.acc[1], imu.acc[2], imu.gyro[0], imu.gyro[1], imu.gyro[2]);
-			usleep(1000);
-		}
+		//for (int i = 0; i < 1000; i++) {
+			//printf("Acc : (%f, %f, %f), Gyro : (%f, %f, %f)\n", imu.acc[0], imu.acc[1], imu.acc[2], imu.gyro[0], imu.gyro[1], imu.gyro[2]);
+			//usleep(1000);
+		//}
 
 		gpio.setPin(16, 0);
 		
