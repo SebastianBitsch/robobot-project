@@ -27,7 +27,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <string>
-#include <math>
+#include <cmath>
 
 //
 // include local files for data values and functions
