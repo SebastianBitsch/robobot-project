@@ -62,11 +62,11 @@ void go_to_position (float x, float y) {
 }
 */
 
-float max_acc = 1;
-float max_vel = 0.5;
+float max_acc = 0.5;
+float max_vel = 2;
 float time_interval = 0.1;
-float dist_margin = 0.05;
-float min_vel = 0.04;
+float dist_margin = 0.02;
+float min_vel = 0.05;
 
 void go_for (float meters) {
 	
@@ -91,7 +91,7 @@ void go_for (float meters) {
 		cur_vel += fmin(abs(target_vel - cur_vel), max_acc * time_interval);
 		cur_vel = cur_vel * dir;
 		*/
-		
+
 		cur_vel = fmax(min_vel, cur_vel);
 
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
@@ -132,7 +132,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		go_for(1);
+		go_for(10);
 		gpio.setPin(16, 0);
 		
 
