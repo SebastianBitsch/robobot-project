@@ -97,6 +97,7 @@ void go_for (float meters) {
 
 		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
+		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
 	}
 }
 
@@ -119,19 +120,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-
-		mixer.setVelocity(0.5);
-		usleep(1*1000*1000);
-		mixer.setVelocity(0);
-		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
-		usleep(5000*1000);
-		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
-
-		//for (int i = 0; i < 1000; i++) {
-			//printf("Acc : (%f, %f, %f), Gyro : (%f, %f, %f)\n", imu.acc[0], imu.acc[1], imu.acc[2], imu.gyro[0], imu.gyro[1], imu.gyro[2]);
-			//usleep(1000);
-		//}
-
+		go_for(3);
 		gpio.setPin(16, 0);
 		
 
