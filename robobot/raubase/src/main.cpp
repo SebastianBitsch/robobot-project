@@ -62,7 +62,7 @@ void go_to_position (float x, float y) {
 }
 */
 
-float max_acc = 0.2;
+float max_acc = 1;
 float max_vel = 0.5;
 float time_interval = 0.1;
 float dist_margin = 0.05;
