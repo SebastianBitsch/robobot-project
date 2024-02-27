@@ -66,7 +66,7 @@ float max_acc = 0.1;
 float max_vel = 0.5;
 float time_interval = 0.1;
 float dist_margin = 0.05;
-float min_vel = 0.02;
+float min_vel = 0.04;
 
 void go_for (float meters) {
 	
@@ -81,9 +81,9 @@ void go_for (float meters) {
 		
 		cur_vel += fmin(target_vel - cur_vel, max_acc * time_interval);
 		cur_vel = fmax(min_vel, cur_vel);
-
+		
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
-		if (meters - dist - dist_margin <= 3*cur_vel*cur_vel/(2*max_acc)) {
+		if ((meters - dist - dist_margin) <= 3*cur_vel*cur_vel/(2*max_acc)) {
 			target_vel = 0;
 		}
 
