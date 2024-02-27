@@ -98,7 +98,7 @@ void go_for (float meters) {
 
 		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
-		printf("pose %f, %f, %f\n", pose.x, pose.y, pose.turned);
+		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 	}
 }
 
