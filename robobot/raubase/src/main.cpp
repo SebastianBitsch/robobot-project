@@ -77,10 +77,10 @@ void go_for (float meters) {
 
 	while (true) {
 
-		dist = math.sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
+		dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
 		
-		cur_vel += math.fmax(target_vel - cur_vel, max_acc * time_interval);
-		cur_vel = math.fmin(min_vel, cur_vel);
+		cur_vel += fmax(target_vel - cur_vel, max_acc * time_interval);
+		cur_vel = fmin(min_vel, cur_vel);
 
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
 		if (meters - dist - dist_margin <= 3*cur_vel*cur_vel/(2*max_acc)) {
