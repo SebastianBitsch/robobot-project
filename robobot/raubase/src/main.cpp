@@ -93,7 +93,7 @@ void go_for (float meters) {
 		else if (cur_vel > target_vel) {
 			cur_vel -= max_acc * time_interval;
 		}
-
+		
 		cur_vel = fmax(min_vel, cur_vel);
 
 		mixer.setVelocity(cur_vel);
@@ -102,6 +102,7 @@ void go_for (float meters) {
 		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+		printf("edge raw : %v, %v, %v, %v, %v, %v, %v, %v,", edgeRaw[0], edgeRaw[1], edgeRaw[2], edgeRaw[3], edgeRaw[4], edgeRaw[5], edgeRaw[6], edgeRaw[7]);
 
 		if (dist >= meters) {
 			mixer.setVelocity(0);
@@ -110,6 +111,11 @@ void go_for (float meters) {
 			break;
 		}
 	}
+}
+
+void go_to (float x, float y, float heading) {
+
+
 }
 
 int main (int argc, char **argv)
@@ -133,6 +139,7 @@ int main (int argc, char **argv)
 		gpio.setPin(16, 1);
 		//go_for(1.5);
 		mixer.setTurnrate(90/180.0f);
+		mixer.setInModeTurnrate();
 		//mixer.setVelocity(0.3);
 		usleep(4 * 1000 * 1000);
 		gpio.setPin(16, 0);
