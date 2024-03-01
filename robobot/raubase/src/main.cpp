@@ -70,6 +70,7 @@ float dist_margin = 0.03;
 float min_vel = 0.04;
 
 float heading_vel = 0.5;
+float heading_threshold = 20;
 
 void setup () {
 	
@@ -83,8 +84,9 @@ void setup () {
 
 		// get values from ini-file
 		ini["postion"]["heading_vel"] = "0.01";
+		ini["postion"]["heading_threshold"] = "20";
 	}
-	
+
 	max_acc 		= strtof(ini["postion"]["max_acc"].c_str(), nullptr);
 	max_vel 		= strtof(ini["postion"]["max_vel"].c_str(), nullptr);
 	time_interval = strtof(ini["postion"]["time_interval"].c_str(), nullptr);
@@ -92,6 +94,7 @@ void setup () {
 	min_vel 		= strtof(ini["postion"]["min_vel"].c_str(), nullptr);
 
 	heading_vel 	= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
+	heading_threshold 	= strtof(ini["postion"]["heading_threshold"].c_str(), nullptr);
 
 }
 
@@ -138,11 +141,11 @@ void go_for (float meters, bool follow_line) {
 		
 		float left_sum = (float)left_sum_int;
 		float right_sum = (float)right_sum_int;
-
-		if (left_sum - right_sum > 50) {
+		
+		if (left_sum - right_sum > heading_threshold) {
 			heading += heading_vel * time_interval;
 		}
-		if (right_sum - left_sum > 50) {
+		if (right_sum - left_sum > heading_threshold) {
 			heading -= heading_vel * time_interval;
 		}
 		
