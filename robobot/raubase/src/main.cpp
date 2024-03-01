@@ -72,8 +72,8 @@ float min_vel = 0.04;
 float heading_vel = 0.5;
 
 void setup () {
-	/*
-	if (not ini.has("postion_controll") or not ini["postion_controll"].has("print")) { // no data yet, so generate some default values
+	
+	if (not ini.has("postion_controll")) { // no data yet, so generate some default values
 
 		ini["postion_controll"]["max_acc"] = "1.0";
 		ini["postion_controll"]["max_vel"] = "0.5";
@@ -92,7 +92,7 @@ void setup () {
 	min_vel 		= strtof(ini["postion_controll"]["min_vel"].c_str(), nullptr);
 
 	heading_vel 	= strtof(ini["postion_controll"]["heading_vel"].c_str(), nullptr);
-	*/
+
 }
 
 void go_for (float meters, bool follow_line) {
