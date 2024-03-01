@@ -156,7 +156,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		go_for(2);
+		go_for(2, true);
 		gpio.setPin(16, 0);
 		
 
