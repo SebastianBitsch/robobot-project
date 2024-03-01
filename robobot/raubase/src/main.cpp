@@ -114,8 +114,8 @@ void go_for (float meters, bool follow_line) {
 		
 		float left_sum = (float)left_sum_int;
 		float right_sum = (float)right_sum_int;
-		
-		heading += (left_sum - right_sum) * heading_kp; 
+
+		heading += (right_sum - left_sum) * heading_kp; 
 
 		mixer.setDesiredHeading(heading);
 
