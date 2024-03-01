@@ -154,9 +154,9 @@ void go_for (float meters, bool follow_line) {
 			heading -= heading_vel * time_interval;
 			heading_buildup += heading_vel * time_interval;
 		}
-		
+
 		heading -= heading_buildup_remove * heading_buildup * time_interval;
-		heading_buildup -= 2 * heading_buildup_remove * heading_buildup * time_interval;
+		heading_buildup -= heading_buildup_remove * heading_buildup * time_interval;
 		
 		mixer.setDesiredHeading(heading);
 
