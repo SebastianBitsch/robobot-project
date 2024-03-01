@@ -141,7 +141,7 @@ void go_for (float meters, bool follow_line) {
 		
 		float left_sum = (float)left_sum_int;
 		float right_sum = (float)right_sum_int;
-		
+
 		if (left_sum - right_sum > heading_threshold) {
 			heading += heading_vel * time_interval;
 		}
