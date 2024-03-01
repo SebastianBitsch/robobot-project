@@ -69,29 +69,30 @@ float time_interval = 0.05;
 float dist_margin = 0.03;
 float min_vel = 0.04;
 
-float heading_vel = 0.01;
+float heading_vel = 0.5;
 
 void setup () {
-if (not ini.has("postion_controll") or not ini["postion_controll"].has("print"))
-  { // no data yet, so generate some default values
-    ini["postion_controll"]["max_acc"] = "1.0";
-    ini["postion_controll"]["max_vel"] = "0.5";
-	ini["postion_controll"]["time_interval"] = "0.05";
-	ini["postion_controll"]["dist_margin"] = "0.05";
-	ini["postion_controll"]["min_vel"] = "0.03";
+	/*
+	if (not ini.has("postion_controll") or not ini["postion_controll"].has("print")) { // no data yet, so generate some default values
 
-	// get values from ini-file
-	ini["postion_controll"]["heading_vel"] = "0.01";
-  }
+		ini["postion_controll"]["max_acc"] = "1.0";
+		ini["postion_controll"]["max_vel"] = "0.5";
+		ini["postion_controll"]["time_interval"] = "0.05";
+		ini["postion_controll"]["dist_margin"] = "0.05";
+		ini["postion_controll"]["min_vel"] = "0.03";
 
-  max_acc 		= strtof(ini["postion_controll"]["max_acc"].c_str(), nullptr);
-  max_vel 		= strtof(ini["postion_controll"]["max_vel"].c_str(), nullptr);
-  time_interval = strtof(ini["postion_controll"]["time_interval"].c_str(), nullptr);
-  dist_margin 	= strtof(ini["postion_controll"]["dist_margin"].c_str(), nullptr);
-  min_vel 		= strtof(ini["postion_controll"]["min_vel"].c_str(), nullptr);
+		// get values from ini-file
+		ini["postion_controll"]["heading_vel"] = "0.01";
+	}
 
-  heading_vel 	= strtof(ini["postion_controll"]["heading_vel"].c_str(), nullptr);
-  
+	max_acc 		= strtof(ini["postion_controll"]["max_acc"].c_str(), nullptr);
+	max_vel 		= strtof(ini["postion_controll"]["max_vel"].c_str(), nullptr);
+	time_interval = strtof(ini["postion_controll"]["time_interval"].c_str(), nullptr);
+	dist_margin 	= strtof(ini["postion_controll"]["dist_margin"].c_str(), nullptr);
+	min_vel 		= strtof(ini["postion_controll"]["min_vel"].c_str(), nullptr);
+
+	heading_vel 	= strtof(ini["postion_controll"]["heading_vel"].c_str(), nullptr);
+	*/
 }
 
 void go_for (float meters, bool follow_line) {
@@ -138,10 +139,10 @@ void go_for (float meters, bool follow_line) {
 		float left_sum = (float)left_sum_int;
 		float right_sum = (float)right_sum_int;
 
-		if (left_sum - right_sum > 0) {
+		if (left_sum - right_sum > 50) {
 			heading += heading_vel * time_interval;
 		}
-		if (right_sum - left_sum > 0) {
+		if (right_sum - left_sum > 50) {
 			heading -= heading_vel * time_interval;
 		}
 		
