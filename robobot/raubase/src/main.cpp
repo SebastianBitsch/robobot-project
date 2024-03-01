@@ -69,7 +69,30 @@ float time_interval = 0.05;
 float dist_margin = 0.03;
 float min_vel = 0.04;
 
-float heading_kp = 0.00005;
+float heading_kp = 0.0001;
+
+void setup () {
+if (not ini.has("postion_controll") or not ini["postion_controll"].has("print"))
+  { // no data yet, so generate some default values
+    ini["postion_controll"]["max_acc"] = "1.0";
+    ini["postion_controll"]["max_vel"] = "0.5";
+	ini["postion_controll"]["time_interval"] = "0.05";
+	ini["postion_controll"]["dist_margin"] = "0.05";
+	ini["postion_controll"]["min_vel"] = "0.03";
+
+	// get values from ini-file
+	ini["postion_controll"]["heading_kp"] = "0.0001";
+  }
+
+  max_acc 		= strtof(ini["postion_controll"]["max_acc"].c_str(), nullptr);
+  max_vel 		= strtof(ini["postion_controll"]["max_vel"].c_str(), nullptr);
+  time_interval = strtof(ini["postion_controll"]["time_interval"].c_str(), nullptr);
+  dist_margin 	= strtof(ini["postion_controll"]["dist_margin"].c_str(), nullptr);
+  min_vel 		= strtof(ini["postion_controll"]["min_vel"].c_str(), nullptr);
+
+  heading_kp 	= strtof(ini["postion_controll"]["heading_kp"].c_str(), nullptr);
+  
+}
 
 void go_for (float meters, bool follow_line) {
 	
@@ -146,6 +169,8 @@ int main (int argc, char **argv)
 	// but also handle command-line options
 	service.setup(argc, argv);
 	imu.setup();
+
+	setup();
 
 	float position[3] = {0,0,0};
 	float position_target[3] = {0,0,0};
