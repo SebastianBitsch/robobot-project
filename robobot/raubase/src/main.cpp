@@ -65,7 +65,7 @@ void go_to_position (float x, float y) {
 float max_acc = 1;
 float max_vel = 0.7;
 float time_interval = 0.1;
-float dist_margin = 0.02;
+float dist_margin = 0.00;
 float min_vel = 0.05;
 
 void go_for (float meters) {
@@ -79,15 +79,6 @@ void go_for (float meters) {
 
 		dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
 
-		if (cur_vel < target_vel) {
-			cur_vel += max_acc * time_interval;
-		}
-		else if (cur_vel > target_vel) {
-			cur_vel -= max_acc * time_interval;
-		}
-
-		cur_vel = fmax(min_vel, cur_vel);
-		
 		// Calculate the stopping distance
 		float stopping_distance = cur_vel * cur_vel / (2 * max_acc);
 
@@ -96,17 +87,26 @@ void go_for (float meters) {
 			target_vel = 0;
 		}
 
+		if (cur_vel < target_vel) {
+			cur_vel += max_acc * time_interval;
+		}
+		else if (cur_vel > target_vel) {
+			cur_vel -= max_acc * time_interval;
+		}
+
+		cur_vel = fmax(min_vel, cur_vel);
+
 		mixer.setVelocity(cur_vel);
 		mixer.setDesiredHeading(0);
+
+		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
+		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
+		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 		
 		if (dist >= meters) {
 			mixer.setVelocity(0);
 			break;
 		}
-
-		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
-		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
-		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 	}
 }
 
@@ -175,7 +175,7 @@ int main (int argc, char **argv)
 
 
 
-	imu.terminate();
+	//imu.terminate();
 
 	// close all logfiles etc.
 	service.terminate();
