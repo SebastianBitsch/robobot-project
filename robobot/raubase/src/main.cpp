@@ -69,7 +69,7 @@ float time_interval = 0.05;
 float dist_margin = 0.03;
 float min_vel = 0.04;
 
-float heading_kp = 0.00002;
+float heading_kp = 0.00005;
 
 void go_for (float meters, bool follow_line) {
 	
