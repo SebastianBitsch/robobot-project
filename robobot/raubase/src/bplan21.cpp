@@ -105,7 +105,7 @@ void BPlan21::run()
           // reset turned angle and distance
           pose.resetPose();
           mixer.setVelocity(0.3);
-          mixer.setTurnrate(M_PI/2);
+          mixer.setDesiredHeading(M_PI/2);
           t.now();
           turns++;
         }
