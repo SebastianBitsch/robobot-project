@@ -105,6 +105,8 @@ void go_for (float meters) {
 
 		if (dist >= meters) {
 			mixer.setVelocity(0);
+			usleep(1000*1000);
+			printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 			break;
 		}
 	}
