@@ -89,7 +89,7 @@ if (not ini.has("postion_controll") or not ini["postion_controll"].has("print"))
   time_interval = strtof(ini["postion_controll"]["time_interval"].c_str(), nullptr);
   dist_margin 	= strtof(ini["postion_controll"]["dist_margin"].c_str(), nullptr);
   min_vel 		= strtof(ini["postion_controll"]["min_vel"].c_str(), nullptr);
-	
+
   heading_vel 	= strtof(ini["postion_controll"]["heading_vel"].c_str(), nullptr);
   
 }
@@ -138,10 +138,10 @@ void go_for (float meters, bool follow_line) {
 		float left_sum = (float)left_sum_int;
 		float right_sum = (float)right_sum_int;
 
-		if left_sum - right_sum > 0 {
+		if (left_sum - right_sum > 0) {
 			heading += heading_vel * time_interval;
 		}
-		if right_sum - left_sum > 0 {
+		if (right_sum - left_sum > 0) {
 			heading -= heading_vel * time_interval;
 		}
 		
