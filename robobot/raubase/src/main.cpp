@@ -193,7 +193,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		go_for(4, true);
+		go_for(20, true);
 		gpio.setPin(16, 0);
 		
 
