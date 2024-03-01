@@ -137,11 +137,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		//go_for(1.5);
-		mixer.setTurnrate(90/180.0f);
-		mixer.setInModeTurnrate();
-		//mixer.setVelocity(0.3);
-		usleep(4 * 1000 * 1000);
+		go_for(2);
 		gpio.setPin(16, 0);
 		
 
