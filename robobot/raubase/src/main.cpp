@@ -65,7 +65,7 @@ void go_to_position (float x, float y) {
 float max_acc = 1;
 float max_vel = 0.7;
 float time_interval = 0.05;
-float dist_margin = 0.5;
+float dist_margin = 0.03;
 float min_vel = 0.04;
 
 void go_for (float meters) {
