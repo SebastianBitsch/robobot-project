@@ -73,25 +73,25 @@ float heading_vel = 0.5;
 
 void setup () {
 	
-	if (not ini.has("postion_controll")) { // no data yet, so generate some default values
+	if (not ini.has("postion")) { // no data yet, so generate some default values
 
-		ini["postion_controll"]["max_acc"] = "1.0";
-		ini["postion_controll"]["max_vel"] = "0.5";
-		ini["postion_controll"]["time_interval"] = "0.05";
-		ini["postion_controll"]["dist_margin"] = "0.05";
-		ini["postion_controll"]["min_vel"] = "0.03";
+		ini["postion"]["max_acc"] = "1.0";
+		ini["postion"]["max_vel"] = "0.5";
+		ini["postion"]["time_interval"] = "0.05";
+		ini["postion"]["dist_margin"] = "0.05";
+		ini["postion"]["min_vel"] = "0.03";
 
 		// get values from ini-file
-		ini["postion_controll"]["heading_vel"] = "0.01";
+		ini["postion"]["heading_vel"] = "0.01";
 	}
+	
+	max_acc 		= strtof(ini["postion"]["max_acc"].c_str(), nullptr);
+	max_vel 		= strtof(ini["postion"]["max_vel"].c_str(), nullptr);
+	time_interval = strtof(ini["postion"]["time_interval"].c_str(), nullptr);
+	dist_margin 	= strtof(ini["postion"]["dist_margin"].c_str(), nullptr);
+	min_vel 		= strtof(ini["postion"]["min_vel"].c_str(), nullptr);
 
-	max_acc 		= strtof(ini["postion_controll"]["max_acc"].c_str(), nullptr);
-	max_vel 		= strtof(ini["postion_controll"]["max_vel"].c_str(), nullptr);
-	time_interval = strtof(ini["postion_controll"]["time_interval"].c_str(), nullptr);
-	dist_margin 	= strtof(ini["postion_controll"]["dist_margin"].c_str(), nullptr);
-	min_vel 		= strtof(ini["postion_controll"]["min_vel"].c_str(), nullptr);
-
-	heading_vel 	= strtof(ini["postion_controll"]["heading_vel"].c_str(), nullptr);
+	heading_vel 	= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
 
 }
 
