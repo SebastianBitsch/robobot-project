@@ -134,6 +134,7 @@ int main (int argc, char **argv)
 		//go_for(1.5);
 		mixer.setDesiredHeading(20);
 		mixer.setVelocity(0.3);
+		usleep(5 * 1000 * 1000);
 		gpio.setPin(16, 0);
 		
 
