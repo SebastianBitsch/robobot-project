@@ -132,9 +132,9 @@ int main (int argc, char **argv)
 
 		gpio.setPin(16, 1);
 		//go_for(1.5);
-		mixer.setTurnrate(5/180.0f);
+		mixer.setTurnrate(90/180.0f);
 		//mixer.setVelocity(0.3);
-		usleep(5 * 1000 * 1000);
+		usleep(4 * 1000 * 1000);
 		gpio.setPin(16, 0);
 		
 
