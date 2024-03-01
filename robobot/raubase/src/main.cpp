@@ -42,6 +42,7 @@
 #include "bplan_test_move.h"
 
 #include "simu.h"
+#include "sedge.h"
 
 enum LineState { on_line, off_line };
 
