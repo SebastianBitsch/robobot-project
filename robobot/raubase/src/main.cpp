@@ -71,6 +71,7 @@ float min_vel = 0.04;
 
 float heading_vel = 0.5;
 float heading_threshold = 20;
+float heading_buildup_remove = 0.5;
 
 void setup () {
 	
@@ -85,6 +86,7 @@ void setup () {
 		// get values from ini-file
 		ini["postion"]["heading_vel"] = "0.01";
 		ini["postion"]["heading_threshold"] = "20";
+		ini["postion"]["heading_threshold"] = "0.5";
 	}
 
 	max_acc 		= strtof(ini["postion"]["max_acc"].c_str(), nullptr);
@@ -93,9 +95,9 @@ void setup () {
 	dist_margin 	= strtof(ini["postion"]["dist_margin"].c_str(), nullptr);
 	min_vel 		= strtof(ini["postion"]["min_vel"].c_str(), nullptr);
 
-	heading_vel 	= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
-	heading_threshold 	= strtof(ini["postion"]["heading_threshold"].c_str(), nullptr);
-
+	heading_vel 			= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
+	heading_threshold 		= strtof(ini["postion"]["heading_threshold"].c_str(), nullptr);
+	heading_buildup_remove 	= strtof(ini["postion"]["heading_buildup_remove"].c_str(), nullptr);
 }
 
 void go_for (float meters, bool follow_line) {
@@ -105,9 +107,11 @@ void go_for (float meters, bool follow_line) {
 	float start[2] = {pose.x, pose.y};
 	float dist = 0;
 	float heading = mixer.desiredHeading;
-
+	float heading_buildup = 0.0f; 
+	
 	int init_left_sum_int = sedge.edgeRaw[0] + sedge.edgeRaw[1] + sedge.edgeRaw[2] + sedge.edgeRaw[3];
 	int init_right_sum_int = sedge.edgeRaw[4] + sedge.edgeRaw[5] + sedge.edgeRaw[6] + sedge.edgeRaw[7];
+
 
 	while (true) {
 
@@ -144,10 +148,15 @@ void go_for (float meters, bool follow_line) {
 
 		if (left_sum - right_sum > heading_threshold) {
 			heading += heading_vel * time_interval;
+			heading_buildup += heading_vel * time_interval;
 		}
 		if (right_sum - left_sum > heading_threshold) {
 			heading -= heading_vel * time_interval;
+			heading_buildup += heading_vel * time_interval;
 		}
+		
+		heading -= heading_buildup_remove * heading_buildup * time_interval;
+		heading_buildup -= 2 * heading_buildup_remove * heading_buildup * time_interval;
 		
 		mixer.setDesiredHeading(heading);
 
