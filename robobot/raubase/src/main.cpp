@@ -64,9 +64,9 @@ void go_to_position (float x, float y) {
 
 float max_acc = 1;
 float max_vel = 0.7;
-float time_interval = 0.1;
-float dist_margin = 0.1;
-float min_vel = 0.05;
+float time_interval = 0.05;
+float dist_margin = 0.00;
+float min_vel = 0.03;
 
 void go_for (float meters) {
 	
@@ -106,7 +106,7 @@ void go_for (float meters) {
 		if (dist >= meters) {
 			mixer.setVelocity(0);
 			usleep(1000*1000);
-			printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+			printf("Final dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 			break;
 		}
 	}
