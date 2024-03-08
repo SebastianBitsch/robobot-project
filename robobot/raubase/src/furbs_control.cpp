@@ -171,7 +171,7 @@ void Furbs::go_for_line (float meters, bool follow_line, Furbs_vel_params p) {
 */
 
 
-void furbs::go_to (float x, float y, Furbs_vel_params p) {
+void Furbs::go_to (float x, float y, Furbs_vel_params p) {
 
 	float cur_vel = 0;
 	float target_vel = p.max_vel;
@@ -187,7 +187,7 @@ void furbs::go_to (float x, float y, Furbs_vel_params p) {
 		///////////////////////// Distance Calculation /////////////////////////
 		//TODO make it intergrating instead of abseluote
 		dist = pose.dist - start_dist;
-		
+
 		// Calculate the stopping distance
 		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
 
@@ -216,10 +216,10 @@ void furbs::go_to (float x, float y, Furbs_vel_params p) {
 		float target_heading = atan2(x - pose.x, y - pose.y);
 
 		if (heading < target_heading) {
-			heading += heading_vel * p.time_interval;
+			heading += p.heading_vel * p.time_interval;
 		}
 		if (heading > target_heading) {
-			heading -= heading_vel * p.time_interval;
+			heading -= p.heading_vel * p.time_interval;
 		}
 
 		mixer.setDesiredHeading(heading);	
