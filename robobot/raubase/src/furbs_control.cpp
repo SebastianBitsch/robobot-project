@@ -88,7 +88,7 @@ void Furbs::go_for (float meters, Furbs_vel_params p) {
 		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
-
+	
 		if (dist >= meters) {
 			mixer.setVelocity(0);
 			printf("Final dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
