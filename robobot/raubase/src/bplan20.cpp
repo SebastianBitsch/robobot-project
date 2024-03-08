@@ -36,6 +36,7 @@
 #include "medge.h"
 #include "cedge.h"
 #include "cmixer.h"
+#include "sdist.h"
 
 #include "bplan20.h"
 
@@ -96,6 +97,7 @@ void BPlan20::run()
         toLog("forward at 0.3m/s");
         mixer.setVelocity(0.3);
         state = 11;
+        toLog(dist.dist[0]);
         break;
       case 11: // wait for distance
         if (pose.dist >= 1.0)
