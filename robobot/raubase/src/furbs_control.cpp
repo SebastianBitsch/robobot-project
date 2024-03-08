@@ -64,10 +64,10 @@ void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
 		dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
 
 		// Calculate the stopping distance
-		float stopping_distance = cur_vel * cur_vel / (2 * max_acc);
+		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
 
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
-		if ((meters - dist - dist_margin) <= stopping_distance) {
+		if ((meters - dist - p.dist_margin) <= stopping_distance) {
 			target_vel = 0;
 		}
 
@@ -110,7 +110,7 @@ void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 		printf("left_sum, right_sum, heading,  %f, %f, %f\n", left_sum, right_sum, heading);
 		printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
-		
+
 		if (dist >= meters) {
 			mixer.setVelocity(0);
 			usleep(1000*1000);

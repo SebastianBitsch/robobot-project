@@ -65,13 +65,12 @@ void go_to_position (float x, float y) {
 
 int main (int argc, char **argv)
 {
-	
+
 	// prepare all modules and start data flow
 	// but also handle command-line options
 	service.setup(argc, argv);
 	imu.setup();
-
-	setup();
+	furbs.setup();
 
 	float position[3] = {0,0,0};
 	float position_target[3] = {0,0,0};
@@ -83,9 +82,9 @@ int main (int argc, char **argv)
 	LineState line_state = off_line;
 
 	if (not service.theEnd) { 
-
+s
 		gpio.setPin(16, 1);
-		go_for(20, true);
+		furbs.go_for(20, true);
 		gpio.setPin(16, 0);
 		
 		//switch(line_state)
