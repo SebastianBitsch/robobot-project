@@ -97,7 +97,7 @@ void BPlan20::run()
         toLog("forward at 0.3m/s");
         mixer.setVelocity(0.3);
         state = 11;
-        toLog(dist.dist[0]);
+        toLog(std::to_string(dist.dist[0]).c_str());
         break;
       case 11: // wait for distance
         if (pose.dist >= 1.0)
