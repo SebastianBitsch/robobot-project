@@ -36,7 +36,8 @@ void Furbs::setup () {
 	vel.dist_margin 	= strtof(ini["postion"]["dist_margin"].c_str(), nullptr);
 	vel.min_vel 		= strtof(ini["postion"]["min_vel"].c_str(), nullptr);
 
-	heading_vel 			= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
+	vel.heading_vel 			= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
+	
 	heading_threshold 		= strtof(ini["postion"]["heading_threshold"].c_str(), nullptr);
 	heading_buildup_remove 	= strtof(ini["postion"]["heading_buildup_remove"].c_str(), nullptr);
 }
@@ -169,15 +170,16 @@ void Furbs::go_for_line (float meters, bool follow_line, Furbs_vel_params p) {
 }
 */
 
-void furbs::go_to (float x, float y, float heading, Furbs_vel_params p) {
-	
+
+void furbs::go_to (float x, float y, Furbs_vel_params p) {
+
 	float cur_vel = 0;
 	float target_vel = p.max_vel;
 	float start[2] = {pose.x, pose.y};
 	float start_dist = pose.dist;
 	float dist = 0;
-	float start_heading = pose.h;
-
+	float heading = pose.h;
+	
 	float total_dist = sqrt((x - pose.x)*(x - pose.x) + (y - pose.y)*(y - pose.y));
 	
 	while (true) {
@@ -185,12 +187,12 @@ void furbs::go_to (float x, float y, float heading, Furbs_vel_params p) {
 		///////////////////////// Distance Calculation /////////////////////////
 		//TODO make it intergrating instead of abseluote
 		dist = pose.dist - start_dist;
-
+		
 		// Calculate the stopping distance
 		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
 
 		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
-		if ((meters - dist - p.dist_margin) <= stopping_distance) {
+		if ((total_dist - dist - p.dist_margin) <= stopping_distance) {
 			target_vel = 0;
 		}
 
@@ -202,20 +204,32 @@ void furbs::go_to (float x, float y, float heading, Furbs_vel_params p) {
 		}
 		
 		cur_vel = fmax(p.min_vel, cur_vel);
-
+		
 		mixer.setVelocity(cur_vel);
 		
 		///////////////////////// Heading Calculation /////////////////////////
-		float t = dist / total_dist;
-		float target_heading = (heading * t) + (start_heading * (1-t)); //linear interpolation
-		mixer.setDesiredHeading(target_heading);
+		//float t = dist / total_dist;
+		//float target_heading = (heading * t) + (start_heading * (1-t)); //linear interpolation
+		//mixer.setDesiredHeading(target_heading);
+		//float dir[2] = {sin(pose.h), cos(pose.h)};
+
+		float target_heading = atan2(x - pose.x, y - pose.y);
+
+		if (heading < target_heading) {
+			heading += heading_vel * p.time_interval;
+		}
+		if (heading > target_heading) {
+			heading -= heading_vel * p.time_interval;
+		}
+
+		mixer.setDesiredHeading(heading);	
 
 		///////////////////////// Time and ending /////////////////////////
 		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 
-		if (dist >= meters) {
+		if (dist >= total_dist) {
 			mixer.setVelocity(0);
 			printf("Final dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 			break;

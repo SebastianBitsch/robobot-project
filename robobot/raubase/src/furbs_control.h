@@ -11,6 +11,7 @@ struct Furbs_vel_params {
 	float time_interval = 0.05;
 	float dist_margin = 0.03;
 	float min_vel = 0.04;
+	float heading_vel = 0.5;
 };
 
 /**
@@ -28,7 +29,7 @@ public:
 	*/
 	void go_for(float meters, Furbs_vel_params p);
 
-	//void go_to(const char * msg, UTime & msgTime);
+	void go_to(float x, float y, Furbs_vel_params p);
 
 	/**
 	* terminate */
@@ -37,7 +38,6 @@ public:
 public:
 	Furbs_vel_params vel;
 	
-	float heading_vel = 0.5;
 	float heading_threshold = 20;
 	float heading_buildup_remove = 0.5;
 
