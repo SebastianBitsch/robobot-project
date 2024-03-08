@@ -212,8 +212,8 @@ void Furbs::go_to (float x, float y, Furbs_vel_params p) {
 		//float target_heading = (heading * t) + (start_heading * (1-t)); //linear interpolation
 		//mixer.setDesiredHeading(target_heading);
 		//float dir[2] = {sin(pose.h), cos(pose.h)};
-
-		float target_heading = atan2(y - pose.y, x - pose.x);
+		
+		float target_heading = atan2(pose.y - y, pose.x - x);
 
 		if (heading < target_heading) {
 			heading += p.heading_vel * p.time_interval;
