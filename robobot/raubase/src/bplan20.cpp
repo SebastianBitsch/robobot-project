@@ -88,39 +88,11 @@ void BPlan20::run()
   //
   toLog("Plan20 started");
   //
-  while (not finished and not lost and not service.stop)
+  while (1)
   {
-    switch (state)
-    { // make a shift in heading-mission
-      case 10:
-        pose.resetPose();
-        toLog("forward at 0.3m/s");
-        mixer.setVelocity(0.3);
-        state = 11;
-        toLog(std::to_string(dist.dist[0]).c_str());
-        break;
-      case 11: // wait for distance
-        if (pose.dist >= 1.0)
-        { // done, and then
-          finished = true;
-        }
-        else if (t.getTimePassed() > 10)
-          lost = true;
-        break;
-      default:
-        toLog("Unknown state");
-        lost = true;
-        break;
-    }
-    if (state != oldstate)
-    {
-      oldstate = state;
-      toLog("state start");
-      // reset time in new state
-      t.now();
-    }
-    // wait a bit to offload CPU
-    usleep(2000);
+
+    toLog(std::to_string(dist.dist[0]).c_str());
+        
   }
   if (lost)
   { // there may be better options, but for now - stop
