@@ -104,7 +104,7 @@ void BPlan21::run()
           toLog("now turn to -pi/2 rad (30deg)");
           // reset turned angle and distance
           pose.resetPose();
-          mixer.setInModeTurnrate(0.1);
+          mixer.setInModeTurnrate(0.01);
           mixer.setVelocity(0.2);
           mixer.setDesiredHeading(M_PI/2);
           t.now();
