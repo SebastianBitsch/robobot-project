@@ -72,13 +72,13 @@ void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
 		}
 
 		if (cur_vel < target_vel) {
-			cur_vel += max_acc * time_interval;
+			cur_vel += p.max_acc * p.time_interval;
 		}
 		else if (cur_vel > target_vel) {
-			cur_vel -= max_acc * time_interval;
+			cur_vel -= p.max_acc * p.time_interval;
 		}
 		
-		cur_vel = fmax(min_vel, cur_vel);
+		cur_vel = fmax(p.min_vel, cur_vel);
 
 		mixer.setVelocity(cur_vel);
 		
@@ -91,26 +91,26 @@ void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
 		float right_sum = (float)right_sum_int;
 
 		if (left_sum - right_sum > heading_threshold) {
-			heading += heading_vel * time_interval;
-			heading_buildup += heading_vel * time_interval;
+			heading += heading_vel * p.time_interval;
+			heading_buildup += heading_vel * p.time_interval;
 		}
 		if (right_sum - left_sum > heading_threshold) {
-			heading -= heading_vel * time_interval;
-			heading_buildup += heading_vel * time_interval;
+			heading -= heading_vel * p.time_interval;
+			heading_buildup += heading_vel * p.time_interval;
 		}
 
-		heading -= heading_buildup_remove * heading_buildup * time_interval;
-		heading_buildup -= heading_buildup_remove * heading_buildup * time_interval;
-		
+		heading -= heading_buildup_remove * heading_buildup * p.time_interval;
+		heading_buildup -= heading_buildup_remove * heading_buildup * p.time_interval;
+
 		mixer.setDesiredHeading(heading);
 
 		///////////////////////// Time and ending /////////////////////////
-		float time_interval_usec = time_interval * 1000.0f * 1000.0f;
+		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
 		printf("left_sum, right_sum, heading,  %f, %f, %f\n", left_sum, right_sum, heading);
 		printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
-
+		
 		if (dist >= meters) {
 			mixer.setVelocity(0);
 			usleep(1000*1000);
