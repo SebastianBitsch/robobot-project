@@ -170,7 +170,7 @@ void Furbs::go_for_line (float meters, bool follow_line, Furbs_vel_params p) {
 */
 
 void furbs::go_to (float x, float y, float heading, Furbs_vel_params p) {
-
+	
 	float cur_vel = 0;
 	float target_vel = p.max_vel;
 	float start[2] = {pose.x, pose.y};
@@ -209,7 +209,7 @@ void furbs::go_to (float x, float y, float heading, Furbs_vel_params p) {
 		float t = dist / total_dist;
 		float target_heading = (heading * t) + (start_heading * (1-t)); //linear interpolation
 		mixer.setDesiredHeading(target_heading);
-		
+
 		///////////////////////// Time and ending /////////////////////////
 		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
