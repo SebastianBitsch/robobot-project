@@ -45,7 +45,63 @@ void Furbs::terminate () {
 	//TODO
 }
 
-void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
+void Furbs::go_for (float meters, Furbs_vel_params p) {
+	
+	float cur_vel = 0;
+	float target_vel = p.max_vel;
+	float start[2] = {pose.x, pose.y};
+	float start_dist = pose.dist;
+	float dist = 0;
+	float heading = mixer.desiredHeading;
+	float heading_buildup = 0.0f;
+	
+	int init_left_sum_int = sedge.edgeRaw[0] + sedge.edgeRaw[1] + sedge.edgeRaw[2] + sedge.edgeRaw[3];
+	int init_right_sum_int = sedge.edgeRaw[4] + sedge.edgeRaw[5] + sedge.edgeRaw[6] + sedge.edgeRaw[7];
+	
+	while (true) {
+
+		///////////////////////// Distance Calculation /////////////////////////
+		//TODO make it intergrating instead of abseluote
+		//dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
+		dist = pose.dist - start_dist;
+
+		// Calculate the stopping distance
+		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
+
+		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
+		if ((meters - dist - p.dist_margin) <= stopping_distance) {
+			target_vel = 0;
+		}
+
+		if (cur_vel < target_vel) {
+			cur_vel += p.max_acc * p.time_interval;
+		}
+		else if (cur_vel > target_vel) {
+			cur_vel -= p.max_acc * p.time_interval;
+		}
+		
+		cur_vel = fmax(p.min_vel, cur_vel);
+
+		mixer.setVelocity(cur_vel);
+		
+		///////////////////////// Time and ending /////////////////////////
+		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
+		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
+		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+		printf("left_sum, right_sum, heading,  %f, %f, %f\n", left_sum, right_sum, heading);
+		printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
+
+		if (dist >= meters) {
+			mixer.setVelocity(0);
+			usleep(1000*1000);
+			printf("Final dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+			break;
+		}
+	}
+}
+
+/*
+void Furbs::go_for_line (float meters, bool follow_line, Furbs_vel_params p) {
 	
 	float cur_vel = 0;
 	float target_vel = p.max_vel;
@@ -120,8 +176,52 @@ void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
 	}
 }
 
-/*
-void furbs::go_to (float x, float y, float heading) {
+void furbs::go_to (float x, float y, float heading, Furbs_vel_params p) {
+
+	float cur_vel = 0;
+	float target_vel = p.max_vel;
+	float start[2] = {pose.x, pose.y};
+	float dist = 0;
+	float target_heading = pose.
+
+	while (true) {
+
+		///////////////////////// Distance Calculation /////////////////////////
+		//TODO make it intergrating instead of abseluote
+		dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
+
+		// Calculate the stopping distance
+		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
+
+		//The distance it will take to reach 0 m/s. A dist_margin is added so it can slow down beforehand.
+		if ((meters - dist - p.dist_margin) <= stopping_distance) {
+			target_vel = 0;
+		}
+
+		if (cur_vel < target_vel) {
+			cur_vel += p.max_acc * p.time_interval;
+		}
+		else if (cur_vel > target_vel) {
+			cur_vel -= p.max_acc * p.time_interval;
+		}
+		
+		cur_vel = fmax(p.min_vel, cur_vel);
+
+		mixer.setVelocity(cur_vel);
+		
+		///////////////////////// Time and ending /////////////////////////
+		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
+		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
+		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+
+		if (dist >= meters) {
+			mixer.setVelocity(0);
+			usleep(1000*1000);
+			printf("Final dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+			break;
+		}
+	}
+}
+*/
 
 
-}*/
