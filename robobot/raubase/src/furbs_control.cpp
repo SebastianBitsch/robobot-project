@@ -1,14 +1,15 @@
 #include "furbs_control.h"
-#include "simu.h"
-#include "sedge.h"
-#include "uservice.h"
-#include "cmixer.h"
 
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
 #include <string>
 #include <cmath>
+
+#include "simu.h"
+#include "sedge.h"
+#include "uservice.h"
+#include "cmixer.h"
 
 // create value
 Furbs furbs;
