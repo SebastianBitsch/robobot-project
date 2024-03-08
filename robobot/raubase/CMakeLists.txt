@@ -29,6 +29,7 @@ set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread")
 
 
 add_executable(raubase
+	src/furbs_control.cpp
 	src/bplan_test_move.cpp
 	src/bplan20.cpp
 	src/bplan21.cpp
