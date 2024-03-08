@@ -228,6 +228,7 @@ void Furbs::go_to (float x, float y, Furbs_vel_params p) {
 		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
+		printf("heading, target_heading, pose.x, pose.y,  %f, %f, %f, %f\n", heading, target_heading, pose.x, pose.y);
 
 		if (dist >= total_dist) {
 			mixer.setVelocity(0);
