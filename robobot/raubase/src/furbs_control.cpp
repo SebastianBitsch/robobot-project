@@ -170,7 +170,6 @@ void Furbs::go_for_line (float meters, bool follow_line, Furbs_vel_params p) {
 }
 */
 
-
 void Furbs::go_to (float x, float y, Furbs_vel_params p) {
 	
 	float cur_vel = 0;
@@ -180,7 +179,7 @@ void Furbs::go_to (float x, float y, Furbs_vel_params p) {
 	float dist = 0;
 	float heading = pose.h;
 	
-	float total_dist = sqrt((x - pose.x)*(x - pose.x) + (y - pose.y)*(y - pose.y));
+	float total_dist = sqrt((x - start[0])*(x - start[0]) + (y - start[1])*(y - start[1]));
 	
 	while (true) {
 
