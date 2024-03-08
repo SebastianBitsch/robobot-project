@@ -11,7 +11,7 @@ struct Furbs_vel_params {
 	float time_interval = 0.05;
 	float dist_margin = 0.03;
 	float min_vel = 0.04;
-}
+};
 
 /**
  * Helper controller for missions
@@ -26,8 +26,8 @@ public:
 	/**
 		Goes for x meters and optionally follow the line.
 	*/
-	void go_for(float meters,  bool follow_line);
-	
+	void go_for(float meters,  bool follow_line, Furbs_vel_params p);
+
 	//void go_to(const char * msg, UTime & msgTime);
 
 	/**

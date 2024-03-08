@@ -29,11 +29,11 @@ void Furbs::setup () {
 		ini["postion"]["heading_threshold"] = "0.5";
 	}
 
-	max_acc 		= strtof(ini["postion"]["max_acc"].c_str(), nullptr);
-	max_vel 		= strtof(ini["postion"]["max_vel"].c_str(), nullptr);
-	time_interval = strtof(ini["postion"]["time_interval"].c_str(), nullptr);
-	dist_margin 	= strtof(ini["postion"]["dist_margin"].c_str(), nullptr);
-	min_vel 		= strtof(ini["postion"]["min_vel"].c_str(), nullptr);
+	vel.max_acc 		= strtof(ini["postion"]["max_acc"].c_str(), nullptr);
+	vel.max_vel 		= strtof(ini["postion"]["max_vel"].c_str(), nullptr);
+	vel.time_interval = strtof(ini["postion"]["time_interval"].c_str(), nullptr);
+	vel.dist_margin 	= strtof(ini["postion"]["dist_margin"].c_str(), nullptr);
+	vel.min_vel 		= strtof(ini["postion"]["min_vel"].c_str(), nullptr);
 
 	heading_vel 			= strtof(ini["postion"]["heading_vel"].c_str(), nullptr);
 	heading_threshold 		= strtof(ini["postion"]["heading_threshold"].c_str(), nullptr);
@@ -44,7 +44,7 @@ void Furbs::terminate () {
 	//TODO
 }
 
-void Furbs::go_for (float meters, bool follow_line, p : Furbs_vel_params) {
+void Furbs::go_for (float meters, bool follow_line, Furbs_vel_params p) {
 	
 	float cur_vel = 0;
 	float target_vel = p.max_vel;
@@ -97,7 +97,7 @@ void Furbs::go_for (float meters, bool follow_line, p : Furbs_vel_params) {
 			heading -= heading_vel * time_interval;
 			heading_buildup += heading_vel * time_interval;
 		}
-		
+
 		heading -= heading_buildup_remove * heading_buildup * time_interval;
 		heading_buildup -= heading_buildup_remove * heading_buildup * time_interval;
 		
