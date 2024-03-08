@@ -40,6 +40,7 @@
 #include "bplan100.h"
 #include "bplan101.h"
 #include "bplan_test_move.h"
+#include "furbs_control.h"
 
 #include "simu.h"
 #include "sedge.h"
@@ -84,7 +85,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 s
 		gpio.setPin(16, 1);
-		furbs.go_for(20, true);
+		furbs.go_for(4, true);
 		gpio.setPin(16, 0);
 		
 		//switch(line_state)
