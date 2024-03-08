@@ -85,7 +85,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 s
 		gpio.setPin(16, 1);
-		furbs.go_for(4, true);
+		furbs.go_for(4, true, furbs.vel);
 		gpio.setPin(16, 0);
 		
 		//switch(line_state)
