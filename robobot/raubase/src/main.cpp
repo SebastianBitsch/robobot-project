@@ -74,7 +74,10 @@ int main (int argc, char **argv)
 	service.setup(argc, argv);
 	imu.setup();
 	furbs.setup();
-
+	sedge.setup();
+	mixer.setup();
+	cedge.setup();
+	
 	float position[3] = {0,0,0};
 	float position_target[3] = {0,0,0};
 
