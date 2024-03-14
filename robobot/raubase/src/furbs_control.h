@@ -17,7 +17,7 @@ struct Furbs_vel_params {
 enum Linemode {
 	no_line_mode,
 	left_line_mode,
-	right_line_mode,
+	right_line_mode
 }
 
 /**
