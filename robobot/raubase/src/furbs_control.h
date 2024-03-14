@@ -18,7 +18,7 @@ enum Linemode {
 	no_line_mode,
 	left_line_mode,
 	right_line_mode
-}
+};
 
 /**
  * Helper controller for missions
