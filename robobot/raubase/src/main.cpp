@@ -90,8 +90,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		mixer.setEdgeMode(false, -0.02);
-		furbs.go_for(10, furbs.vel);
+		furbs.go_for(10, left_line_mode, .vel);
 		gpio.setPin(16, 0);
 		
 		//switch(line_state)

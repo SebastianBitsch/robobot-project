@@ -14,6 +14,12 @@ struct Furbs_vel_params {
 	float heading_vel = 0.5;
 };
 
+enum Linemode {
+	no_line_mode,
+	left_line_mode,
+	right_line_mode,
+}
+
 /**
  * Helper controller for missions
  * */
