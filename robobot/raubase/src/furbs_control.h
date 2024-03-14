@@ -33,7 +33,7 @@ public:
 	/**
 		Goes for x meters and optionally follow the line.
 	*/
-	void go_for(float meters, Furbs_vel_params p);
+	void go_for(float meters, Linemode lm, Furbs_vel_params p);
 
 	void go_to(float x, float y, Furbs_vel_params p);
 
