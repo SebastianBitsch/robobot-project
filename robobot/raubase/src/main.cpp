@@ -77,7 +77,7 @@ int main (int argc, char **argv)
 	sedge.setup();
 	mixer.setup();
 	cedge.setup();
-	
+
 	float position[3] = {0,0,0};
 	float position_target[3] = {0,0,0};
 
@@ -90,7 +90,7 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		mixer.setEdgeMode(true, 0);
+		mixer.setEdgeMode(true, -0.1);
 		furbs.go_for(10, furbs.vel);
 		gpio.setPin(16, 0);
 		
