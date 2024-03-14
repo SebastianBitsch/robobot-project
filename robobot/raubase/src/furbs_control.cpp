@@ -53,7 +53,7 @@ void Furbs::go_for (float meters, Linemode lm , Furbs_vel_params p) {
 	float start[2] = {pose.x, pose.y};
 	float start_dist = pose.dist;
 	float dist = 0;
-
+	
 	if (lm == left_line_mode) {
 		mixer.setEdgeMode(true, 0.03);
 	}
