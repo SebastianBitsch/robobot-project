@@ -39,6 +39,8 @@
 #include "bplan40.h"
 #include "bplan100.h"
 #include "bplan101.h"
+#include "medge.h"
+#include "cedge.h"
 #include "bplan_test_move.h"
 #include "furbs_control.h"
 
@@ -85,12 +87,8 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		while (true) {
-			furbs.go_to(1, 0, furbs.vel);
-			furbs.go_to(1, 1, furbs.vel);
-			furbs.go_to(0, 1, furbs.vel);
-			furbs.go_to(0, 0, furbs.vel);
-		}
+		mixer.setEdgeMode(true, 0);
+		furbs.go_for(10, furbs.vel);
 		gpio.setPin(16, 0);
 		
 		//switch(line_state)
