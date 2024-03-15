@@ -88,7 +88,7 @@ int main (int argc, char **argv)
 	
 	LineState line_state = off_line;
 	
-	int sampels = 10;
+	int sampels = 100;
 	float filter_dist = 0;
 	float target_dist = 0.15;
 	float float_mes_dist = 0;
