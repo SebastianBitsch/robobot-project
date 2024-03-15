@@ -39,6 +39,8 @@ public:
 
 	void go_to(float x, float y, Furbs_vel_params p);
 
+	void turn(float t, Furbs_vel_params p);
+
 	/**
 	* terminate */
 	void terminate();
