@@ -119,14 +119,14 @@ void Furbs::turn (float t, Furbs_vel_params p) {
 
 	float start_heading = pose.h;
 	float heading = start_heading;
-	float target = start_heading + t *  180.0f / 3.14f;
+	float target = start_heading + t * 3.14f / 180.0f;
 
 	mixer.setDesiredHeading(start_heading);
 
 	while (true) {
 
 		heading = abs(pose.h - start_heading);
-
+		
 		if (heading < target) {
 			heading += p.heading_vel * p.time_interval;
 		}
