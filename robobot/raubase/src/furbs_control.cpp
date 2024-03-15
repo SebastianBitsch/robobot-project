@@ -46,7 +46,7 @@ void Furbs::terminate () {
 	//TODO
 }
 
-void Furbs::go_for (float meters, Linemode lm , Furbs_vel_params p) {
+void Furbs::go_for (float meters, Linemode lm, Furbs_vel_params p) {
 	
 	float cur_vel = 0;
 	float target_vel = p.max_vel;
@@ -59,6 +59,9 @@ void Furbs::go_for (float meters, Linemode lm , Furbs_vel_params p) {
 	}
 	else if (lm == right_line_mode) {
 		mixer.setEdgeMode(false, p.right_line_offset);
+	}
+	else {
+		mixer.setDesiredHeading(0);
 	}
 
 	while (true) {
