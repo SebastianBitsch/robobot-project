@@ -65,7 +65,7 @@ int main (int argc, char **argv)
 	
 	int sampels = 20;
 	float filter_dist = 0;
-	float target_dist = 0.15;
+	float target_dist = 0.1;
 	float float_mes_dist = 0;
 
 	int filter_dist_wait = 21*0000;
