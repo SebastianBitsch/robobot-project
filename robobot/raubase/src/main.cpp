@@ -122,7 +122,7 @@ int main (int argc, char **argv)
 				mes_dist(7);
 			}
 			
-			mixer.setVelocity(0);
+			furbs.go_for(-0.5, right_line_mode, p);
 		}
 		gpio.setPin(16, 0);
 	
