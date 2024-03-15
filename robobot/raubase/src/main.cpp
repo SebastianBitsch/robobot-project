@@ -93,8 +93,8 @@ int main (int argc, char **argv)
 		{
 			auto p = furbs.vel;
 			p.left_line_offset += 0.02;
-			furbs.go_for(3.65, left_line_mode, p);
-			furbs.go_for(1, no_line_mode, p);
+			furbs.go_for(3.75, left_line_mode, p);
+			furbs.go_for(0.3, no_line_mode, p);
 			furbs.go_for(10, left_line_mode, p);
 		}
 		gpio.setPin(16, 0);
