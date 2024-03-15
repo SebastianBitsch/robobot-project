@@ -104,10 +104,10 @@ int main (int argc, char **argv)
 				filter_dist += dist.dist[0]/sampels;
 				usleep(1000);
 			}
-			for (dist.dist[0] > 0.25) {
+			while (dist.dist[0] > 0.25) {
 				usleep(1000);
 			}
-			for (dist.dist[0] < 0.5) {
+			while (dist.dist[0] < 0.5) {
 				usleep(1000);
 			}
 			usleep(5*1000*1000);
