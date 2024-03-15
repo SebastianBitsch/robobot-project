@@ -61,7 +61,7 @@ void Furbs::go_for (float meters, Linemode lm, Furbs_vel_params p) {
 		mixer.setEdgeMode(false, p.right_line_offset);
 	}
 	else {
-		mixer.setDesiredHeading(0);
+		mixer.setDesiredHeading(pose.h);
 	}
 
 	while (true) {
