@@ -100,7 +100,6 @@ int main (int argc, char **argv)
 		gpio.setPin(16, 1);
 		{
 			auto p = furbs.vel;
-			p.left_line_offset += 0.01; //offset to not hit the other line
 			furbs.go_for(3.73, left_line_mode, p);
 			furbs.go_for(0.50, no_line_mode, p);
 			p.max_vel -= 0.1; //slow down a bit
@@ -151,7 +150,6 @@ int main (int argc, char **argv)
 				}
 			}
 			//usleep(1*1000*1000);
-			p.left_line_offset -= 0.01; // center centering
 			p.max_acc += 0.5;
 			p.max_vel += 0.4;
 			furbs.go_for(1, no_line_mode, p);
