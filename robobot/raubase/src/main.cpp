@@ -116,9 +116,10 @@ int main (int argc, char **argv)
 			mixer.setEdgeMode(true, -0.01);
 			mixer.setVelocity(0.15);
 
+			mes_dist(6);
 			//Once the we find the box
 			while (filter_dist > 0.13) {
-				mes_dist(6);
+				mes_dist(7);
 			}
 
 			mixer.setVelocity(0);
