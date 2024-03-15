@@ -74,6 +74,7 @@ int main (int argc, char **argv)
 
 		gpio.setPin(16, 1);
 		{
+		/*
 			auto p = furbs.vel;
 			furbs.go_for(3.73, left_line_mode, p);
 			furbs.go_for(0.50, no_line_mode, p);
@@ -111,6 +112,7 @@ int main (int argc, char **argv)
 			furbs.go_for(1, no_line_mode, p);
 			p.max_acc -= 0.5;
 			p.max_vel -= 0.4;
+			*/
 			furbs.go_for(1, left_line_mode, p);
 			mixer.setEdgeMode(true, -0.01);
 			mixer.setVelocity(0.15);
