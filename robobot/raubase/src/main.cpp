@@ -112,20 +112,12 @@ int main (int argc, char **argv)
 			
 			//Wait till the thing comes by
 			while (filter_dist > 0.3) {
-				filter_dist = 0;
-				for (int i = 0; i < sampels; i++) {
-					filter_dist += dist.dist[0]/sampels;
-					usleep(filter_dist_wait); printf("filter_dist2 : %f\n", filter_dist);
-				}
+				mes_dist(2);
 			}
 
 			//Do a distance meassture
 			//how far are we away
-			filter_dist = 0;
-			for (int i = 0; i < sampels; i++) {
-					filter_dist += dist.dist[0]/sampels;
-				usleep(filter_dist_wait); printf("filter_dist3 : %f\n", filter_dist);
-			}
+			mes_dist(3);
 			float_mes_dist = filter_dist;
 			
 			//Go closer
@@ -133,20 +125,12 @@ int main (int argc, char **argv)
 
 			//Now we wait for the thing to go by again
 			while (filter_dist > target_dist + 0.1) {
-				filter_dist = 0;
-				for (int i = 0; i < sampels; i++) {
-					filter_dist += dist.dist[0]/sampels;
-					usleep(filter_dist_wait); printf("filter_dist4 : %f\n", filter_dist);
-				}
+				mes_dist(4);
 				float_mes_dist = filter_dist;
 			}
 			//Once the dist becomes far we go fast
 			while (filter_dist < 0.5) {
-				filter_dist = 0;
-				for (int i = 0; i < sampels; i++) {
-					filter_dist += dist.dist[0]/sampels;
-					usleep(filter_dist_wait); printf("filter_dist5 : %f\n", filter_dist);
-				}
+				mes_dist(5);
 			}
 			//usleep(1*1000*1000);
 			p.max_acc += 0.5;
@@ -156,7 +140,7 @@ int main (int argc, char **argv)
 			p.max_vel -= 0.4;
 			furbs.go_for(1, left_line_mode, p);
 
-
+		
 		}
 		gpio.setPin(16, 0);
 		
