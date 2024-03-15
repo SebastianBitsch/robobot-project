@@ -12,6 +12,8 @@ struct Furbs_vel_params {
 	float dist_margin = 0.03;
 	float min_vel = 0.04;
 	float heading_vel = 0.5;
+	float right_line_offset = -0.01;
+	float left_line_offset = 0.03;
 };
 
 enum Linemode {

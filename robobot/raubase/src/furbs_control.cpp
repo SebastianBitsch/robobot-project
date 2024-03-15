@@ -55,14 +55,14 @@ void Furbs::go_for (float meters, Linemode lm , Furbs_vel_params p) {
 	float dist = 0;
 	
 	if (lm == left_line_mode) {
-		mixer.setEdgeMode(true, 0.03);
+		mixer.setEdgeMode(true, p.left_line_offset);
 	}
 	else if (lm == right_line_mode) {
-		mixer.setEdgeMode(false, -0.01);
+		mixer.setEdgeMode(false, p.right_line_offset);
 	}
 
 	while (true) {
-
+		
 		///////////////////////// Distance Calculation /////////////////////////
 		//TODO make it intergrating instead of abseluote
 		//dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));

@@ -90,9 +90,13 @@ int main (int argc, char **argv)
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
-		furbs.go_for(3.65, left_line_mode, furbs.vel);
-		furbs.go_for(1, no_line_mode, furbs.vel);
-		furbs.go_for(10, left_line_mode, furbs.vel);
+		{
+			auto p = furbs.vel;
+			p.left_line_offset += 0.02;
+			furbs.go_for(3.65, left_line_mode, p);
+			furbs.go_for(1, no_line_mode, p);
+			furbs.go_for(10, left_line_mode, furbs.vel);
+		}
 		gpio.setPin(16, 0);
 		
 		//switch(line_state)
