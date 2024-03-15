@@ -90,6 +90,8 @@ int main (int argc, char **argv)
 	
 	int sampels = 20;
 	float filter_dist = 0;
+	float target_dist = 0.05;
+	float float_mes_dist = 0;
 
 	if (not service.theEnd) { 
 
@@ -107,13 +109,38 @@ int main (int argc, char **argv)
 				filter_dist += dist.dist[0]/sampels;
 				usleep(1000);
 			}
-			while (filter_dist > 0.25) {
+			
+			//Wait till the thing comes by
+			while (filter_dist > 0.3) {
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
 					usleep(1000);
 				}
 			}
+
+			//Do a distance meassture
+			//how far are we away
+			filter_dist = 0;
+			for (int i = 0; i < sampels; i++) {
+					filter_dist += dist.dist[0]/sampels;
+				usleep(1000);
+			}
+			float_mes_dist = filter_dist;
+
+			//Go closer
+			furbs.go_for(target_dist-float_mes_dist, left_line_mode, p);
+
+			//Now we wait for the thing to go by again
+			while (filter_dist > target_dist + 0.1) {
+				filter_dist = 0;
+				for (int i = 0; i < sampels; i++) {
+					filter_dist += dist.dist[0]/sampels;
+					usleep(1000);
+				}
+				float_mes_dist = filter_dist;
+			}
+			//Once the dist becomes far we go fast
 			while (filter_dist < 0.5) {
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
@@ -123,7 +150,12 @@ int main (int argc, char **argv)
 			}
 			//usleep(1*1000*1000);
 			p.left_line_offset -= 0.01; // center centering
-			furbs.go_for(2, left_line_mode, p);
+			p.max_acc += 0.5;
+			p.max_vel += 0.4;
+			furbs.go_for(1, no_line_mode, p);
+			p.max_acc -= 0.5;
+			p.max_vel -= 0.4;
+			
 		}
 		gpio.setPin(16, 0);
 		
