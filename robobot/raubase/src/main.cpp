@@ -107,7 +107,7 @@ int main (int argc, char **argv)
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 				filter_dist += dist.dist[0]/sampels;
-				usleep(1000);
+				usleep(1000); printf("filter_dist : %f", filter_dist);
 			}
 			
 			//Wait till the thing comes by
@@ -115,7 +115,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(1000);
+					usleep(1000); printf("filter_dist : %f", filter_dist);
 				}
 			}
 
@@ -124,7 +124,7 @@ int main (int argc, char **argv)
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-				usleep(1000);
+				usleep(1000); printf("filter_dist : %f", filter_dist);
 			}
 			float_mes_dist = filter_dist;
 
@@ -136,7 +136,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(1000);
+					usleep(1000); printf("filter_dist : %f", filter_dist);
 				}
 				float_mes_dist = filter_dist;
 			}
@@ -145,7 +145,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(1000);
+					usleep(1000); printf("filter_dist : %f", filter_dist);
 				}
 			}
 			//usleep(1*1000*1000);
@@ -155,7 +155,7 @@ int main (int argc, char **argv)
 			furbs.go_for(1, no_line_mode, p);
 			p.max_acc -= 0.5;
 			p.max_vel -= 0.4;
-			
+
 		}
 		gpio.setPin(16, 0);
 		
