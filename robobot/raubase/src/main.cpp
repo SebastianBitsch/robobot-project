@@ -94,7 +94,7 @@ int main (int argc, char **argv)
 			float_mes_dist = filter_dist;
 			
 			//Go closer
-			furbs.go_for(target_dist-float_mes_dist, left_line_mode, p);
+			furbs.go_for(float_mes_dist-target_dist, left_line_mode, p);
 
 			//Now we wait for the thing to go by again
 			while (filter_dist > target_dist + 0.1) {
