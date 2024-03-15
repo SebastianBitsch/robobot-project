@@ -100,17 +100,26 @@ int main (int argc, char **argv)
 			furbs.go_for(3.73, left_line_mode, p);
 			furbs.go_for(0.35, no_line_mode, p);
 			furbs.go_for(2.05, left_line_mode, p);
+			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 				filter_dist += dist.dist[0]/sampels;
 				usleep(1000);
 			}
-			while (dist.dist[0] > 0.25) {
-				usleep(1000);
+			while (filter_dist > 0.25) {
+				filter_dist = 0;
+				for (int i = 0; i < sampels; i++) {
+					filter_dist += dist.dist[0]/sampels;
+					usleep(1000);
+				}
 			}
-			while (dist.dist[0] < 0.5) {
-				usleep(1000);
+			while (filter_dist < 0.5) {
+				filter_dist = 0;
+				for (int i = 0; i < sampels; i++) {
+					filter_dist += dist.dist[0]/sampels;
+					usleep(1000);
+				}
 			}
-			usleep(5*1000*1000);
+			usleep(1*1000*1000);
 			p.left_line_offset -= 0.01; // more centering
 			furbs.go_for(2, left_line_mode, p);
 		}
