@@ -67,6 +67,8 @@ void go_to_position (float x, float y) {
 }
 */
 
+#define mes_dist(x) filter_dist = 0; for (int i = 0; i < sampels; i++) { filter_dist += dist.dist[0]/sampels; usleep(filter_dist_wait); printf("filter_dist %i : %f\n", x, filter_dist); }
+
 int main (int argc, char **argv)
 {
 
@@ -88,7 +90,7 @@ int main (int argc, char **argv)
 	
 	LineState line_state = off_line;
 	
-	int sampels = 100;
+	int sampels = 20;
 	float filter_dist = 0;
 	float target_dist = 0.15;
 	float float_mes_dist = 0;
@@ -105,11 +107,8 @@ int main (int argc, char **argv)
 			p.max_vel -= 0.1; //slow down a bit
 			furbs.go_for(2, left_line_mode, p);
 			p.max_vel += 0.1; //regain speed
-			filter_dist = 0;
-			for (int i = 0; i < sampels; i++) {
-				filter_dist += dist.dist[0]/sampels;
-				usleep(filter_dist_wait); printf("filter_dist1 : %f\n", filter_dist);
-			}
+			
+			mes_dist(1);
 			
 			//Wait till the thing comes by
 			while (filter_dist > 0.3) {
@@ -155,6 +154,8 @@ int main (int argc, char **argv)
 			furbs.go_for(1, no_line_mode, p);
 			p.max_acc -= 0.5;
 			p.max_vel -= 0.4;
+			furbs.go_for(1, left_line_mode, p);
+
 
 		}
 		gpio.setPin(16, 0);
