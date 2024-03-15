@@ -90,7 +90,7 @@ int main (int argc, char **argv)
 	
 	int sampels = 10;
 	float filter_dist = 0;
-	float target_dist = 0.05;
+	float target_dist = 0.15;
 	float float_mes_dist = 0;
 
 	int filter_dist_wait = 21*0000;
@@ -128,7 +128,7 @@ int main (int argc, char **argv)
 				usleep(filter_dist_wait); printf("filter_dist3 : %f\n", filter_dist);
 			}
 			float_mes_dist = filter_dist;
-
+			
 			//Go closer
 			furbs.go_for(target_dist-float_mes_dist, left_line_mode, p);
 
