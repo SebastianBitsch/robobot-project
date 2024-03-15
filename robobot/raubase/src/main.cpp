@@ -88,7 +88,7 @@ int main (int argc, char **argv)
 	
 	LineState line_state = off_line;
 	
-	int sampels = 20;
+	int sampels = 10;
 	float filter_dist = 0;
 	float target_dist = 0.05;
 	float float_mes_dist = 0;
@@ -107,7 +107,7 @@ int main (int argc, char **argv)
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 				filter_dist += dist.dist[0]/sampels;
-				usleep(1000); printf("filter_dist : %f", filter_dist);
+				usleep(10000); printf("filter_dist : %f\n", filter_dist);
 			}
 			
 			//Wait till the thing comes by
@@ -115,7 +115,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(1000); printf("filter_dist : %f", filter_dist);
+					usleep(10000); printf("filter_dist : %f\n", filter_dist);
 				}
 			}
 
@@ -124,7 +124,7 @@ int main (int argc, char **argv)
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-				usleep(1000); printf("filter_dist : %f", filter_dist);
+				usleep(10000); printf("filter_dist : %f\n", filter_dist);
 			}
 			float_mes_dist = filter_dist;
 
@@ -136,7 +136,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(1000); printf("filter_dist : %f", filter_dist);
+					usleep(10000); printf("filter_dist : %f\n", filter_dist);
 				}
 				float_mes_dist = filter_dist;
 			}
@@ -145,7 +145,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(1000); printf("filter_dist : %f", filter_dist);
+					usleep(10000); printf("filter_dist : %f\n", filter_dist);
 				}
 			}
 			//usleep(1*1000*1000);
