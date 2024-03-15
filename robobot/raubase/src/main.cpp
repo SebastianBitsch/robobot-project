@@ -96,10 +96,12 @@ int main (int argc, char **argv)
 		gpio.setPin(16, 1);
 		{
 			auto p = furbs.vel;
-			p.left_line_offset += 0.02; //offset to not hit the other line
+			p.left_line_offset += 0.01; //offset to not hit the other line
 			furbs.go_for(3.73, left_line_mode, p);
-			furbs.go_for(0.35, no_line_mode, p);
+			furbs.go_for(0.40, no_line_mode, p);
+			p.max_vel -= 0.1; //slow down a bit
 			furbs.go_for(2.05, left_line_mode, p);
+			p.max_vel += 0.1; //regain speed
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 				filter_dist += dist.dist[0]/sampels;
@@ -120,11 +122,10 @@ int main (int argc, char **argv)
 				}
 			}
 			usleep(1*1000*1000);
-			p.left_line_offset -= 0.01; // more centering
+			p.left_line_offset -= 0.01; // center centering
 			furbs.go_for(2, left_line_mode, p);
 		}
 		gpio.setPin(16, 0);
-	 
 		
 		//switch(line_state)
 		//{
