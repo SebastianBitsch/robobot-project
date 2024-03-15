@@ -121,9 +121,13 @@ int main (int argc, char **argv)
 				furbs.go_for(0.05, left_line_mode, p);
 				mes_dist(7);
 			}
+			furbs.go_for(0.05, left_line_mode, p);
+
 			p.max_vel -= 0.2;
-			furbs.go_for(-0.5, left_line_mode, p);
+			furbs.go_for(-0.3, no_line_mode, p);
 			p.max_vel += 0.2;
+			furbs.go_for(0.3, right_line_mode, p);
+			furbs.go_for(-0.3, no_line_mode, p);
 		}
 		gpio.setPin(16, 0);
 	

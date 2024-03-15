@@ -75,7 +75,7 @@ void Furbs::go_for (float meters, Linemode lm, Furbs_vel_params p) {
 		///////////////////////// Distance Calculation /////////////////////////
 		//TODO make it intergrating instead of abseluote
 		//dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
-		dist = pose.dist - start_dist;
+		dist = abs(pose.dist - start_dist);
 
 		// Calculate the stopping distance
 		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
