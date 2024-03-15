@@ -111,14 +111,14 @@ int main (int argc, char **argv)
 			furbs.go_for(1, no_line_mode, p);
 			p.max_acc -= 0.5;
 			p.max_vel -= 0.4;
-			furbs.go_for(1, left_line_mode, p);
 			*/
+			furbs.go_for(0.5, left_line_mode, p);
 
 			mes_dist(6);
 
 			mixer.setEdgeMode(true, -0.01);
 			mixer.setVelocity(0.1);
-		
+			
 			//Once the we find the box
 			while (filter_dist > 0.13) {
 				mes_dist(7);
