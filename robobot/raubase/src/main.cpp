@@ -46,6 +46,7 @@
 
 #include "simu.h"
 #include "sedge.h"
+#include "sdist.h"
 
 enum LineState { on_line, off_line };
 
@@ -86,18 +87,35 @@ int main (int argc, char **argv)
 	bool is_direction_target = false;
 	
 	LineState line_state = off_line;
+	
+	int sampels = 20;
+	float filter_dist = 0;
 
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
 		{
 			auto p = furbs.vel;
-			p.left_line_offset += 0.02;
+			p.left_line_offset += 0.02; //offset to not hit the other line
 			furbs.go_for(3.73, left_line_mode, p);
-			furbs.go_for(0.3, no_line_mode, p);
-			furbs.go_for(1.95, left_line_mode, p);
+			furbs.go_for(0.35, no_line_mode, p);
+			furbs.go_for(2.05, left_line_mode, p);
+			for (int i = 0; i < sampels; i++) {
+				filter_dist += dist.dist[0]/sampels;
+				usleep(1000);
+			}
+			for (dist.dist[0] > 0.25) {
+				usleep(1000);
+			}
+			for (dist.dist[0] < 0.5) {
+				usleep(1000);
+			}
+			usleep(5*1000*1000);
+			p.left_line_offset -= 0.01; // more centering
+			furbs.go_for(2, left_line_mode, p);
 		}
 		gpio.setPin(16, 0);
+	 
 		
 		//switch(line_state)
 		//{
