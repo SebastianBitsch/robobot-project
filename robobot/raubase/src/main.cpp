@@ -93,6 +93,8 @@ int main (int argc, char **argv)
 	float target_dist = 0.05;
 	float float_mes_dist = 0;
 
+	int filter_dist_wait = 21*0000;
+
 	if (not service.theEnd) { 
 
 		gpio.setPin(16, 1);
@@ -107,7 +109,7 @@ int main (int argc, char **argv)
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 				filter_dist += dist.dist[0]/sampels;
-				usleep(10000); printf("filter_dist : %f\n", filter_dist);
+				usleep(filter_dist_wait); printf("filter_dist1 : %f\n", filter_dist);
 			}
 			
 			//Wait till the thing comes by
@@ -115,7 +117,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(10000); printf("filter_dist : %f\n", filter_dist);
+					usleep(filter_dist_wait); printf("filter_dist2 : %f\n", filter_dist);
 				}
 			}
 
@@ -124,7 +126,7 @@ int main (int argc, char **argv)
 			filter_dist = 0;
 			for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-				usleep(10000); printf("filter_dist : %f\n", filter_dist);
+				usleep(filter_dist_wait); printf("filter_dist3 : %f\n", filter_dist);
 			}
 			float_mes_dist = filter_dist;
 
@@ -136,7 +138,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(10000); printf("filter_dist : %f\n", filter_dist);
+					usleep(filter_dist_wait); printf("filter_dist4 : %f\n", filter_dist);
 				}
 				float_mes_dist = filter_dist;
 			}
@@ -145,7 +147,7 @@ int main (int argc, char **argv)
 				filter_dist = 0;
 				for (int i = 0; i < sampels; i++) {
 					filter_dist += dist.dist[0]/sampels;
-					usleep(10000); printf("filter_dist : %f\n", filter_dist);
+					usleep(filter_dist_wait); printf("filter_dist5 : %f\n", filter_dist);
 				}
 			}
 			//usleep(1*1000*1000);
