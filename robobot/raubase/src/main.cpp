@@ -57,6 +57,7 @@ int main (int argc, char **argv)
 	// prepare all modules and start data flow
 	// but also handle command-line options
 	service.setup(argc, argv);
+	sedge.setup();
 	mixer.setup();
 
 	if (not service.theEnd) { 
@@ -83,6 +84,7 @@ int main (int argc, char **argv)
 	service.setup(argc, argv);
 	imu.setup();
 	furbs.setup();
+	sedge.setup();
 	mixer.setup();
 	cedge.setup();
 	
