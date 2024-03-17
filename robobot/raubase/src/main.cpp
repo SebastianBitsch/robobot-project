@@ -59,7 +59,6 @@ int main (int argc, char **argv)
 	service.setup(argc, argv);
 	imu.setup();
 	furbs.setup();
-	sedge.setup();
 	mixer.setup();
 	cedge.setup();
 	
