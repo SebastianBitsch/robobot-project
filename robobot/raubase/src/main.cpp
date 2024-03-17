@@ -57,6 +57,29 @@ int main (int argc, char **argv)
 	// prepare all modules and start data flow
 	// but also handle command-line options
 	service.setup(argc, argv);
+	mixer.setup();
+
+	if (not service.theEnd) { 
+		
+		gpio.setPin(16, 1);
+		mixer.setVelocity(0.2);
+		gpio.setPin(16, 0);
+	
+	}
+
+	// close all logfiles etc.
+	service.terminate();
+	return service.theEnd;
+}
+
+
+/*
+int main (int argc, char **argv)
+{
+
+	// prepare all modules and start data flow
+	// but also handle command-line options
+	service.setup(argc, argv);
 	imu.setup();
 	furbs.setup();
 	mixer.setup();
@@ -143,4 +166,4 @@ int main (int argc, char **argv)
 	service.terminate();
 	return service.theEnd;
 }
-
+*/
