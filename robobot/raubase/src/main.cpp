@@ -65,6 +65,12 @@ int main (int argc, char **argv)
 		gpio.setPin(16, 1);
 		mixer.setVelocity(0.2);
 		usleep(1*1000*1000);
+		sedge.setSensor(true, true);
+		sedge.tick();
+		printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
+		usleep(1*1000*1000);
+		printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
+		usleep(1*1000*1000);
 		gpio.setPin(16, 0);
 	
 	}
