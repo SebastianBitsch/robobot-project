@@ -60,9 +60,10 @@ int main (int argc, char **argv)
 	mixer.setup();
 
 	if (not service.theEnd) { 
-		
+
 		gpio.setPin(16, 1);
 		mixer.setVelocity(0.2);
+		usleep(1*1000*1000);
 		gpio.setPin(16, 0);
 	
 	}
