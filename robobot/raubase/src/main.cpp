@@ -112,23 +112,29 @@ int main (int argc, char **argv)
 			p.max_acc -= 0.2;
 			p.max_vel -= 0.2;
 			
-			furbs.go_for(1, left_line_mode, p);
+			furbs.go_for(1.3, left_line_mode, p);
 
-			mes_dist(6);
+			bool do_box = false;
+			if (do_box) {
+				mes_dist(6);
 
-			//Once the we find the box
-			while (filter_dist > 0.13) {
-				furbs.go_for(0.05, left_line_mode, p);
-				mes_dist(7);
+				//Once the we find the box
+				while (filter_dist > 0.13) {
+					furbs.go_for(0.05, left_line_mode, p);
+					mes_dist(7);
+				}
+				
+				p.max_vel -= 0.2;
+				furbs.go_for(-0.2, no_line_mode, p);
+				p.max_vel += 0.2;
+				furbs.go_for(0.2, right_line_mode, p);
+				furbs.go_for(-1, no_line_mode, p);
+				furbs.go_for(0.3, right_line_mode, p);
+				furbs.turn(30, p);
 			}
-			
-			p.max_vel -= 0.2;
-			furbs.go_for(-0.2, no_line_mode, p);
-			p.max_vel += 0.2;
-			furbs.go_for(0.2, right_line_mode, p);
-			furbs.go_for(-1, no_line_mode, p);
-			furbs.go_for(0.3, right_line_mode, p);
-			furbs.turn(30, p);
+			else {
+				furbs.go_for(5, right_line_mode, p);
+			}
 		}
 		gpio.setPin(16, 0);
 	

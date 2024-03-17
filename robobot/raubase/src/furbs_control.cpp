@@ -95,10 +95,10 @@ void Furbs::go_for (float meters, Linemode lm, Furbs_vel_params p) {
 		cur_vel = fmax(p.min_vel, cur_vel);
 
 		if (backwards) {
-			mixer.setVelocity(-cur_vel);
+			mixer.setVelocity(cur_vel);
 		}
 		else {
-			mixer.setVelocity(cur_vel);
+			mixer.setVelocity(-cur_vel);
 		}
 		///////////////////////// Time and ending /////////////////////////
 		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
