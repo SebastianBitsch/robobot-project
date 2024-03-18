@@ -113,6 +113,11 @@ int main (int argc, char **argv)
 			p.max_vel -= 0.2;
 			
 			furbs.go_for(1.3, left_line_mode, p);
+			p.max_acc -= 0.2;
+			p.max_vel -= 0.2;
+			furbs.go_for(1, right_line_mode, p);
+			p.max_acc += 0.2;
+			p.max_vel += 0.2;
 			furbs.go_for(5, right_line_mode, p);
 		}
 		gpio.setPin(16, 0);
