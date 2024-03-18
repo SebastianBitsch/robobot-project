@@ -66,13 +66,13 @@ void Furbs::go_for (float meters, Linemode lm, float start_off, float end_off, F
 	float cur_off = (t * end_off) + (t - 1) * start_off;
 
 	if (lm == left_line_mode) {
-		mixer.setEdgeMode(true, p.left_line_offset + cur_off);
+		mixer.setEdgeMode(true, p.left_line_offset);
 	}
 	else if (lm == right_line_mode) {
-		mixer.setEdgeMode(false, p.right_line_offset + cur_off);
+		mixer.setEdgeMode(false, p.right_line_offset);
 	}
 	else {
-		mixer.setDesiredHeading(h);
+		mixer.setDesiredHeading(pose.h);
 	}
 
 	while (true) {
@@ -82,7 +82,6 @@ void Furbs::go_for (float meters, Linemode lm, float start_off, float end_off, F
 		//dist = sqrt((start[0] - pose.x)*(start[0] - pose.x) + (start[1] - pose.y)*(start[1] - pose.y));
 		dist = abs(pose.dist - start_dist);
 		
-
 		// Calculate the stopping distance
 		float stopping_distance = cur_vel * cur_vel / (2 * p.max_acc);
 
@@ -110,7 +109,7 @@ void Furbs::go_for (float meters, Linemode lm, float start_off, float end_off, F
 		float time_interval_usec = p.time_interval * 1000.0f * 1000.0f;
 		usleep((useconds_t)time_interval_usec); //ms before updating velocity and heading
 		printf("dist, cur_vel, target_vel,  %f, %f, %f\n", dist, cur_vel, target_vel);
-		printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
+		//printf("edge raw : %i, %i, %i, %i, %i, %i, %i, %i \n", sedge.edgeRaw[0], sedge.edgeRaw[1], sedge.edgeRaw[2], sedge.edgeRaw[3], sedge.edgeRaw[4], sedge.edgeRaw[5], sedge.edgeRaw[6], sedge.edgeRaw[7]);
 
 		if (dist >= meters) {
 			mixer.setVelocity(0);
