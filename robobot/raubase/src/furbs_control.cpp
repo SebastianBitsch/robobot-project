@@ -70,7 +70,7 @@ void Furbs::go_for (float meters, Linemode lm, float start_off, float end_off, F
 		dist = abs(pose.dist - start_dist);
 		
 		float t = (meters / dist);
-		float cur_off = (t * end_off) + (k - 1) * start_off;
+		float cur_off = (t * end_off) + (t - 1) * start_off;
 
 		if (lm == left_line_mode) {
 			mixer.setEdgeMode(true, p.left_line_offset + cur_off);
