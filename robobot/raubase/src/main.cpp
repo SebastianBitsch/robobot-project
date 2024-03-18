@@ -63,7 +63,7 @@ int main (int argc, char **argv)
 	mixer.setup();
 	cedge.setup();
 	
-	int sampels = 20;
+	int sampels = 10;
 	float filter_dist = 0;
 	float target_dist = 0.1;
 	float float_mes_dist = 0;
