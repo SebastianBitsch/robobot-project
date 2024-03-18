@@ -108,17 +108,17 @@ int main (int argc, char **argv)
 			//usleep(1*1000*1000);
 			p.max_acc += 0.2;
 			p.max_vel += 0.2;
-			furbs.go_for(0.5, left_line_mode, p, 0, 0);
+			furbs.go_for(0.5, left_line_mode, 0, 0, p);
 			p.max_acc -= 0.2;
 			p.max_vel -= 0.2;
 			
-			furbs.go_for(1.3, left_line_mode, p, 0, 0);
+			furbs.go_for(1.3, left_line_mode, 0, 0, p);
 			p.max_acc -= 0.2;
 			p.max_vel -= 0.2;
-			furbs.go_for(1, right_line_mode, p, 0, 0);
+			furbs.go_for(1, right_line_mode, 0, 0, p);
 			p.max_acc += 0.2;
 			p.max_vel += 0.2;
-			furbs.go_for(4, right_line_mode, p, 0, 0);
+			furbs.go_for(4, right_line_mode, 0, 0, p);
 		}
 		gpio.setPin(16, 0);
 	
