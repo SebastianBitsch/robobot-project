@@ -75,12 +75,10 @@ int main (int argc, char **argv)
 		gpio.setPin(16, 1);
 		{
 			auto p = furbs.vel;
-			furbs.go_for(2, left_line_mode, p);
-			p.left_line_offset += 0.01;
-			furbs.go_for(1.73, left_line_mode, p);
-			furbs.go_for(0.50, no_line_mode, p);
+			furbs.go_for(3.73, left_line_mode, 0, 0.03, p);
+			furbs.go_for(0.50, no_line_mode, 0.03, 0.03, p);
 			p.max_vel -= 0.1; //slow down a bit
-			furbs.go_for(1.95, left_line_mode, p);
+			furbs.go_for(1.95, left_line_mode, 0.03, 0, p);
 			p.max_vel += 0.1; //regain speed
 			
 			mes_dist(1);
@@ -96,7 +94,7 @@ int main (int argc, char **argv)
 			float_mes_dist = filter_dist;
 			
 			//Go closer
-			furbs.go_for(float_mes_dist-target_dist, left_line_mode, p);
+			furbs.go_for(float_mes_dist-target_dist, left_line_mode, 0, 0, p);
 
 			//Now we wait for the thing to go by again
 			while (filter_dist > target_dist + 0.1) {
@@ -110,17 +108,17 @@ int main (int argc, char **argv)
 			//usleep(1*1000*1000);
 			p.max_acc += 0.2;
 			p.max_vel += 0.2;
-			furbs.go_for(0.5, left_line_mode, p);
+			furbs.go_for(0.5, left_line_mode, p, 0, 0);
 			p.max_acc -= 0.2;
 			p.max_vel -= 0.2;
 			
-			furbs.go_for(1.3, left_line_mode, p);
+			furbs.go_for(1.3, left_line_mode, p, 0, 0);
 			p.max_acc -= 0.2;
 			p.max_vel -= 0.2;
-			furbs.go_for(1, right_line_mode, p);
+			furbs.go_for(1, right_line_mode, p, 0, 0);
 			p.max_acc += 0.2;
 			p.max_vel += 0.2;
-			furbs.go_for(5, right_line_mode, p);
+			furbs.go_for(4, right_line_mode, p, 0, 0);
 		}
 		gpio.setPin(16, 0);
 	
